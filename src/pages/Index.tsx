@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { Pizza, Search, Settings as SettingsIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+import { BarChart3, Pizza, Search, Settings as SettingsIcon } from "lucide-react";
 import locationsData from "@/data/locations.json";
 import type { Location, User, Visit } from "@/types/pizza";
 import { getUser, saveUser, upsertVisit, removeVisit, clearAll } from "@/lib/storage";
