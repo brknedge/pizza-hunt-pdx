@@ -1,0 +1,162 @@
+import { useEffect, useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { StarRating } from "./StarRating";
+import { ExternalLink, Trash2 } from "lucide-react";
+import type { Location, RatingCategory, Visit } from "@/types/pizza";
+
+const CATEGORIES: { key: RatingCategory; label: string; desc: string }[] = [
+  { key: "creativity", label: "Creativity", desc: "How original is the concept?" },
+  { key: "flavor", label: "Flavor", desc: "How does it taste?" },
+  { key: "service", label: "Service", desc: "How was the staff?" },
+  { key: "atmosphere", label: "Atmosphere", desc: "Vibe of the space?" },
+  { key: "overall", label: "Overall", desc: "Your holistic score" },
+];
+
+interface Props {
+  location: Location | null;
+  existing?: Visit;
+  open: boolean;
+  onOpenChange: (o: boolean) => void;
+  onSave: (visit: Visit) => void;
+  onDelete?: () => void;
+}
+
+export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, onDelete }: Props) => {
+  const [ratings, setRatings] = useState<Record<RatingCategory, number>>({
+    creativity: 0, flavor: 0, service: 0, atmosphere: 0, overall: 0,
+  });
+  const [notes, setNotes] = useState("");
+  const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
+
+  useEffect(() => {
+    if (open && location) {
+      if (existing) {
+        setRatings(existing.ratings);
+        setNotes(existing.notes);
+        setDate(existing.visitedAt.slice(0, 10));
+      } else {
+        setRatings({ creativity: 0, flavor: 0, service: 0, atmosphere: 0, overall: 0 });
+        setNotes("");
+        setDate(new Date().toISOString().slice(0, 10));
+      }
+    }
+  }, [open, location, existing]);
+
+  if (!location) return null;
+
+  const handleSave = () => {
+    if (ratings.overall === 0) {
+      // overall is required per PRD
+      return;
+    }
+    onSave({
+      visitedAt: new Date(date).toISOString(),
+      ratings,
+      notes: notes.slice(0, 280),
+    });
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="max-w-lg max-h-[90dvh] overflow-y-auto bg-card border-2 border-ink shadow-zine-lg p-0 rounded-xl">
+        <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+          <img src={location.imageUrl} alt={location.pizzaName} className="w-full h-full object-cover" />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+            <p className="text-secondary font-semibold text-sm">{location.name} · {location.neighborhood}</p>
+            <DialogTitle className="font-display text-3xl text-white tracking-wide leading-tight">
+              {location.pizzaName}
+            </DialogTitle>
+          </div>
+        </div>
+
+        <div className="p-5 space-y-5">
+          <DialogHeader className="sr-only">
+            <DialogTitle>{location.pizzaName}</DialogTitle>
+          </DialogHeader>
+
+          <div className="flex items-center justify-between text-sm">
+            <a
+              href={location.everoutUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="text-marinara font-semibold inline-flex items-center gap-1 hover:underline"
+            >
+              View on EverOut <ExternalLink className="h-3 w-3" />
+            </a>
+            <span className="bg-mozz border border-ink px-2 py-0.5 rounded font-display tracking-wide">
+              $4 SLICE / $25 PIE
+            </span>
+          </div>
+
+          <div className="space-y-3">
+            {CATEGORIES.map((c) => (
+              <div key={c.key} className="flex items-center justify-between gap-3 border-b border-dashed border-muted pb-3 last:border-0">
+                <div>
+                  <div className="font-display text-lg tracking-wide">
+                    {c.label}
+                    {c.key === "overall" && <span className="text-marinara ml-1">*</span>}
+                  </div>
+                  <div className="text-xs text-muted-foreground">{c.desc}</div>
+                </div>
+                <StarRating
+                  value={ratings[c.key]}
+                  onChange={(v) => setRatings((r) => ({ ...r, [c.key]: v }))}
+                  size="md"
+                  label={c.label}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div>
+            <label className="font-display text-lg tracking-wide block mb-1">Notes</label>
+            <Textarea
+              value={notes}
+              maxLength={280}
+              onChange={(e) => setNotes(e.target.value)}
+              placeholder="Crust was incredible, loved the honey drizzle…"
+              className="border-2 border-ink shadow-zine-sm rounded-lg min-h-[80px] bg-background"
+            />
+            <div className="text-xs text-muted-foreground text-right mt-1">{notes.length}/280</div>
+          </div>
+
+          <div>
+            <label className="font-display text-lg tracking-wide block mb-1">Date visited</label>
+            <input
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              className="w-full h-11 px-3 rounded-lg border-2 border-ink shadow-zine-sm bg-background text-base"
+            />
+          </div>
+
+          <div className="flex gap-2 pt-2">
+            {existing && onDelete && (
+              <Button
+                type="button"
+                variant="outline"
+                onClick={onDelete}
+                className="border-2 border-ink shadow-zine-sm h-12 px-3"
+                aria-label="Remove visit"
+              >
+                <Trash2 className="h-4 w-4" />
+              </Button>
+            )}
+            <Button
+              onClick={handleSave}
+              disabled={ratings.overall === 0}
+              className="flex-1 h-12 font-display text-lg tracking-widest bg-marinara text-primary-foreground border-2 border-ink shadow-zine hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-zine-lg transition-transform rounded-lg"
+            >
+              {existing ? "UPDATE RATING" : "SAVE RATING"}
+            </Button>
+          </div>
+          {ratings.overall === 0 && (
+            <p className="text-xs text-muted-foreground text-center">Overall rating is required</p>
+          )}
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
