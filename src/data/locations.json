@@ -1,0 +1,562 @@
+[
+  {
+    "id": "spuds-mackenzie",
+    "name": "10 Barrel Brewing",
+    "neighborhood": "Pearl District",
+    "pizzaName": "Spuds Mackenzie",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE1MjM5MDY2NjI0NS0xMC1CYXJyZWwuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/spuds-mackenzie/"
+  },
+  {
+    "id": "the-farm-feast",
+    "name": "21st Century Pizza",
+    "neighborhood": "Southwest Portland",
+    "pizzaName": "The Farm Feast",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTA2MTc2OTAyNC0yMXN0LUNlbnR1cnkuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/the-farm-feast/"
+  },
+  {
+    "id": "crema-my-pork",
+    "name": "48 NORTH PIZZERIA & PUB",
+    "neighborhood": "South Portland",
+    "pizzaName": "Crema My Pork",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE3MjIxNjMxODI1OS00OC1Ob3J0aC5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/crema-my-pork/"
+  },
+  {
+    "id": "the-hot-date",
+    "name": "Atlas Pizza Division",
+    "neighborhood": "Richmond",
+    "pizzaName": "The Hot Date",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTgwOTQyOTg4MS1BdGxhcy1QaXp6YS1EaXZpc2lvbi5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/the-hot-date/"
+  },
+  {
+    "id": "schwilly-pie",
+    "name": "Atlas Pizza Foster",
+    "neighborhood": "Foster - Powell",
+    "pizzaName": "Schwilly Pie",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTc1NjIwOTg1LUF0bGFzLVBpenphLUZvc3Rlci5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/schwilly-pie/"
+  },
+  {
+    "id": "the-kim-chi-possible",
+    "name": "Atlas Pizza Killingsworth",
+    "neighborhood": "North Portland",
+    "pizzaName": "The Kim(chi)-Possible",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTc4NDEwNjgwOS1BdGxhcy1QaXp6YS1LaWxsaW5nc3dvcnRoLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/the-kim-chi-possible/"
+  },
+  {
+    "id": "a-reuben-jamaica-ooh-i-wanna-take-ya-to-baby-doll-pizza",
+    "name": "Baby Doll Pizza",
+    "neighborhood": "Kerns",
+    "pizzaName": "A-Reuben, Jamaica, Ooh I Wanna Take Ya (To Baby Doll Pizza)",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE3MjMyMjY3MzAwNi1CYWJ5ZG9sbC1Tb3V0aGVhc3QuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/a-reuben-jamaica-ooh-i-wanna-take-ya-to-baby-doll-pizza/"
+  },
+  {
+    "id": "belly-of-the-beast",
+    "name": "Baby Doll Pizza Northeast",
+    "neighborhood": "King",
+    "pizzaName": "Belly of the Beast",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE3MjI3Mzc1MDUzMy1CYWJ5ZG9sbC1NTEsuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/belly-of-the-beast/"
+  },
+  {
+    "id": "triple-mac-cheese-pizza",
+    "name": "Barbur World Foods",
+    "neighborhood": "Southwest Portland",
+    "pizzaName": "Triple (Mac &) Cheese Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTY1ODI4NjIxMy1CYXJidXItV29ybGQtRm9vZHMuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/triple-mac-cheese-pizza/"
+  },
+  {
+    "id": "chicken-bacon-ranch-pizza",
+    "name": "Blind Onion",
+    "neighborhood": "Mount Tabor",
+    "pizzaName": "Chicken Bacon Ranch Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDQ0NzExNTcwMS1CbGluZC1Pbmlvbi1CZWxtb250LmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/chicken-bacon-ranch-pizza/"
+  },
+  {
+    "id": "the-caeza",
+    "name": "Blind Onion Pizza Pub",
+    "neighborhood": "Grant Park",
+    "pizzaName": "The Cae'Za",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDQxMTYzMjg0Mi1CbGluZC1Pbmlvbi1Ccm9hZHdheS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/the-caeza/"
+  },
+  {
+    "id": "banh-to-be-wild",
+    "name": "Boxcar Pizza",
+    "neighborhood": "Kerns",
+    "pizzaName": "Banh To Be Wild",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDEzODk4ODE4Ny1Cb3hjYXItUGl6emEuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJsZWZ0IiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/banh-to-be-wild/"
+  },
+  {
+    "id": "thai-chicken-pizza",
+    "name": "Brix Tavern",
+    "neighborhood": "Pearl District",
+    "pizzaName": "Thai Chicken Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NjMxODQ2MjI4NC1Ccml4LmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/thai-chicken-pizza/"
+  },
+  {
+    "id": "snyder-weccacoe",
+    "name": "Checkerboard Pizza",
+    "neighborhood": "",
+    "pizzaName": "Snyder Weccacoe",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDI1MDczNDU3NS1DaGVja2VyYm9hcmQuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/snyder-weccacoe/"
+  },
+  {
+    "id": "mediterranean-mojo-lamb",
+    "name": "Clarklewis",
+    "neighborhood": "Buckman",
+    "pizzaName": "Mediterranean Mojo Lamb",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDA4MDc5NDI5Ni1DbGFya2xld2lzLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/mediterranean-mojo-lamb/"
+  },
+  {
+    "id": "pepperoni-pony",
+    "name": "Dante's PizzaSlut",
+    "neighborhood": "Old Town-Chinatown",
+    "pizzaName": "Pepperoni Pony!",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDgxNzE4NTI0NC1EYW50ZXMuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/pepperoni-pony/"
+  },
+  {
+    "id": "pizza-scarp-no-chicken",
+    "name": "Dick's Pizza",
+    "neighborhood": "Sellwood - Moreland",
+    "pizzaName": "PIZZA SCARP, NO CHICKEN",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTg0MzU4ODQzMy1EaWNrcy1QaXp6YS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/pizza-scarp-no-chicken/"
+  },
+  {
+    "id": "the-drunken-pig",
+    "name": "Dimo's Apizza",
+    "neighborhood": "Kerns",
+    "pizzaName": "The Drunken Pig",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDkxOTIxMjg3My1EaW1vcy1BcGl6emEuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/the-drunken-pig/"
+  },
+  {
+    "id": "taos",
+    "name": "Double Mountain Overlook Taproom",
+    "neighborhood": "Overlook",
+    "pizzaName": "Taos",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTE2MDQ4MzI3NC1Eb3VibGUtTW91bnRhaW4tT3Zlcmxvb2suanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/taos/"
+  },
+  {
+    "id": "belly-up-to-the-orchard",
+    "name": "Double Mountain Woodstock Taproom",
+    "neighborhood": "Southeast Portland",
+    "pizzaName": "Belly Up to the Orchard",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTI3NzAzMDE3My1Eb3VibGUtTW91bnRhaW4tV29vZHN0b2NrLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/belly-up-to-the-orchard/"
+  },
+  {
+    "id": "heated-rivalry",
+    "name": "East Glisan Pizza Lounge",
+    "neighborhood": "Montavilla",
+    "pizzaName": "Heated Rivalry",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTU5ODg5ODc1Ny1FYXN0LUdsaXNhbi1QaXp6YS1Mb3VuZ2UuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/heated-rivalry/"
+  },
+  {
+    "id": "smoky-4-2026",
+    "name": "Edan Pizza",
+    "neighborhood": "Downtown Portland",
+    "pizzaName": "Smoky 4/2026",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTg0MzUxMDMxMy1FZGFuLVBpenphLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/smoky-4-2026/"
+  },
+  {
+    "id": "tater-tot-hot-dish-pizza",
+    "name": "Fast Times Pizza & Soft Serve",
+    "neighborhood": "Buckman",
+    "pizzaName": "TATER TOT HOT DISH Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTM4MjkyMzk0Mi1GYXN0LVRpbWVzLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/tater-tot-hot-dish-pizza/"
+  },
+  {
+    "id": "alliuminati",
+    "name": "Fino Bistro & Pizzeria",
+    "neighborhood": "Kenton",
+    "pizzaName": "Alliuminati",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDk1MTEwMTc1My1GaW5vLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/alliuminati/"
+  },
+  {
+    "id": "the-goat-father",
+    "name": "Fire on the Mountain",
+    "neighborhood": "Rose City Park",
+    "pizzaName": "The GOAT Father",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE1MjM0NjkyMjI1Ny1GaXJlLW9udGhlLU1vdW50YWluLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/the-goat-father/"
+  },
+  {
+    "id": "haters-gonna-hate",
+    "name": "Gabby's Next Door",
+    "neighborhood": "Concordia",
+    "pizzaName": "Haters Gonna Hate",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTMzMzc3OTkyLUdhYnlzLU5leHQtRG9vci5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/haters-gonna-hate/"
+  },
+  {
+    "id": "hot-honey-hog",
+    "name": "Good Neighbor Pizzeria",
+    "neighborhood": "Woodlawn",
+    "pizzaName": "Hot Honey Hog",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NjI0NTM5OTc1NS1Hb29kLU5laWdoYm9yLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/hot-honey-hog/"
+  },
+  {
+    "id": "miso-apple-pizza",
+    "name": "Hapa Pizza",
+    "neighborhood": "Beaverton",
+    "pizzaName": "Miso Apple Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTI1OTk4NjMxNi1IYXBhLVBpenphLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/miso-apple-pizza/"
+  },
+  {
+    "id": "the-wurst-pizza-ever",
+    "name": "Hopworks Brewery",
+    "neighborhood": "Creston - Kenilworth",
+    "pizzaName": "The Wurst Pizza Ever",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDI2MDIyNDc0Ni1Ib3B3b3Jrcy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/the-wurst-pizza-ever/"
+  },
+  {
+    "id": "the-lilia",
+    "name": "Humdinger Pizza",
+    "neighborhood": "Lents",
+    "pizzaName": "The Lilia",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDg1MTE1MTQ5MS1IdW1kaW5nZXIuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/the-lilia/"
+  },
+  {
+    "id": "you-asked-for-it",
+    "name": "Lazy Days Brewing",
+    "neighborhood": "Eliot",
+    "pizzaName": "You Asked for It",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTk2Njk0MzMzOS1MYXp5LURheXMtUG9ydGxhbmQuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/you-asked-for-it/"
+  },
+  {
+    "id": "taco-the-town",
+    "name": "Lazy Days Brewing - Beaverton",
+    "neighborhood": "Beaverton",
+    "pizzaName": "Taco The Town",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NjAzMjcwOTg2Ni1MYXp5LURheXMtQmVhdmVydG9uLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/taco-the-town/"
+  },
+  {
+    "id": "the-gravy-train",
+    "name": "Loowit Brewing - Ole's Outpost",
+    "neighborhood": "Vancouver",
+    "pizzaName": "The Gravy Train",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDcwNjM2NDA5NS1Mb293aXQtQnJld2luZy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/the-gravy-train/"
+  },
+  {
+    "id": "chicken-piccata",
+    "name": "Meta Pizza",
+    "neighborhood": "Brooklyn",
+    "pizzaName": "Chicken Piccata",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDY2NjA3OTA2MS1NZXRhLVBpenphLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/chicken-piccata/"
+  },
+  {
+    "id": "whipped-mascarpone-smoked-salmon-pizza",
+    "name": "Metropolitan Tavern",
+    "neighborhood": "Lloyd District",
+    "pizzaName": "Whipped Mascarpone & Smoked Salmon Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDU2MTU1Njk5My1NZXRyb3BvbGl0YW4tVGF2ZXJuLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/whipped-mascarpone-smoked-salmon-pizza/"
+  },
+  {
+    "id": "zingo-starr-it-dont-come-cheesy",
+    "name": "Mississippi Pizza Pub & Atlantis Lounge",
+    "neighborhood": "Boise",
+    "pizzaName": "Zingo Starr (It don't come cheesy)",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTUwMTIyNzQzNjYyOC1NaXNzaXNzaXBwaS1QaXp6YS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/zingo-starr-it-dont-come-cheesy/"
+  },
+  {
+    "id": "primavera",
+    "name": "Mucca Pizzeria",
+    "neighborhood": "Downtown Portland",
+    "pizzaName": "Primavera",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTUyMzcxNjYxMS1NdWNjYS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/primavera/"
+  },
+  {
+    "id": "fig-me-up-before-you-prosciutto",
+    "name": "NASO",
+    "neighborhood": "Ladd's Addition",
+    "pizzaName": "Fig Me Up Before You Prosciutto",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTI5MjQ2OTgxNS1OYXNvLVdpbmUtQmFyLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/fig-me-up-before-you-prosciutto/"
+  },
+  {
+    "id": "gluten-free-buffalo-blue-cheese-chicken-pizza",
+    "name": "New Cascadia Traditional",
+    "neighborhood": "Hosford-Abernethy",
+    "pizzaName": "Gluten-Free Buffalo Blue Cheese Chicken Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDI4NDE4MjAxOS1OZXctQ2FzY2FkaWEuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/gluten-free-buffalo-blue-cheese-chicken-pizza/"
+  },
+  {
+    "id": "shatta-pizza",
+    "name": "Nicholas Restaurant",
+    "neighborhood": "Buckman",
+    "pizzaName": "Shatta Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NjE2OTQ1MzMzNy1OaWNob2xhcy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/shatta-pizza/"
+  },
+  {
+    "id": "lets-get-baked-potato-pizza",
+    "name": "Oakshire Beer Hall",
+    "neighborhood": "Concordia",
+    "pizzaName": "Let's Get Baked Potato Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDk3OTAxOTIyNi1PYWtzaGlyZS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/lets-get-baked-potato-pizza/"
+  },
+  {
+    "id": "the-carmela",
+    "name": "Original Dream Pizza",
+    "neighborhood": "North Tabor",
+    "pizzaName": "The Carmela",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTkwNjM4MTM0LU9yaWdpbmFsLURyZWFtLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/the-carmela/"
+  },
+  {
+    "id": "bend-and-snap",
+    "name": "Oven & Shaker",
+    "neighborhood": "Pearl District",
+    "pizzaName": "Bend and Snap!",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTQyMTkyNDA0LU92ZW4tU2hha2VyLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/bend-and-snap/"
+  },
+  {
+    "id": "the-pauper-prince",
+    "name": "Paladin Pie",
+    "neighborhood": "Alberta",
+    "pizzaName": "The Pauper Prince",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTIzNDUwMjU4LVBhbGFkaW4tUGllLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/the-pauper-prince/"
+  },
+  {
+    "id": "say-when",
+    "name": "Pizza Machine",
+    "neighborhood": "Mount Tabor",
+    "pizzaName": "Say When",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTA5MDY3MjcyOC1QaXp6YS1NYWNoaW5lLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/say-when/"
+  },
+  {
+    "id": "rossa-pizza-caesar",
+    "name": "Pizza Thief",
+    "neighborhood": "Hosford-Abernethy",
+    "pizzaName": "Rossa Pizza Caesar",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTE0OTc5NTYwMS1QaXp6YS1UaGllZi5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/rossa-pizza-caesar/"
+  },
+  {
+    "id": "rossa-pizza-caesar",
+    "name": "Pizza Thief @ Great Notion",
+    "neighborhood": "Northwest Industrial",
+    "pizzaName": "Rossa Pizza Caesar",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTE4NjE0MTY4LVBpenphLVRoZWlmX0dyZWF0LU5vdGlvbi5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/rossa-pizza-caesar/"
+  },
+  {
+    "id": "peace-love-n-chicken",
+    "name": "PLS on Sixth",
+    "neighborhood": "Downtown Portland",
+    "pizzaName": "Peace, Love, 'n Chicken",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDc0NzAzMzkwNy1QTFMtU2l4dGguanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/peace-love-n-chicken/"
+  },
+  {
+    "id": "prosciutto-broccoli-rabe",
+    "name": "Pop Pizza",
+    "neighborhood": "Buckman",
+    "pizzaName": "Prosciutto Broccoli Rabe",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTU1ODMwODIyOC1Qb3AtUGl6emEuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/prosciutto-broccoli-rabe/"
+  },
+  {
+    "id": "you-gotta-ricotta",
+    "name": "Portland Cider Company",
+    "neighborhood": "Clackamas",
+    "pizzaName": "You Gotta Ricotta",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTA1NDUzMTkxNy1Qb3J0bGFuZC1DaWRlci5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/you-gotta-ricotta/"
+  },
+  {
+    "id": "artichoke-garlic-pizza",
+    "name": "Rialto",
+    "neighborhood": "Southwest Portland",
+    "pizzaName": "Artichoke Garlic Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE1MzExNTg5NTAwOC1SaWFsdG8uanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/artichoke-garlic-pizza/"
+  },
+  {
+    "id": "super-mario-galaxy-pizza",
+    "name": "Rudy's Gourmet Pizza",
+    "neighborhood": "Creston - Kenilworth",
+    "pizzaName": "Super Mario Galaxy Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDIxODgwOTQwNS1SdWR5cy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/super-mario-galaxy-pizza/"
+  },
+  {
+    "id": "one-hit-wonder",
+    "name": "Ruse Brewing",
+    "neighborhood": "Slabtown",
+    "pizzaName": "One Hit Wonder",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTg3NDk0MjE0OS1SdXNlLUJyZXdpbmcuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/one-hit-wonder/"
+  },
+  {
+    "id": "sausage-pesto",
+    "name": "Satellite Tavern",
+    "neighborhood": "Overlook",
+    "pizzaName": "Sausage Pesto",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTUwMTM0NTMwNDMzLVNhdGVsbGl0ZS1UYXZlcm4uanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/sausage-pesto/"
+  },
+  {
+    "id": "bada-bing",
+    "name": "Scottie's Pizza Parlor NW",
+    "neighborhood": "Nob Hill",
+    "pizzaName": "Bada Bing!",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDczNjY2NzIwMy1TY290dGllcy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/bada-bing/"
+  },
+  {
+    "id": "bada-bing",
+    "name": "Scottie's Pizza Parlor SE",
+    "neighborhood": "Hosford-Abernethy",
+    "pizzaName": "Bada Bing!",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDc5NDQxNTU1My1TY290dGllcy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/bada-bing/"
+  },
+  {
+    "id": "havana-slice",
+    "name": "Signal Station Pizza",
+    "neighborhood": "North Portland",
+    "pizzaName": "Havana Slice",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDg4MDY3MjUyMS1TaWduYWwtU3RhdGlvbi5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/havana-slice/"
+  },
+  {
+    "id": "happiness-is-a-shawarm-gun",
+    "name": "Straight From New York Pizza",
+    "neighborhood": "Hawthorne District",
+    "pizzaName": "Happiness is a Shawarm Gun",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDIwNjU5NDE5My1TRk5ZLUhhd3Rob3JuZS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/happiness-is-a-shawarm-gun/"
+  },
+  {
+    "id": "the-pork-store",
+    "name": "Straight From New York Pizza",
+    "neighborhood": "Sunnyside",
+    "pizzaName": "The Pork Store",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDA5MjQ1Mzg4Ni1TRk5ZLUJlbG1vbnQuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/the-pork-store/"
+  },
+  {
+    "id": "chicken-breast-and-artichoke-pizza",
+    "name": "Taylor Street Tavern",
+    "neighborhood": "Downtown Portland",
+    "pizzaName": "Chicken Breast and Artichoke Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTczMzEzODI5NC1UYXlsb3ItU3RyZWV0LmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/chicken-breast-and-artichoke-pizza/"
+  },
+  {
+    "id": "staten-island-trio",
+    "name": "The Focacceria",
+    "neighborhood": "Sellwood - Moreland",
+    "pizzaName": "Staten Island Trio",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTU5Mzc0MDE1MDU4MS1Gb2NhY2NlcmlhLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/staten-island-trio/"
+  },
+  {
+    "id": "taumoeba",
+    "name": "The Secret Pizza Society",
+    "neighborhood": "Montavilla",
+    "pizzaName": "TAUMOEBA",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDQ4ODkyMzk4Ny1TZWNyZXQtUGl6emEtU29jaWV0eS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/taumoeba/"
+  },
+  {
+    "id": "cash-rules-everything-guanciale-creme-fraiche-get-salami-pickled-pickled-fennel-yall",
+    "name": "The Social Spoon",
+    "neighborhood": "Downtown Portland",
+    "pizzaName": "Cash Rules Everything Guanciale / Creme Fraiche / Get Salami / Pickled Pickled Fennel Y'all",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDU5ODcyNzQyNi1Tb2NpYWwtU3Bvb24uanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/cash-rules-everything-guanciale-creme-fraiche-get-salami-pickled-pickled-fennel-yall/"
+  },
+  {
+    "id": "country-reuben-pizza",
+    "name": "The Star",
+    "neighborhood": "Northwest Portland",
+    "pizzaName": "Country Reuben Pizza",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTQ3NTczMTUwNC1TdGFyLVBpenphLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/country-reuben-pizza/"
+  },
+  {
+    "id": "athena-dion",
+    "name": "Via Chicago",
+    "neighborhood": "Humboldt",
+    "pizzaName": "Athena Dion",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTAwNjYxNzYxMy1WaWEtQ2hpY2Fnby5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/athena-dion/"
+  },
+  {
+    "id": "flaming-mac-n-cheeto",
+    "name": "Von Ebert Brewing",
+    "neighborhood": "Beaverton",
+    "pizzaName": "Flaming Mac N' Cheeto",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDUzNjI4NTUtVm9uLUViZXJ0LUJlYXZlcnRvbi5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/flaming-mac-n-cheeto/"
+  },
+  {
+    "id": "everything-but-the-bagel",
+    "name": "Von Ebert Brewing Glendoveer + Kitchen",
+    "neighborhood": "East Portland",
+    "pizzaName": "Everything But The Bagel",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTEyMDA3NzYxNy1Wb24tRWJlcnQtR2xlbmRvdmVlci5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
+    "everoutUrl": "https://everout.com/portland/events/everything-but-the-bagel/"
+  },
+  {
+    "id": "the-garden-father",
+    "name": "World Foods",
+    "neighborhood": "Northwest Portland",
+    "pizzaName": "The Garden Father",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTY4ODA0MDM2Mi1Xb3JsZC1Gb29kcy1FdmVyZXR0LmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/the-garden-father/"
+  },
+  {
+    "id": "baa-baa-boom",
+    "name": "Ya Hala",
+    "neighborhood": "Montavilla",
+    "pizzaName": "\u201cBaa Baa\u201d Boom",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTYyNzk4MDk5LVlhLUhhbGEuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
+    "everoutUrl": "https://everout.com/portland/events/baa-baa-boom/"
+  },
+  {
+    "id": "the-italian-big-mac",
+    "name": "Yum's of PDX",
+    "neighborhood": "Buckman",
+    "pizzaName": "The Italian Big Mac",
+    "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDMxMTYzNjcyNi1ZdW1zLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
+    "everoutUrl": "https://everout.com/portland/events/the-italian-big-mac/"
+  }
+]
