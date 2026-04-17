@@ -30,7 +30,7 @@ export const LocationCard = ({ location, visit, onClick, index }: Props) => {
           loading="lazy"
           className={cn(
             "w-full h-full object-cover transition-all duration-500",
-            !visited && "grayscale-card group-hover:grayscale-0",
+            visited && "grayscale-card group-hover:grayscale-0",
           )}
         />
         {visited && (
