@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { Pizza, Search, Settings as SettingsIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+import { BarChart3, Pizza, Search, Settings as SettingsIcon } from "lucide-react";
 import locationsData from "@/data/locations.json";
 import type { Location, User, Visit } from "@/types/pizza";
 import { getUser, saveUser, upsertVisit, removeVisit, clearAll } from "@/lib/storage";
@@ -96,10 +97,17 @@ const Index = () => {
           <div className="hidden sm:block bg-mozz border-2 border-ink px-3 py-1 rounded-md font-display tracking-widest text-sm">
             APR 20–26
           </div>
+          <Link
+            to="/stats"
+            aria-label="My stats"
+            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
+          >
+            <BarChart3 className="h-4 w-4" />
+          </Link>
           <button
             onClick={() => setSettingsOpen(true)}
             aria-label="Settings"
-            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm"
+            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
           >
             <SettingsIcon className="h-4 w-4" />
           </button>
