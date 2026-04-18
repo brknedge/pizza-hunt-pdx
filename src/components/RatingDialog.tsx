@@ -94,6 +94,27 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
             </span>
           </div>
 
+          {(location.ingredients || location.blurb) && (
+            <div className="border-2 border-ink rounded-lg bg-mozz/40 p-3 space-y-2">
+              {location.ingredients && (
+                <div>
+                  <div className="font-display text-sm tracking-widest text-marinara">
+                    WHAT'S ON IT
+                  </div>
+                  <p className="text-sm leading-snug mt-0.5">{location.ingredients}</p>
+                </div>
+              )}
+              {location.blurb && (
+                <div>
+                  <div className="font-display text-sm tracking-widest text-marinara">
+                    WHAT THEY SAY
+                  </div>
+                  <p className="text-sm leading-snug mt-0.5 italic">"{location.blurb}"</p>
+                </div>
+              )}
+            </div>
+          )}
+
           <div className="space-y-3">
             {CATEGORIES.map((c) => (
               <div key={c.key} className="flex items-center justify-between gap-3 border-b border-dashed border-muted pb-3 last:border-0">
