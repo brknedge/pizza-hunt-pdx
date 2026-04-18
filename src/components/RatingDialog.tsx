@@ -68,18 +68,20 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-lg max-h-[90dvh] overflow-y-auto bg-card border-2 border-ink shadow-zine-lg p-0 rounded-xl">
-        <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+      <DialogContent className="max-w-lg max-h-[90dvh] overflow-hidden bg-card border-2 border-ink shadow-zine-lg p-0 rounded-xl flex flex-col">
+        <div className="relative aspect-[16/9] overflow-hidden bg-muted shrink-0">
           <img src={location.imageUrl} alt={location.pizzaName} className="w-full h-full object-cover" />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-            <p className="text-secondary font-semibold text-sm">{location.name} · {location.neighborhood}</p>
-            <DialogTitle className="font-display text-3xl text-white tracking-wide leading-tight">
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent px-5 pt-10 pb-4">
+            <p className="text-mozz font-semibold text-sm leading-tight">
+              {location.name} · {location.neighborhood}
+            </p>
+            <DialogTitle className="font-display text-2xl sm:text-3xl text-white tracking-wide leading-tight mt-0.5">
               {location.pizzaName}
             </DialogTitle>
           </div>
         </div>
 
-        <div className="p-5 space-y-5">
+        <div className="p-5 space-y-5 overflow-y-auto flex-1 min-h-0">
           <DialogHeader className="sr-only">
             <DialogTitle>{location.pizzaName}</DialogTitle>
           </DialogHeader>
