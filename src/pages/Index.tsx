@@ -15,7 +15,14 @@ import {
 
 const LOCATIONS = locationsData as Location[];
 
-type Filter = "all" | "visited" | "unvisited" | string;
+type Filter =
+  | "all"
+  | "visited"
+  | "unvisited"
+  | "vegetarian"
+  | "vegan"
+  | "gluten-free"
+  | string;
 
 const Index = () => {
   const [user, setUser] = useState<User | null>(null);
