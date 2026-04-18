@@ -39,6 +39,40 @@ export const LocationCard = ({ location, visit, onClick, index }: Props) => {
             <span className="font-display text-sm tracking-wide">VISITED</span>
           </div>
         )}
+        <div className="absolute top-2 left-2 flex flex-col gap-1 items-start">
+          {location.dietary.includes("vegan") && (
+            <span
+              title="Vegan"
+              className="bg-card border-2 border-ink rounded-md px-1.5 py-0.5 font-display text-xs tracking-wide shadow-zine-sm"
+            >
+              🌱 VEGAN
+            </span>
+          )}
+          {location.dietary.includes("vegetarian") && !location.dietary.includes("vegan") && (
+            <span
+              title="Vegetarian"
+              className="bg-card border-2 border-ink rounded-md px-1.5 py-0.5 font-display text-xs tracking-wide shadow-zine-sm"
+            >
+              🥬 VEG
+            </span>
+          )}
+          {(location.glutenFree === "yes" ||
+            location.glutenFree === "available-same-price" ||
+            location.glutenFree === "available-with-surcharge") && (
+            <span
+              title={
+                location.glutenFree === "yes"
+                  ? "Gluten-free"
+                  : location.glutenFree === "available-same-price"
+                  ? "GF available (same price)"
+                  : "GF available (surcharge)"
+              }
+              className="bg-card border-2 border-ink rounded-md px-1.5 py-0.5 font-display text-xs tracking-wide shadow-zine-sm"
+            >
+              🌾 GF
+            </span>
+          )}
+        </div>
         {visited && overall > 0 && (
           <div className="absolute bottom-2 left-2 bg-marinara text-primary-foreground border-2 border-ink rounded-md px-2 py-0.5 font-display text-base tracking-wide shadow-zine-sm">
             ★ {overall}/5
