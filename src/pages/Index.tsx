@@ -153,10 +153,13 @@ const Index = () => {
             <SelectTrigger className="w-full sm:w-56 h-11 border-2 border-ink shadow-zine-sm rounded-lg bg-card font-semibold">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="border-2 border-ink">
+            <SelectContent className="border-2 border-ink max-h-80">
               <SelectItem value="all">All locations</SelectItem>
               <SelectItem value="visited">Visited only</SelectItem>
               <SelectItem value="unvisited">Unvisited only</SelectItem>
+              <SelectItem value="vegetarian">🥬 Vegetarian</SelectItem>
+              <SelectItem value="vegan">🌱 Vegan</SelectItem>
+              <SelectItem value="gluten-free">🌾 Gluten-free option</SelectItem>
               {neighborhoods.map((n) => (
                 <SelectItem key={n} value={n}>{n}</SelectItem>
               ))}
