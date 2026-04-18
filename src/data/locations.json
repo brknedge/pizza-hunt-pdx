@@ -5,7 +5,14 @@
     "neighborhood": "Pearl District",
     "pizzaName": "Spuds Mackenzie",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE1MjM5MDY2NjI0NS0xMC1CYXJyZWwuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/spuds-mackenzie/"
+    "everoutUrl": "https://everout.com/portland/events/spuds-mackenzie/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "the-farm-feast",
@@ -13,7 +20,15 @@
     "neighborhood": "Southwest Portland",
     "pizzaName": "The Farm Feast",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTA2MTc2OTAyNC0yMXN0LUNlbnR1cnkuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/the-farm-feast/"
+    "everoutUrl": "https://everout.com/portland/events/the-farm-feast/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "crema-my-pork",
@@ -21,7 +36,15 @@
     "neighborhood": "South Portland",
     "pizzaName": "Crema My Pork",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE3MjIxNjMxODI1OS00OC1Ob3J0aC5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/crema-my-pork/"
+    "everoutUrl": "https://everout.com/portland/events/crema-my-pork/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "the-hot-date",
@@ -29,7 +52,14 @@
     "neighborhood": "Richmond",
     "pizzaName": "The Hot Date",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTgwOTQyOTg4MS1BdGxhcy1QaXp6YS1EaXZpc2lvbi5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/the-hot-date/"
+    "everoutUrl": "https://everout.com/portland/events/the-hot-date/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "schwilly-pie",
@@ -37,7 +67,14 @@
     "neighborhood": "Foster - Powell",
     "pizzaName": "Schwilly Pie",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTc1NjIwOTg1LUF0bGFzLVBpenphLUZvc3Rlci5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/schwilly-pie/"
+    "everoutUrl": "https://everout.com/portland/events/schwilly-pie/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "the-kim-chi-possible",
@@ -45,7 +82,14 @@
     "neighborhood": "North Portland",
     "pizzaName": "The Kim(chi)-Possible",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTc4NDEwNjgwOS1BdGxhcy1QaXp6YS1LaWxsaW5nc3dvcnRoLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/the-kim-chi-possible/"
+    "everoutUrl": "https://everout.com/portland/events/the-kim-chi-possible/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "a-reuben-jamaica-ooh-i-wanna-take-ya-to-baby-doll-pizza",
@@ -53,7 +97,15 @@
     "neighborhood": "Kerns",
     "pizzaName": "A-Reuben, Jamaica, Ooh I Wanna Take Ya (To Baby Doll Pizza)",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE3MjMyMjY3MzAwNi1CYWJ5ZG9sbC1Tb3V0aGVhc3QuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/a-reuben-jamaica-ooh-i-wanna-take-ya-to-baby-doll-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/a-reuben-jamaica-ooh-i-wanna-take-ya-to-baby-doll-pizza/",
+    "dietary": [
+      "vegetarian",
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "belly-of-the-beast",
@@ -61,7 +113,14 @@
     "neighborhood": "King",
     "pizzaName": "Belly of the Beast",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE3MjI3Mzc1MDUzMy1CYWJ5ZG9sbC1NTEsuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/belly-of-the-beast/"
+    "everoutUrl": "https://everout.com/portland/events/belly-of-the-beast/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "triple-mac-cheese-pizza",
@@ -69,7 +128,14 @@
     "neighborhood": "Southwest Portland",
     "pizzaName": "Triple (Mac &) Cheese Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTY1ODI4NjIxMy1CYXJidXItV29ybGQtRm9vZHMuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/triple-mac-cheese-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/triple-mac-cheese-pizza/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "chicken-bacon-ranch-pizza",
@@ -77,7 +143,15 @@
     "neighborhood": "Mount Tabor",
     "pizzaName": "Chicken Bacon Ranch Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDQ0NzExNTcwMS1CbGluZC1Pbmlvbi1CZWxtb250LmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/chicken-bacon-ranch-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/chicken-bacon-ranch-pizza/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "the-caeza",
@@ -85,7 +159,16 @@
     "neighborhood": "Grant Park",
     "pizzaName": "The Cae'Za",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDQxMTYzMjg0Mi1CbGluZC1Pbmlvbi1Ccm9hZHdheS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/the-caeza/"
+    "everoutUrl": "https://everout.com/portland/events/the-caeza/",
+    "dietary": [
+      "vegetarian",
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "banh-to-be-wild",
@@ -93,7 +176,15 @@
     "neighborhood": "Kerns",
     "pizzaName": "Banh To Be Wild",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDEzODk4ODE4Ny1Cb3hjYXItUGl6emEuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJsZWZ0IiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/banh-to-be-wild/"
+    "everoutUrl": "https://everout.com/portland/events/banh-to-be-wild/",
+    "dietary": [
+      "vegan"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "thai-chicken-pizza",
@@ -101,7 +192,14 @@
     "neighborhood": "Pearl District",
     "pizzaName": "Thai Chicken Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NjMxODQ2MjI4NC1Ccml4LmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/thai-chicken-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/thai-chicken-pizza/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "snyder-weccacoe",
@@ -109,7 +207,15 @@
     "neighborhood": "",
     "pizzaName": "Snyder Weccacoe",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDI1MDczNDU3NS1DaGVja2VyYm9hcmQuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/snyder-weccacoe/"
+    "everoutUrl": "https://everout.com/portland/events/snyder-weccacoe/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "mediterranean-mojo-lamb",
@@ -117,7 +223,14 @@
     "neighborhood": "Buckman",
     "pizzaName": "Mediterranean Mojo Lamb",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDA4MDc5NDI5Ni1DbGFya2xld2lzLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/mediterranean-mojo-lamb/"
+    "everoutUrl": "https://everout.com/portland/events/mediterranean-mojo-lamb/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "pepperoni-pony",
@@ -125,7 +238,15 @@
     "neighborhood": "Old Town-Chinatown",
     "pizzaName": "Pepperoni Pony!",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDgxNzE4NTI0NC1EYW50ZXMuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/pepperoni-pony/"
+    "everoutUrl": "https://everout.com/portland/events/pepperoni-pony/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "pizza-scarp-no-chicken",
@@ -133,7 +254,14 @@
     "neighborhood": "Sellwood - Moreland",
     "pizzaName": "PIZZA SCARP, NO CHICKEN",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTg0MzU4ODQzMy1EaWNrcy1QaXp6YS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/pizza-scarp-no-chicken/"
+    "everoutUrl": "https://everout.com/portland/events/pizza-scarp-no-chicken/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "the-drunken-pig",
@@ -141,7 +269,16 @@
     "neighborhood": "Kerns",
     "pizzaName": "The Drunken Pig",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDkxOTIxMjg3My1EaW1vcy1BcGl6emEuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/the-drunken-pig/"
+    "everoutUrl": "https://everout.com/portland/events/the-drunken-pig/",
+    "dietary": [
+      "vegetarian",
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "taos",
@@ -149,7 +286,14 @@
     "neighborhood": "Overlook",
     "pizzaName": "Taos",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTE2MDQ4MzI3NC1Eb3VibGUtTW91bnRhaW4tT3Zlcmxvb2suanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/taos/"
+    "everoutUrl": "https://everout.com/portland/events/taos/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "belly-up-to-the-orchard",
@@ -157,7 +301,14 @@
     "neighborhood": "Southeast Portland",
     "pizzaName": "Belly Up to the Orchard",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTI3NzAzMDE3My1Eb3VibGUtTW91bnRhaW4tV29vZHN0b2NrLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/belly-up-to-the-orchard/"
+    "everoutUrl": "https://everout.com/portland/events/belly-up-to-the-orchard/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "heated-rivalry",
@@ -165,7 +316,16 @@
     "neighborhood": "Montavilla",
     "pizzaName": "Heated Rivalry",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTU5ODg5ODc1Ny1FYXN0LUdsaXNhbi1QaXp6YS1Mb3VuZ2UuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/heated-rivalry/"
+    "everoutUrl": "https://everout.com/portland/events/heated-rivalry/",
+    "dietary": [
+      "vegetarian",
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "smoky-4-2026",
@@ -173,7 +333,15 @@
     "neighborhood": "Downtown Portland",
     "pizzaName": "Smoky 4/2026",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTg0MzUxMDMxMy1FZGFuLVBpenphLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/smoky-4-2026/"
+    "everoutUrl": "https://everout.com/portland/events/smoky-4-2026/",
+    "dietary": [
+      "vegetarian",
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "tater-tot-hot-dish-pizza",
@@ -181,7 +349,16 @@
     "neighborhood": "Buckman",
     "pizzaName": "TATER TOT HOT DISH Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTM4MjkyMzk0Mi1GYXN0LVRpbWVzLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/tater-tot-hot-dish-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/tater-tot-hot-dish-pizza/",
+    "dietary": [
+      "vegan",
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "alliuminati",
@@ -189,7 +366,14 @@
     "neighborhood": "Kenton",
     "pizzaName": "Alliuminati",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDk1MTEwMTc1My1GaW5vLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/alliuminati/"
+    "everoutUrl": "https://everout.com/portland/events/alliuminati/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "the-goat-father",
@@ -197,7 +381,15 @@
     "neighborhood": "Rose City Park",
     "pizzaName": "The GOAT Father",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE1MjM0NjkyMjI1Ny1GaXJlLW9udGhlLU1vdW50YWluLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/the-goat-father/"
+    "everoutUrl": "https://everout.com/portland/events/the-goat-father/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "haters-gonna-hate",
@@ -205,7 +397,14 @@
     "neighborhood": "Concordia",
     "pizzaName": "Haters Gonna Hate",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTMzMzc3OTkyLUdhYnlzLU5leHQtRG9vci5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/haters-gonna-hate/"
+    "everoutUrl": "https://everout.com/portland/events/haters-gonna-hate/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "hot-honey-hog",
@@ -213,7 +412,14 @@
     "neighborhood": "Woodlawn",
     "pizzaName": "Hot Honey Hog",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NjI0NTM5OTc1NS1Hb29kLU5laWdoYm9yLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/hot-honey-hog/"
+    "everoutUrl": "https://everout.com/portland/events/hot-honey-hog/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "miso-apple-pizza",
@@ -221,7 +427,14 @@
     "neighborhood": "Beaverton",
     "pizzaName": "Miso Apple Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTI1OTk4NjMxNi1IYXBhLVBpenphLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/miso-apple-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/miso-apple-pizza/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "the-wurst-pizza-ever",
@@ -229,7 +442,15 @@
     "neighborhood": "Creston - Kenilworth",
     "pizzaName": "The Wurst Pizza Ever",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDI2MDIyNDc0Ni1Ib3B3b3Jrcy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/the-wurst-pizza-ever/"
+    "everoutUrl": "https://everout.com/portland/events/the-wurst-pizza-ever/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "the-lilia",
@@ -237,7 +458,14 @@
     "neighborhood": "Lents",
     "pizzaName": "The Lilia",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDg1MTE1MTQ5MS1IdW1kaW5nZXIuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/the-lilia/"
+    "everoutUrl": "https://everout.com/portland/events/the-lilia/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "you-asked-for-it",
@@ -245,7 +473,15 @@
     "neighborhood": "Eliot",
     "pizzaName": "You Asked for It",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTk2Njk0MzMzOS1MYXp5LURheXMtUG9ydGxhbmQuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/you-asked-for-it/"
+    "everoutUrl": "https://everout.com/portland/events/you-asked-for-it/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "taco-the-town",
@@ -253,7 +489,15 @@
     "neighborhood": "Beaverton",
     "pizzaName": "Taco The Town",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NjAzMjcwOTg2Ni1MYXp5LURheXMtQmVhdmVydG9uLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/taco-the-town/"
+    "everoutUrl": "https://everout.com/portland/events/taco-the-town/",
+    "dietary": [
+      "vegetarian",
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "the-gravy-train",
@@ -261,7 +505,14 @@
     "neighborhood": "Vancouver",
     "pizzaName": "The Gravy Train",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDcwNjM2NDA5NS1Mb293aXQtQnJld2luZy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/the-gravy-train/"
+    "everoutUrl": "https://everout.com/portland/events/the-gravy-train/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "chicken-piccata",
@@ -269,7 +520,15 @@
     "neighborhood": "Brooklyn",
     "pizzaName": "Chicken Piccata",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDY2NjA3OTA2MS1NZXRhLVBpenphLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/chicken-piccata/"
+    "everoutUrl": "https://everout.com/portland/events/chicken-piccata/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "whipped-mascarpone-smoked-salmon-pizza",
@@ -277,7 +536,14 @@
     "neighborhood": "Lloyd District",
     "pizzaName": "Whipped Mascarpone & Smoked Salmon Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDU2MTU1Njk5My1NZXRyb3BvbGl0YW4tVGF2ZXJuLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/whipped-mascarpone-smoked-salmon-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/whipped-mascarpone-smoked-salmon-pizza/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "zingo-starr-it-dont-come-cheesy",
@@ -285,7 +551,15 @@
     "neighborhood": "Boise",
     "pizzaName": "Zingo Starr (It don't come cheesy)",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTUwMTIyNzQzNjYyOC1NaXNzaXNzaXBwaS1QaXp6YS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/zingo-starr-it-dont-come-cheesy/"
+    "everoutUrl": "https://everout.com/portland/events/zingo-starr-it-dont-come-cheesy/",
+    "dietary": [
+      "vegan"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "primavera",
@@ -293,7 +567,14 @@
     "neighborhood": "Downtown Portland",
     "pizzaName": "Primavera",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTUyMzcxNjYxMS1NdWNjYS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/primavera/"
+    "everoutUrl": "https://everout.com/portland/events/primavera/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "fig-me-up-before-you-prosciutto",
@@ -301,7 +582,16 @@
     "neighborhood": "Ladd's Addition",
     "pizzaName": "Fig Me Up Before You Prosciutto",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTI5MjQ2OTgxNS1OYXNvLVdpbmUtQmFyLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/fig-me-up-before-you-prosciutto/"
+    "everoutUrl": "https://everout.com/portland/events/fig-me-up-before-you-prosciutto/",
+    "dietary": [
+      "vegetarian",
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "gluten-free-buffalo-blue-cheese-chicken-pizza",
@@ -309,7 +599,15 @@
     "neighborhood": "Hosford-Abernethy",
     "pizzaName": "Gluten-Free Buffalo Blue Cheese Chicken Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDI4NDE4MjAxOS1OZXctQ2FzY2FkaWEuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/gluten-free-buffalo-blue-cheese-chicken-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/gluten-free-buffalo-blue-cheese-chicken-pizza/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "yes",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "shatta-pizza",
@@ -317,7 +615,14 @@
     "neighborhood": "Buckman",
     "pizzaName": "Shatta Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NjE2OTQ1MzMzNy1OaWNob2xhcy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/shatta-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/shatta-pizza/",
+    "dietary": [
+      "vegan"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "lets-get-baked-potato-pizza",
@@ -325,7 +630,14 @@
     "neighborhood": "Concordia",
     "pizzaName": "Let's Get Baked Potato Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDk3OTAxOTIyNi1PYWtzaGlyZS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/lets-get-baked-potato-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/lets-get-baked-potato-pizza/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "the-carmela",
@@ -333,7 +645,15 @@
     "neighborhood": "North Tabor",
     "pizzaName": "The Carmela",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTkwNjM4MTM0LU9yaWdpbmFsLURyZWFtLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/the-carmela/"
+    "everoutUrl": "https://everout.com/portland/events/the-carmela/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "bend-and-snap",
@@ -341,7 +661,14 @@
     "neighborhood": "Pearl District",
     "pizzaName": "Bend and Snap!",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTQyMTkyNDA0LU92ZW4tU2hha2VyLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/bend-and-snap/"
+    "everoutUrl": "https://everout.com/portland/events/bend-and-snap/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "the-pauper-prince",
@@ -349,7 +676,15 @@
     "neighborhood": "Alberta",
     "pizzaName": "The Pauper Prince",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTIzNDUwMjU4LVBhbGFkaW4tUGllLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/the-pauper-prince/"
+    "everoutUrl": "https://everout.com/portland/events/the-pauper-prince/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "say-when",
@@ -357,7 +692,14 @@
     "neighborhood": "Mount Tabor",
     "pizzaName": "Say When",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTA5MDY3MjcyOC1QaXp6YS1NYWNoaW5lLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/say-when/"
+    "everoutUrl": "https://everout.com/portland/events/say-when/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "rossa-pizza-caesar",
@@ -365,7 +707,15 @@
     "neighborhood": "Hosford-Abernethy",
     "pizzaName": "Rossa Pizza Caesar",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTE0OTc5NTYwMS1QaXp6YS1UaGllZi5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/rossa-pizza-caesar/"
+    "everoutUrl": "https://everout.com/portland/events/rossa-pizza-caesar/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "rossa-pizza-caesar",
@@ -373,7 +723,15 @@
     "neighborhood": "Northwest Industrial",
     "pizzaName": "Rossa Pizza Caesar",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTE4NjE0MTY4LVBpenphLVRoZWlmX0dyZWF0LU5vdGlvbi5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/rossa-pizza-caesar/"
+    "everoutUrl": "https://everout.com/portland/events/rossa-pizza-caesar/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "peace-love-n-chicken",
@@ -381,7 +739,14 @@
     "neighborhood": "Downtown Portland",
     "pizzaName": "Peace, Love, 'n Chicken",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDc0NzAzMzkwNy1QTFMtU2l4dGguanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/peace-love-n-chicken/"
+    "everoutUrl": "https://everout.com/portland/events/peace-love-n-chicken/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-same-price",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "prosciutto-broccoli-rabe",
@@ -389,7 +754,15 @@
     "neighborhood": "Buckman",
     "pizzaName": "Prosciutto Broccoli Rabe",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTU1ODMwODIyOC1Qb3AtUGl6emEuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/prosciutto-broccoli-rabe/"
+    "everoutUrl": "https://everout.com/portland/events/prosciutto-broccoli-rabe/",
+    "dietary": [
+      "vegetarian",
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "you-gotta-ricotta",
@@ -397,7 +770,14 @@
     "neighborhood": "Clackamas",
     "pizzaName": "You Gotta Ricotta",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTA1NDUzMTkxNy1Qb3J0bGFuZC1DaWRlci5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/you-gotta-ricotta/"
+    "everoutUrl": "https://everout.com/portland/events/you-gotta-ricotta/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "available-same-price",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "artichoke-garlic-pizza",
@@ -405,7 +785,14 @@
     "neighborhood": "Southwest Portland",
     "pizzaName": "Artichoke Garlic Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE1MzExNTg5NTAwOC1SaWFsdG8uanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/artichoke-garlic-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/artichoke-garlic-pizza/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "super-mario-galaxy-pizza",
@@ -413,7 +800,15 @@
     "neighborhood": "Creston - Kenilworth",
     "pizzaName": "Super Mario Galaxy Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDIxODgwOTQwNS1SdWR5cy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/super-mario-galaxy-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/super-mario-galaxy-pizza/",
+    "dietary": [
+      "vegan",
+      "meat"
+    ],
+    "glutenFree": "yes",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "one-hit-wonder",
@@ -421,7 +816,14 @@
     "neighborhood": "Slabtown",
     "pizzaName": "One Hit Wonder",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTg3NDk0MjE0OS1SdXNlLUJyZXdpbmcuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/one-hit-wonder/"
+    "everoutUrl": "https://everout.com/portland/events/one-hit-wonder/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "sausage-pesto",
@@ -429,7 +831,15 @@
     "neighborhood": "Overlook",
     "pizzaName": "Sausage Pesto",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTUwMTM0NTMwNDMzLVNhdGVsbGl0ZS1UYXZlcm4uanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/sausage-pesto/"
+    "everoutUrl": "https://everout.com/portland/events/sausage-pesto/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "bada-bing",
@@ -437,7 +847,15 @@
     "neighborhood": "Nob Hill",
     "pizzaName": "Bada Bing!",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDczNjY2NzIwMy1TY290dGllcy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/bada-bing/"
+    "everoutUrl": "https://everout.com/portland/events/bada-bing/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "bada-bing",
@@ -445,7 +863,15 @@
     "neighborhood": "Hosford-Abernethy",
     "pizzaName": "Bada Bing!",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDc5NDQxNTU1My1TY290dGllcy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/bada-bing/"
+    "everoutUrl": "https://everout.com/portland/events/bada-bing/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "havana-slice",
@@ -453,7 +879,15 @@
     "neighborhood": "North Portland",
     "pizzaName": "Havana Slice",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDg4MDY3MjUyMS1TaWduYWwtU3RhdGlvbi5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/havana-slice/"
+    "everoutUrl": "https://everout.com/portland/events/havana-slice/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "happiness-is-a-shawarm-gun",
@@ -461,7 +895,15 @@
     "neighborhood": "Hawthorne District",
     "pizzaName": "Happiness is a Shawarm Gun",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDIwNjU5NDE5My1TRk5ZLUhhd3Rob3JuZS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/happiness-is-a-shawarm-gun/"
+    "everoutUrl": "https://everout.com/portland/events/happiness-is-a-shawarm-gun/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "the-pork-store",
@@ -469,7 +911,15 @@
     "neighborhood": "Sunnyside",
     "pizzaName": "The Pork Store",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDA5MjQ1Mzg4Ni1TRk5ZLUJlbG1vbnQuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/the-pork-store/"
+    "everoutUrl": "https://everout.com/portland/events/the-pork-store/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "chicken-breast-and-artichoke-pizza",
@@ -477,7 +927,14 @@
     "neighborhood": "Downtown Portland",
     "pizzaName": "Chicken Breast and Artichoke Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NTczMzEzODI5NC1UYXlsb3ItU3RyZWV0LmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/chicken-breast-and-artichoke-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/chicken-breast-and-artichoke-pizza/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "staten-island-trio",
@@ -485,7 +942,15 @@
     "neighborhood": "Sellwood - Moreland",
     "pizzaName": "Staten Island Trio",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTU5Mzc0MDE1MDU4MS1Gb2NhY2NlcmlhLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/staten-island-trio/"
+    "everoutUrl": "https://everout.com/portland/events/staten-island-trio/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "taumoeba",
@@ -493,7 +958,15 @@
     "neighborhood": "Montavilla",
     "pizzaName": "TAUMOEBA",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDQ4ODkyMzk4Ny1TZWNyZXQtUGl6emEtU29jaWV0eS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/taumoeba/"
+    "everoutUrl": "https://everout.com/portland/events/taumoeba/",
+    "dietary": [
+      "vegan"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "cash-rules-everything-guanciale-creme-fraiche-get-salami-pickled-pickled-fennel-yall",
@@ -501,7 +974,15 @@
     "neighborhood": "Downtown Portland",
     "pizzaName": "Cash Rules Everything Guanciale / Creme Fraiche / Get Salami / Pickled Pickled Fennel Y'all",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDU5ODcyNzQyNi1Tb2NpYWwtU3Bvb24uanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/cash-rules-everything-guanciale-creme-fraiche-get-salami-pickled-pickled-fennel-yall/"
+    "everoutUrl": "https://everout.com/portland/events/cash-rules-everything-guanciale-creme-fraiche-get-salami-pickled-pickled-fennel-yall/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "country-reuben-pizza",
@@ -509,7 +990,14 @@
     "neighborhood": "Northwest Portland",
     "pizzaName": "Country Reuben Pizza",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTQ3NTczMTUwNC1TdGFyLVBpenphLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/country-reuben-pizza/"
+    "everoutUrl": "https://everout.com/portland/events/country-reuben-pizza/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "whole-pie"
+    ]
   },
   {
     "id": "athena-dion",
@@ -517,7 +1005,15 @@
     "neighborhood": "Humboldt",
     "pizzaName": "Athena Dion",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTAwNjYxNzYxMy1WaWEtQ2hpY2Fnby5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/athena-dion/"
+    "everoutUrl": "https://everout.com/portland/events/athena-dion/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "flaming-mac-n-cheeto",
@@ -525,7 +1021,15 @@
     "neighborhood": "Beaverton",
     "pizzaName": "Flaming Mac N' Cheeto",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MDUzNjI4NTUtVm9uLUViZXJ0LUJlYXZlcnRvbi5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/flaming-mac-n-cheeto/"
+    "everoutUrl": "https://everout.com/portland/events/flaming-mac-n-cheeto/",
+    "dietary": [
+      "vegetarian"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "everything-but-the-bagel",
@@ -533,7 +1037,15 @@
     "neighborhood": "East Portland",
     "pizzaName": "Everything But The Bagel",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTEyMDA3NzYxNy1Wb24tRWJlcnQtR2xlbmRvdmVlci5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsiZml0IjogImNvdmVyIiwgInBvc2l0aW9uIjogImNlbnRyZSIsICJ3aWR0aCI6IDc2NSwgImhlaWdodCI6IDU3MywgIndpdGhvdXRFbmxhcmdlbWVudCI6IGZhbHNlfSwgInJvdGF0ZSI6IG51bGx9fQ==",
-    "everoutUrl": "https://everout.com/portland/events/everything-but-the-bagel/"
+    "everoutUrl": "https://everout.com/portland/events/everything-but-the-bagel/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "available-same-price",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "the-garden-father",
@@ -541,7 +1053,14 @@
     "neighborhood": "Northwest Portland",
     "pizzaName": "The Garden Father",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTY4ODA0MDM2Mi1Xb3JsZC1Gb29kcy1FdmVyZXR0LmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/the-garden-father/"
+    "everoutUrl": "https://everout.com/portland/events/the-garden-father/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice"
+    ]
   },
   {
     "id": "baa-baa-boom",
@@ -549,7 +1068,15 @@
     "neighborhood": "Montavilla",
     "pizzaName": "\u201cBaa Baa\u201d Boom",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NDY1MTYyNzk4MDk5LVlhLUhhbGEuanBnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7ImZpdCI6ICJjb3ZlciIsICJwb3NpdGlvbiI6ICJjZW50cmUiLCAid2lkdGgiOiA3NjUsICJoZWlnaHQiOiA1NzMsICJ3aXRob3V0RW5sYXJnZW1lbnQiOiBmYWxzZX0sICJyb3RhdGUiOiBudWxsfX0=",
-    "everoutUrl": "https://everout.com/portland/events/baa-baa-boom/"
+    "everoutUrl": "https://everout.com/portland/events/baa-baa-boom/",
+    "dietary": [
+      "meat"
+    ],
+    "glutenFree": "no",
+    "servingStyle": [
+      "by-the-slice",
+      "whole-pie"
+    ]
   },
   {
     "id": "the-italian-big-mac",
@@ -557,6 +1084,14 @@
     "neighborhood": "Buckman",
     "pizzaName": "The Italian Big Mac",
     "imageUrl": "https://d2sa0osf92td39.cloudfront.net/eyJidWNrZXQiOiAiZXZlcm91dC1pbWFnZXMtcHJvZHVjdGlvbiIsICJrZXkiOiAiaW1hZ2UtMTc3NTE0NDMxMTYzNjcyNi1ZdW1zLmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJmaXQiOiAiY292ZXIiLCAicG9zaXRpb24iOiAiY2VudHJlIiwgIndpZHRoIjogNzY1LCAiaGVpZ2h0IjogNTczLCAid2l0aG91dEVubGFyZ2VtZW50IjogZmFsc2V9LCAicm90YXRlIjogbnVsbH19",
-    "everoutUrl": "https://everout.com/portland/events/the-italian-big-mac/"
+    "everoutUrl": "https://everout.com/portland/events/the-italian-big-mac/",
+    "dietary": [
+      "vegetarian",
+      "meat"
+    ],
+    "glutenFree": "available-with-surcharge",
+    "servingStyle": [
+      "whole-pie"
+    ]
   }
 ]

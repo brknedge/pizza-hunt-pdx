@@ -15,7 +15,14 @@ import {
 
 const LOCATIONS = locationsData as Location[];
 
-type Filter = "all" | "visited" | "unvisited" | string;
+type Filter =
+  | "all"
+  | "visited"
+  | "unvisited"
+  | "vegetarian"
+  | "vegan"
+  | "gluten-free"
+  | string;
 
 const Index = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -43,6 +50,15 @@ const Index = () => {
       }
       if (filter === "visited") return !!user?.visits[l.id];
       if (filter === "unvisited") return !user?.visits[l.id];
+      if (filter === "vegetarian")
+        return l.dietary.includes("vegetarian") || l.dietary.includes("vegan");
+      if (filter === "vegan") return l.dietary.includes("vegan");
+      if (filter === "gluten-free")
+        return (
+          l.glutenFree === "yes" ||
+          l.glutenFree === "available-same-price" ||
+          l.glutenFree === "available-with-surcharge"
+        );
       if (filter !== "all") return l.neighborhood === filter;
       return true;
     });
@@ -137,10 +153,13 @@ const Index = () => {
             <SelectTrigger className="w-full sm:w-56 h-11 border-2 border-ink shadow-zine-sm rounded-lg bg-card font-semibold">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="border-2 border-ink">
+            <SelectContent className="border-2 border-ink max-h-80">
               <SelectItem value="all">All locations</SelectItem>
               <SelectItem value="visited">Visited only</SelectItem>
               <SelectItem value="unvisited">Unvisited only</SelectItem>
+              <SelectItem value="vegetarian">🥬 Vegetarian</SelectItem>
+              <SelectItem value="vegan">🌱 Vegan</SelectItem>
+              <SelectItem value="gluten-free">🌾 Gluten-free option</SelectItem>
               {neighborhoods.map((n) => (
                 <SelectItem key={n} value={n}>{n}</SelectItem>
               ))}
