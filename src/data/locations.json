@@ -12,7 +12,9 @@
     "glutenFree": "available-with-surcharge",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Whipped potato base, shredded mozzarella and cheddar cheese, smoked bacon, pickled jalape\u00f1os topped with green onions, garden herbs, parmesan cheese and sour cream.",
+    "blurb": "You've had your mom's baked potato, throw that out the window and jump on this hype train to the future! CHOO CHOO! Babes will cry, longtime enemies will become old friends, and the dead will come back to life for these flavors. They say world peace is unobtainable, not with this on the menu."
   },
   {
     "id": "the-farm-feast",
@@ -28,7 +30,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Spinach, sun-dried tomatoes, chicken, topped with Italian seasoning. Made with house marinara red sauce.",
+    "blurb": "Back to our Italian roots, this Tuscany-inspired slice packs a simple punch! Chicken raised exclusively on our local Oregon city farm! Looking forward sharing with everyone!"
   },
   {
     "id": "crema-my-pork",
@@ -44,7 +48,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Carolina Gold BBQ base, slow-cooked pulled pork, perfectly pickled red onions, fresh jalape\u00f1os, whole milk mozzarella, finished with a lime-cilantro crema drizzle.",
+    "blurb": "A combination of sweetness from the south and spiciness from the Pacific Northwest, this pizza has flavors that will explode in your mouth and leave your tastebuds wanting more after every bite. Pair this pie with a Jim Beam neat or on the rocks and your night... well, find out for yourself."
   },
   {
     "id": "the-hot-date",
@@ -59,7 +65,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "Candied bacon, chopped dates, caramelized onion, ch\u00e8vre, balsamic glaze, arugula salad tossed in Newk\u2019s Elderfire Mango Habanero hot sauce",
+    "blurb": "A smooth garlic oil base paves the way for this sweet and spicy mama. House candied bacon with a hint of cayenne pepper, chopped dates, caramelized onions, and goat cheese finished off with a balsamic glaze and topped with arugula tossed in Newk\u2019s Elderfire Mango Habanero hot sauce. Sugar, spice, and everything nice. She\u2019ll be waiting for ya ;)"
   },
   {
     "id": "schwilly-pie",
@@ -74,7 +82,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "We got tiny little slices of pizza on top of a big ol' slice of pizza.",
+    "blurb": "What\u2019s better than pizza?!? How bout pizza ON pizza!!! We took our traditional New York plain cheese slice and dressed it up nice with mini slices of our beloved green pie. Threw in some smoked feta, Italian herbs, crushed chili flakes and finished it with some hot honey. \ud83e\udd0c"
   },
   {
     "id": "the-kim-chi-possible",
@@ -89,7 +99,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "The Kim(chi)-possible pie: garlic base, spicy pork belly bulgogi, onion, baechu-kimchi, gochujang aioli drizzle, and scallions",
+    "blurb": "A Korean styled pie featuring our special sweet & spicy pork belly bulgogi, locally sourced baechu-kimchi, and finished up with a gochujang aioli drizzle! Decadent Korean flavors combined with our pizza prowess to make for a delicious pizza experience!!"
   },
   {
     "id": "a-reuben-jamaica-ooh-i-wanna-take-ya-to-baby-doll-pizza",
@@ -105,7 +117,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "Corned beef, sauerkraut, provolone & mozzarella cheese, green onion on a pepperoncini aioli base. (Allergy alert for Paprika)",
+    "blurb": "The rueben, your favorite deli sandwich, has reached its final form. Shaved slices of corned beef, sauerkraut for a slight kick, melded with provolone and mozzarella cheese on a base of pepperoncini aioli. Topped with diced green onions for those fresh high notes. Close your eyes and relive your favorite bodega memories."
   },
   {
     "id": "belly-of-the-beast",
@@ -120,7 +134,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "Slow-roasted pork belly, caramelized onions, arugula tossed in lemon vinaigrette, topped with herb aioli.",
+    "blurb": "We find only the most evil pigs and steal their bellies to bring you the most delicious slice of pie you've ever had."
   },
   {
     "id": "triple-mac-cheese-pizza",
@@ -135,7 +151,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "Monterey Jack, cheddar, cream cheese, chiles, cream, poblano, dough, butter, flour, milk.",
+    "blurb": "A slice that eats like your favorite late-night comfort ritual. Monterey Jack, cheddar, and cream cheese melt into a velvety base with smoky Hatch chiles and cream. Finished with fire-roasted poblano for a charred edge and just enough heat."
   },
   {
     "id": "chicken-bacon-ranch-pizza",
@@ -151,7 +169,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Ranch base with chicken, mozzarella cheese, crispy bacon, and a light dusting of cheddar. Finished with a ranch drizzle and fresh herbs.",
+    "blurb": "Fan favorite in-house and by customers, this pizza has only been limited availability until now. Our inspiration? Who doesn't love ranch! A delightful combination of flavors and texture: this pizza is light and fresh yet indulgent."
   },
   {
     "id": "the-caeza",
@@ -168,7 +188,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Caesar dressing base, spinach, chicken, mozzarella, and shredded Parmesan, finished with lemon vinaigrette",
+    "blurb": "We wanted to combine the two best things our restaurant has to offer (pizza and Caesar salad) into one e-money tasty treat, and thus the Cae'Za was born!!"
   },
   {
     "id": "banh-to-be-wild",
@@ -184,7 +206,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Mozzarella-cheddar blend, yellow curry chicken, jalape\u00f1o, pickled carrot & daikon, cilantro, sweet chili mayo",
+    "blurb": "This is a b\u00e1nh m\u00ec-inspired pizza, completely vegan, and available gluten free for an additional charge."
   },
   {
     "id": "thai-chicken-pizza",
@@ -199,7 +223,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Hand-stretched crust with savory peanut sauce, mozzarella, marinated chicken, and roasted peppers. Topped with fresh bean sprouts, Sriracha, cilantro, and a crunchy crushed peanut finish.",
+    "blurb": "Trust us, just get it."
   },
   {
     "id": "snyder-weccacoe",
@@ -215,7 +241,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "White Pie (garlic + evoo), Roasted Pork, Rapini, Calabrian Chili, Caciocavallo",
+    "blurb": "Slow roasted pork shank, braised rapini, fermented Calabrian chili sauce topped with grated caciocavallo...inspired from Johns in Philly"
   },
   {
     "id": "mediterranean-mojo-lamb",
@@ -230,7 +258,9 @@
     "glutenFree": "available-with-surcharge",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Mojo braised Anderson Ranch lamb, harissa spiced tomato sauce, feta, kalamata olive tapenade, Mama Lil's peppers",
+    "blurb": "Mediterranean flavors meet PNW ingredients. Succulent local lamb braised in a blend of mint, orange, Greek oregano, and cumin. Rounded out with a subtle harissa kick tempered by salty and briny feta & kalamata olives."
   },
   {
     "id": "pepperoni-pony",
@@ -246,7 +276,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Double pepperoni",
+    "blurb": "Double the meat, double the treat! At PizzaSlut we keep it greasy so it slides in easy!"
   },
   {
     "id": "pizza-scarp-no-chicken",
@@ -261,7 +293,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "Sausage, pickled hot peppers, red bell peppers, onion, garlic and parsley.",
+    "blurb": "Named after the classic Italian American dish, Chicken Scarpariello, with all the components, excluding the chicken. Bright flavors and herbs along side deep rich savory elements. It\u2019s a great example of our style of cooking and pizzas."
   },
   {
     "id": "the-drunken-pig",
@@ -278,7 +312,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Spicy vodka sauce, bacon, fermented chili hot honey, mozzarella, Grana Padano, Pecorino, and fried basil",
+    "blurb": "No overthinking, just keeping it simple and delicious! We're trying to give the people what they want! Whole pies available vegetarian, slices are not."
   },
   {
     "id": "taos",
@@ -293,7 +329,9 @@
     "glutenFree": "available-with-surcharge",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Cilantro pesto, mozzarella, southwest marinated pork belly lardons, oven roasted corn and onions, sliced roasted red peppers, finished with cotija cheese.",
+    "blurb": "A little heat, a little brightness, a lot of soul. Taos brings it all together with smoky pork, sweet corn, and a lift of cilantro that cuts through in the best way. It\u2019s bold without trying too hard, layered without feeling heavy, and somehow tastes like sunshine, fire, and good company in every bite."
   },
   {
     "id": "belly-up-to-the-orchard",
@@ -308,7 +346,9 @@
     "glutenFree": "available-with-surcharge",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Olive oil, mozzarella, thinly sliced apples and pears, braised brown sugar pork belly slices, pulled burrata, hard cheese, finished and topped with candied walnuts, hot honey, and light arugula.",
+    "blurb": "Sweet meets savory in a way that feels effortless. Juicy apples and pears melt into rich pork belly, while burrata softens every edge. Candied walnuts bring crunch, hot honey adds a gentle heat, and arugula lifts it all. It\u2019s indulgent, balanced, and just a little unexpected, with each bite unfolding like a perfect autumn afternoon."
   },
   {
     "id": "heated-rivalry",
@@ -325,7 +365,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "3 cheese blend, roasted pepper cream cheese, house-pickled jalape\u00f1o, berry drizzle, house hot jalape\u00f1o honey, Frito crumbs, with or without bacon.",
+    "blurb": "We know...another Pizza Week, another jalape\u00f1o popper riff\u2014that's all Shane\u2014but we're inviting Ilya to this game with haaaaaaaawt honey & just a little bit sweet berry situation. Plus Frito crumbs because fun, and have some bacon too if you're into it."
   },
   {
     "id": "smoky-4-2026",
@@ -341,7 +383,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Fennel sausage, garlic confit, fresh tomato, smoked peppers, smoked mozzarella, hot honey. Vegetarian sausage available.",
+    "blurb": "Munchie-crushing flavor bomb, the Smoky 4/2026, celebrates the season with Aidan's house-made fennel sausage, smoky cheese, smoky peppers, garlic confit, and our hot honey."
   },
   {
     "id": "tater-tot-hot-dish-pizza",
@@ -358,7 +402,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Creamy garlic sauce, house cheese blend, cheddar cheese, tater tots, bacon & green onions",
+    "blurb": "Inspired by grandma's classic midwestern TATER TOT HOT DISH!"
   },
   {
     "id": "alliuminati",
@@ -373,7 +419,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "The Alliuminati features a rich roasted garlic cream base topped with caramelized onions, saut\u00e9ed mushrooms, crispy bacon, tender potato, and a generous dusting of parmesan, finished with fresh chives",
+    "blurb": "This pizza was born from a love of all things allium; garlic, onion, and chive working in harmony to create something deeply savory and satisfying. Drawing inspiration from the classic French Alpine dish tartiflette, with its indulgent combination of potato, bacon, and melted cheese, the roasted garlic cream base ties everything together, making each bite rich, earthy, and completely irresistible."
   },
   {
     "id": "the-goat-father",
@@ -389,7 +437,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Capicola ham, hot cherry bomb peppers, ch\u00e8vre, hot honey.",
+    "blurb": "Salty, funky, sweet\u2014just like Fire on the Mountain!"
   },
   {
     "id": "haters-gonna-hate",
@@ -404,7 +454,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "Housemade focaccia, red sauce, mortadella, pineapple, jalape\u00f1o, fontina, parmesan, Italian chile crisp",
+    "blurb": "Hawaiian pizza has always been polarizing, but we are doubling down on the deliciousness of our version. Our Hawaiian-raised Italian chef Liz, with the help of chef Keith, have made the ultimate fresh focaccia version of this pizza classic. For those who can get on board, you won't want to miss the 'Haters Gonna Hate.'"
   },
   {
     "id": "hot-honey-hog",
@@ -419,7 +471,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "Red sauce base, pepperoni, pulled pork, crushed red pepper flakes and jalape\u00f1os, finished with a honey drizzle and fresh lemon zest.",
+    "blurb": "The combination of pepperoni and pulled pork gives you a nice mix of salty crunch and tender richness, while the jalape\u00f1os and red pepper flakes provide a solid kick. The honey drizzle is the game-changer here\u2014it creates that \"hot honey\" effect that balances the spice perfectly."
   },
   {
     "id": "miso-apple-pizza",
@@ -434,7 +488,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Apple butter, apple compote, mint, shiso, miso vinaigrette, whipped lemon ricotta, house taro chips",
+    "blurb": "Miso Apple Pizza was inspired by a Portland pizza competition where we set out to create something truly unique, combining bright Asian flavors and subtle sweetness. Now it\u2019s a staff favorite we\u2019re excited to share, featuring an apple butter base, apple compote, shiso and mint, miso vinaigrette, whipped lemon ricotta, and crispy house-made taro chips."
   },
   {
     "id": "the-wurst-pizza-ever",
@@ -450,7 +506,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Beer cheese & stone ground mustard, mozzarella, caramelized onion, sauerkraut, and beer sausage.",
+    "blurb": "Direct from our German beer heritage, we're bringing the spirit of Oktoberfest to your pizza. This bold, unexpected combination is the wurst idea we've ever had."
   },
   {
     "id": "the-lilia",
@@ -465,7 +523,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "Guajillo chipotle sauce, mozzarella, potato, chorizo, red onion, roasted red pepper, crema, salsa cerde, cilantro",
+    "blurb": "When I was in high school my best friend's mom was an integral part of me wanting to pursue cooking. I would go over to their house for barbeques; while everyone else was outside in the yard, I would be in the kitchen with her. This pizza was inspired by one of the dishes she used to make."
   },
   {
     "id": "you-asked-for-it",
@@ -481,7 +541,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "It's a burger. On a pizza. We took a Detroit-style pizza and built a burger on top. A miniature beef slider patty on every slice, topped with American cheese, shredded lettuce, our burger sauce and dill pickles, and a tiny little bun.",
+    "blurb": "We really loved the pizza burger we made for Burger Week last year, so it was pretty clear what we had to do."
   },
   {
     "id": "taco-the-town",
@@ -497,7 +559,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Detroit-style pizza base, refried beans, brick cheese, slow simmered spiced beef, lettuce, tomato, lime crema, tortilla chips, oven roasted salsa and lime on side. Can be ordered without beef to be vegetarian.",
+    "blurb": "A crispy-edged Detroit slab stacked with creamy refried beans, molten brick cheese, and bold taco-spiced beef. Baked to golden perfection, then topped with cool lettuce, juicy tomatoes, zesty lime crema, and crunchy tortilla chips. Served with smoky oven-roasted salsa and a lime on the side for good measure. Messy, loud, and absolutely loaded."
   },
   {
     "id": "the-gravy-train",
@@ -512,7 +576,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Chorizo gravy base, mozzarella and white cheddar, bright pickled corn, a warm yolk drizzle designed to break over each slice, finished with fresh chives\u2014inspired by classic biscuits and gravy.",
+    "blurb": "Inspired by the morning after an evening of questionable decision making, the quest for comfort and the savory embrace of all things gravy based. No recompense, no regrets, just the certainty of manifest chorizo destiny and the promise of glorious satisfaction!"
   },
   {
     "id": "chicken-piccata",
@@ -528,7 +594,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Chicken thigh, capers, Taggiasca olives, provolone, parsley, pecorino",
+    "blurb": "A classic east coast Italian-American dish that\u2019s close to my heart! I added cream and olives to make it delicious and unforgettable!"
   },
   {
     "id": "whipped-mascarpone-smoked-salmon-pizza",
@@ -543,7 +611,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Whipped mascarpone, smoked salmon, broccoli raab, shaved fennel, arugula, sweet vermouth reduction.",
+    "blurb": "Our pizza is a balanced play of smoke, bitterness, and brightness."
   },
   {
     "id": "zingo-starr-it-dont-come-cheesy",
@@ -559,7 +629,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Tomato sauce, fresh basil, pickled asparagus, diced cherry peppers, cauliflower, nutritional yeast.",
+    "blurb": "Inspired by our love of hosting live music and making great pizza. The fresh basil and cauliflower are elevated with a little help from the cherry pepper zing. Our house-pickled asparagus brings a flavor you'll be thinking about eight days a week. The nutritional yeast makes it all come together. We know it don't come easy, but pizza helps!"
   },
   {
     "id": "primavera",
@@ -574,7 +646,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Pesto, mozzarella, roasted cherry tomatoes, burrata, basil",
+    "blurb": "Primavera is all about balance\u2014fresh basil, creamy burrata, and Parmigiano pesto at their peak. The real star is our slow-fermented dough\u2014light, airy, and full of flavor, designed to let the crust shine."
   },
   {
     "id": "fig-me-up-before-you-prosciutto",
@@ -591,7 +665,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Sweet, salty, and just a little bit seductive. Creamy brie melts into a golden base, layered with jammy figs, roasted red grapes, and ribbons of delicate prosciutto. Finished with a balsamic reduction crema, a drizzle of honey, fresh rosemary, and a crack of black pepper for that perfect bite. Rich. Balanced. Completely irresistible.",
+    "blurb": "I\u2019ve always loved the balance of sweet and savory, so this pizza brings together my favorite flavors\u2014figs, grapes, prosciutto, and brie. Our dough is made in-house, and we finish the pizza with Chili Munch, a house made topping my husband creates through Hood\u2019s Projects, for a subtle, craveable kick."
   },
   {
     "id": "gluten-free-buffalo-blue-cheese-chicken-pizza",
@@ -607,7 +683,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Built on our artisan gluten-free crust, this pizza is topped with a bold Buffalo blue cheese sauce, butter-and-cheesy cracker-battered chicken baked to perfection, then finished with fresh scallions and crumbled blue cheese.",
+    "blurb": "Built on our artisan gluten-free crust, this pizza brings the heat and the taste. A bold buffalo blue cheese sauce delivers just the right kick, layered with tender chicken that\u2019s been dredged in butter and crushed cheesy crackers then roasted for an irresistible taste. Finished with fresh scallions for a pop of brightness, every slice hits spicy, savory and creamy. Oh, and it\u2019s all gluten-free."
   },
   {
     "id": "shatta-pizza",
@@ -622,7 +700,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "A tender, flaky crust covered with fermented red chili paste and topped with a blend of imported Lebanese cheeses. Can be made vegan by omitting the cheese.",
+    "blurb": "Our inspiration is the flavors and spices of Mediterranean foods, family recipes, and not to mention our delicious pita."
   },
   {
     "id": "lets-get-baked-potato-pizza",
@@ -637,7 +717,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Potatoes, smoked bacon, mozzarella and cheddar cheese, green onion, sour cream.",
+    "blurb": "Po-ta-toes! Boil 'em, mash 'em, stick 'em on a pizza."
   },
   {
     "id": "the-carmela",
@@ -653,7 +735,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Original Dream marinara, garlic-parsley ricotta dollops and spicy Italian sausage. All atop our house-made dough with a honey-butter hand-braided crust.",
+    "blurb": "At Original Dream Pizza, we keep it simple and delicious! If you like lasagna, you will love this pizza. After all, what's better than Sunday supper at Nonna's house? Please note we are opening early on Saturday and Sunday (4/25 & 4/26) just for Pizza Week!"
   },
   {
     "id": "bend-and-snap",
@@ -668,7 +752,9 @@
     "glutenFree": "available-with-surcharge",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Rhubarb and strawberry base, goat cheese, fresh snap peas, Pecorino, and kaiware.",
+    "blurb": "Endorphins make you happy. Happy people just don't skip pizza... they just don't! Why you'll love it: The Bend- Perfectly foldable crust with our house made sourdough The Snap- Fresh snap peas that pop The Verdict- Objection! (WAIT- sustained. It's delicious) \"What, like it's hard to eat the whole thing?\""
   },
   {
     "id": "the-pauper-prince",
@@ -684,7 +770,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Bacon jam, pickled jalape\u00f1os, calabrian chili pimento cheese, and garlic chili Cheez-It crumble. All house-made.",
+    "blurb": "We know you remember our prior Pizza Week specials because you keep asking us to bring them back. Well, prepare to have your memory wiped because this one blows all of those out of the water. This year we are answering the stoney call of 4/20 week with a jalape\u00f1o popper inspired pizza that, quite frankly, is flavor-blasted beyond your wildest imaginings. Come and get it, freakazoids."
   },
   {
     "id": "say-when",
@@ -699,7 +787,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "Garlic butter brushed crust, minestrone sauce, mozzarella, romaine lettuce, sliced Roma tomatoes, red onion, black olives, pepperoncini, grated Romano cheese, Italian dressing.",
+    "blurb": "A soup, salad, and breadstick combo on a single slice. Garlic-butter crust topped with minestrone, melted mozzarella, and a cold Italian-dressed salad with tomatoes, olives, pepperoncini, onion, and Romano grated to order (\u201csay when\u201d). Inspired by the classic unlimited soup-salad-breadstick meal at a certain Italian-American chain restaurant, reimagined as pizza."
   },
   {
     "id": "rossa-pizza-caesar",
@@ -715,7 +805,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Tomato sauce, Pecorino, garlic bread crumbs, oregano & chile flakes, topped with our kale caesar salad",
+    "blurb": "Combining two of our favorite things: a traditional Italian pizza and our popular caesar salad!"
   },
   {
     "id": "rossa-pizza-caesar",
@@ -731,7 +823,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Tomato sauce, Pecorino, garlic bread crumbs, oregano & chile flakes, topped with our kale caesar salad",
+    "blurb": "Combining two of our favorite things: a traditional Italian pizza and our popular caesar salad!"
   },
   {
     "id": "peace-love-n-chicken",
@@ -746,7 +840,9 @@
     "glutenFree": "available-same-price",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Grilled chicken, tangy BBQ, red onion, fresh basil, crispy bacon, mozzarella cheese, garlic oil",
+    "blurb": "PLS stands for \"peace, love, and soul,\" and what's just as good as peace and love? BBQ chicken! Combined with bacon?! Sign us up. Our chef knows exactly how to combine everything you've been craving."
   },
   {
     "id": "prosciutto-broccoli-rabe",
@@ -762,7 +858,9 @@
     "glutenFree": "available-with-surcharge",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Prosciutto di Parma, broccoli rabe, house white sauce, our three cheese blend, mushroom confit, Calabrian chilies",
+    "blurb": "This pizza is a twist on a classic Italian pasta dish with broccoli rabe (cime di rapa), traditionally paired with orecchiette from Puglia. It features blanched, slightly bitter broccoli rabe saut\u00e9ed in olive oil with garlic, red pepper flakes, and sometimes anchovies, tossed with pasta and finished with Pecorino Romano cheese."
   },
   {
     "id": "you-gotta-ricotta",
@@ -777,7 +875,9 @@
     "glutenFree": "available-same-price",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Seasoned whipped ricotta, basil, and homemade red pepper aioli over red sauce.",
+    "blurb": "Bursting with bold flavor, this vegetarian pie is like your favorite pasta on a pizza crust. Pair it with our Kinda Dry or McIntosh ciders!"
   },
   {
     "id": "artichoke-garlic-pizza",
@@ -792,7 +892,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "Garlic parmesan base topped with artichoke hearts, spinach, and green onion, finished with a garlic herb crust.",
+    "blurb": "This pizza feels like something you\u2019d eat after sinking the winning shot on the last table of the night. It\u2019s rich, garlicky and a little boujee. The garlic parmesan base brings that creamy, indulgent punch, while the artichokes + spinach keep it fresh and just fancy enough to feel like you made a good decision (even if it\u2019s your third slice). The garlic herb crust? That\u2019s the closer. That\u2019s the \u201cyeah\u2026 this is the one\u201d bite."
   },
   {
     "id": "super-mario-galaxy-pizza",
@@ -808,7 +910,9 @@
     "glutenFree": "yes",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Red sauce base loaded with mozzarella cheese, Italian sausage, red and green bell peppers, mushrooms, peaches and basil.",
+    "blurb": "Born from a Mario galaxy sized imagination, this pizza exists to play. We pull power-ups from everywhere, blending comfort with surprise. It\u2019s a delicious warp-pipe to fun because every bite should help you level up. Vegan, vegetarian and gluten free substitutions available."
   },
   {
     "id": "one-hit-wonder",
@@ -823,7 +927,9 @@
     "glutenFree": "available-with-surcharge",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Mozzarella, brick cheddar, sweet corn, green chili, crema Mexicana, Flaming Hot Cheetos, lime pickled onion, cilantro",
+    "blurb": "Chef Dino got a little too baked this time."
   },
   {
     "id": "sausage-pesto",
@@ -839,7 +945,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Creamy pesto base, house made sausage on a garlic herb crust, topped with fresh basil, mushrooms, and parmesean.",
+    "blurb": "We love our house made Italian sausage and want to share that love with the world. Pesto, sausage, mushroom and fresh basil = perfection."
   },
   {
     "id": "bada-bing",
@@ -855,7 +963,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Cherry pizza with brie, lemon zesty pistachio pesto, and balsamic drizzle.",
+    "blurb": "An Italian-inspired cherry pie, Bada Bing! blends the flavors of savory baked brie, sweet and tart cherries, and pistachio pesto into a rich, balanced bite that\u2019s both nostalgic and unexpected. Big flavor, no apologies. Come and get it!"
   },
   {
     "id": "bada-bing",
@@ -871,7 +981,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Cherry pizza with brie, lemon zesty pistachio pesto, and balsamic drizzle.",
+    "blurb": "An Italian-inspired cherry pie, Bada Bing! blends the flavors of savory baked brie, sweet and tart cherries, and pistachio pesto into a rich, balanced bite that\u2019s both nostalgic and unexpected. Big flavor, no apologies. Come and get it!"
   },
   {
     "id": "havana-slice",
@@ -887,7 +999,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Olive oil, mozzarella, mojo-marinated pulled pork, ham, dill pickles, Swiss cheese, and squirt of classic yellow mustard.",
+    "blurb": "Transport to Miami with this Cubano inspired slice. \u201cSay Hello To My Little Friend\u201d"
   },
   {
     "id": "happiness-is-a-shawarm-gun",
@@ -903,7 +1017,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Tzatziki, ground lamb, red onion, pickled turnip, diced tomato, feta.",
+    "blurb": "Mother Ewe-perior jumped the gun."
   },
   {
     "id": "the-pork-store",
@@ -919,7 +1035,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "House marinara, provolone, capocollo, salami, vinegar peppers.",
+    "blurb": "You know what they say: \"Revenge is like serving cold cuts.\""
   },
   {
     "id": "chicken-breast-and-artichoke-pizza",
@@ -934,7 +1052,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Roasted chicken breast, garlic oil, mozzarella cheese, artichoke hearts, pickled peppers, and pesto sauce.",
+    "blurb": "Simple, but it hits every note."
   },
   {
     "id": "staten-island-trio",
@@ -950,7 +1070,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Focaccia topped with mozzarella, provolone, red sauce, pesto, vodka sauce",
+    "blurb": "Feeling saucy? Why choose one sauce when you can have three? Meet our Staten Island Trio; fluffy homemade focaccia topped with melted mozzarella, provolone, savory pesto, zesty red sauce AND creamy vodka sauce! You can purchase The Staten Island Trio by the square or the slab! Limited quantity daily."
   },
   {
     "id": "taumoeba",
@@ -966,7 +1088,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Artichoke, spinach, garlic, tomato, onion, parsley, and parmesan.",
+    "blurb": "Taumoeba exists in many environments, but is generally hunger-resistant. The adventurers at Secret Pizza Society have bred a hunger-susceptible strain, synthesized from elements of artichoke bruschetta, cashew parm, and Erisian dough, which\u2014when combined\u2014is sure to save our home world from the scourge of this nonsense."
   },
   {
     "id": "cash-rules-everything-guanciale-creme-fraiche-get-salami-pickled-pickled-fennel-yall",
@@ -982,7 +1106,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Olympia Provisions Soppressata, Mama Lil's Peppers, pickled fennel, creme fraiche, parsley, mozzarella, provolone, Asiago, and a guanciale-Calabrian chile marinara",
+    "blurb": "Pizza is the ultimate culinary tabula rasa. It can be a vehicle for anything, as Pizza Week proves, so why not have it be a vehicle for greatness? Unctuous Soppressata, juicy Mama Lil's, house-pickled fennel, creme fraiche, and a sauce rich with cubes of guanciale and the tangy heat of Calabrian chiles. Mangia!"
   },
   {
     "id": "country-reuben-pizza",
@@ -997,7 +1123,9 @@
     "glutenFree": "available-with-surcharge",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Homemade thousand island dressing, classic mozzarella, corned beef, sauerkraut, red onions, and Swiss cheese.",
+    "blurb": "In the fast-paced world of trending cuisine, we decided to go back to a humble classic. Our Country Reuben pizza brings back savory memories of any small town diner, or just your local favorite corner sandwich shop."
   },
   {
     "id": "athena-dion",
@@ -1013,7 +1141,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Homemade arugula pesto, feta and sliced red onions",
+    "blurb": "Delicious Greek-inspired pie, Chicago Style!"
   },
   {
     "id": "flaming-mac-n-cheeto",
@@ -1029,7 +1159,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "We want to highlight comfort food all on one pie! Pizza, mac' n cheese, and Flaming Hots are a trio guaranteed to bring you a few moments of comfort and nostalgia!",
+    "blurb": "Creamy buffalo b\u00e9chamel base, mac n' cheese layered between cheddar and mozzarella, topped with crushed Flaming Hots and fresh jalape\u00f1o."
   },
   {
     "id": "everything-but-the-bagel",
@@ -1045,7 +1177,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Whipped lemony cream cheese, mozzarella, smoked salmon, capers, fresh red onion, dill, dressed arugula, and everything bagel seasoning",
+    "blurb": "Your favorite bagel order\u2014on a pizza! Smoked salmon, lemony whipped cream cheese, capers, dill, everything bagel seasoning, fresh red onion, and dressed arugula bring big brunch energy to every slice."
   },
   {
     "id": "the-garden-father",
@@ -1060,7 +1194,9 @@
     "glutenFree": "no",
     "servingStyle": [
       "by-the-slice"
-    ]
+    ],
+    "ingredients": "Red pepper, feta, eggplant, artichokes, sausage, mint, dough, olive oil.",
+    "blurb": "Savory, smoky, and just a touch wild. A roasted red pepper\u2013feta sauce anchors roasted eggplant, marinated artichokes, and spicy sausage. Sheep\u2019s milk feta and fresh mint brighten every bite."
   },
   {
     "id": "baa-baa-boom",
@@ -1076,7 +1212,9 @@
     "servingStyle": [
       "by-the-slice",
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Tomato, harissa, lamb, onions, feta, pomegranate molasses, mint, dough, olive oil.",
+    "blurb": "Bold and deeply satisfying. Roasted tomato, harissa, and whipped feta set the stage for spiced lamb, onions, and a drizzle of pomegranate molasses. Finished with garlicky sheep\u2019s milk feta and mint."
   },
   {
     "id": "the-italian-big-mac",
@@ -1092,6 +1230,8 @@
     "glutenFree": "available-with-surcharge",
     "servingStyle": [
       "whole-pie"
-    ]
+    ],
+    "ingredients": "Provolone, mozzarella, romano, crumbled Italian fennel sausage, picked red onion, toasted sesame, kosher dill pickles, and a secret burger sauce.",
+    "blurb": "What happens when a wood-fired pizzaiola's best friend says, \"Make me something epic for my birthday\u2014 and I love burgers\"? You get The Italian Big Mac and honestly, the world is a better place for it. Born out of pure love and debuted in Brooklyn, this pizza sold out at every single event it touched, and one bite tells you exactly why. We're talking a cloud-like, blistered wood-fired crust layered with provolone, mozzarella, and romano, then piled with crumbled Italian fennel sausage, tangy pickled red onion, briny kosher dill pickles, and finished with toasted sesame and our secret burger sauce. It's everything you love about a perfect cheeseburger, reimagined with Italian soul and fired in a wood-fired oven. Bold claim, but we'll stand behind it: this is quite possibly the greatest cheeseburger pizza on the planet."
   }
 ]
