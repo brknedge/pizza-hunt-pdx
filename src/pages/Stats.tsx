@@ -11,9 +11,7 @@ const LOCATIONS = locationsData as Location[];
 
 const CATEGORY_LABELS: Record<RatingCategory, string> = {
   creativity: "Creativity",
-  flavor: "Flavor",
-  service: "Service",
-  atmosphere: "Atmosphere",
+  taste: "Taste",
   overall: "Overall",
 };
 
@@ -44,11 +42,16 @@ const Stats = () => {
 
   const avgPerCategory = useMemo(() => {
     const out: Record<RatingCategory, number> = {
-      creativity: 0, flavor: 0, service: 0, atmosphere: 0, overall: 0,
+      creativity: 0, taste: 0, overall: 0,
     };
     if (count === 0) return out;
     (Object.keys(out) as RatingCategory[]).forEach((k) => {
-      const sum = visited.reduce((s, v) => s + (v.visit.ratings[k] || 0), 0);
+      const sum = visited.reduce((s, v) => {
+        const r = v.visit.ratings as Partial<Record<string, number>>;
+        // migrate: old "flavor" → "taste"
+        const val = k === "taste" ? (r.taste ?? r.flavor ?? 0) : (r[k] ?? 0);
+        return s + val;
+      }, 0);
       out[k] = sum / count;
     });
     return out;
