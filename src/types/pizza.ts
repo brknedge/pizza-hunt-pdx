@@ -21,7 +21,7 @@ export interface Location {
   blurb?: string | null;
 }
 
-export type RatingCategory = "creativity" | "taste" | "overall";
+export type RatingCategory = "creativity" | "taste" | "service" | "atmosphere" | "overall";
 
 export interface Visit {
   visitedAt: string;

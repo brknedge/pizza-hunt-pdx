@@ -9,6 +9,8 @@ import type { Location, RatingCategory, Visit } from "@/types/pizza";
 const CATEGORIES: { key: RatingCategory; label: string; desc: string }[] = [
   { key: "creativity", label: "Creativity", desc: "How original is the concept?" },
   { key: "taste", label: "Taste", desc: "How does it actually taste?" },
+  { key: "service", label: "Service", desc: "How was the staff?" },
+  { key: "atmosphere", label: "Atmosphere", desc: "Vibe of the space?" },
   { key: "overall", label: "Overall", desc: "Your holistic score" },
 ];
 
