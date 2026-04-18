@@ -25,7 +25,7 @@ interface Props {
 
 export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, onDelete }: Props) => {
   const [ratings, setRatings] = useState<Record<RatingCategory, number>>({
-    creativity: 0, taste: 0, overall: 0,
+    creativity: 0, taste: 0, service: 0, atmosphere: 0, overall: 0,
   });
   const [notes, setNotes] = useState("");
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
@@ -38,12 +38,14 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
         setRatings({
           creativity: r.creativity ?? 0,
           taste: r.taste ?? r.flavor ?? 0,
+          service: r.service ?? 0,
+          atmosphere: r.atmosphere ?? 0,
           overall: r.overall ?? 0,
         });
         setNotes(existing.notes);
         setDate(existing.visitedAt.slice(0, 10));
       } else {
-        setRatings({ creativity: 0, taste: 0, overall: 0 });
+        setRatings({ creativity: 0, taste: 0, service: 0, atmosphere: 0, overall: 0 });
         setNotes("");
         setDate(new Date().toISOString().slice(0, 10));
       }

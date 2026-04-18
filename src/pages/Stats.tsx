@@ -12,6 +12,8 @@ const LOCATIONS = locationsData as Location[];
 const CATEGORY_LABELS: Record<RatingCategory, string> = {
   creativity: "Creativity",
   taste: "Taste",
+  service: "Service",
+  atmosphere: "Atmosphere",
   overall: "Overall",
 };
 
