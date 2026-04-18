@@ -1,3 +1,12 @@
+export type DietaryTag = "meat" | "vegetarian" | "vegan";
+export type GlutenFree =
+  | "yes"
+  | "no"
+  | "available-same-price"
+  | "available-with-surcharge"
+  | null;
+export type ServingStyle = "by-the-slice" | "whole-pie";
+
 export interface Location {
   id: string;
   name: string;
@@ -5,6 +14,9 @@ export interface Location {
   pizzaName: string;
   imageUrl: string;
   everoutUrl: string;
+  dietary: DietaryTag[];
+  glutenFree: GlutenFree;
+  servingStyle: ServingStyle[];
 }
 
 export type RatingCategory = "creativity" | "flavor" | "service" | "atmosphere" | "overall";
