@@ -17,9 +17,11 @@ export interface Location {
   dietary: DietaryTag[];
   glutenFree: GlutenFree;
   servingStyle: ServingStyle[];
+  ingredients?: string | null;
+  blurb?: string | null;
 }
 
-export type RatingCategory = "creativity" | "flavor" | "service" | "atmosphere" | "overall";
+export type RatingCategory = "creativity" | "taste" | "overall";
 
 export interface Visit {
   visitedAt: string;

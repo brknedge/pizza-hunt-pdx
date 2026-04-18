@@ -8,9 +8,7 @@ import type { Location, RatingCategory, Visit } from "@/types/pizza";
 
 const CATEGORIES: { key: RatingCategory; label: string; desc: string }[] = [
   { key: "creativity", label: "Creativity", desc: "How original is the concept?" },
-  { key: "flavor", label: "Flavor", desc: "How does it taste?" },
-  { key: "service", label: "Service", desc: "How was the staff?" },
-  { key: "atmosphere", label: "Atmosphere", desc: "Vibe of the space?" },
+  { key: "taste", label: "Taste", desc: "How does it actually taste?" },
   { key: "overall", label: "Overall", desc: "Your holistic score" },
 ];
 
@@ -25,7 +23,7 @@ interface Props {
 
 export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, onDelete }: Props) => {
   const [ratings, setRatings] = useState<Record<RatingCategory, number>>({
-    creativity: 0, flavor: 0, service: 0, atmosphere: 0, overall: 0,
+    creativity: 0, taste: 0, overall: 0,
   });
   const [notes, setNotes] = useState("");
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
@@ -33,11 +31,17 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
   useEffect(() => {
     if (open && location) {
       if (existing) {
-        setRatings(existing.ratings);
+        // Migrate older visits that may have `flavor` instead of `taste`
+        const r = existing.ratings as Partial<Record<string, number>>;
+        setRatings({
+          creativity: r.creativity ?? 0,
+          taste: r.taste ?? r.flavor ?? 0,
+          overall: r.overall ?? 0,
+        });
         setNotes(existing.notes);
         setDate(existing.visitedAt.slice(0, 10));
       } else {
-        setRatings({ creativity: 0, flavor: 0, service: 0, atmosphere: 0, overall: 0 });
+        setRatings({ creativity: 0, taste: 0, overall: 0 });
         setNotes("");
         setDate(new Date().toISOString().slice(0, 10));
       }
@@ -89,6 +93,27 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
               $4 SLICE / $25 PIE
             </span>
           </div>
+
+          {(location.ingredients || location.blurb) && (
+            <div className="border-2 border-ink rounded-lg bg-mozz/40 p-3 space-y-2">
+              {location.ingredients && (
+                <div>
+                  <div className="font-display text-sm tracking-widest text-marinara">
+                    WHAT'S ON IT
+                  </div>
+                  <p className="text-sm leading-snug mt-0.5">{location.ingredients}</p>
+                </div>
+              )}
+              {location.blurb && (
+                <div>
+                  <div className="font-display text-sm tracking-widest text-marinara">
+                    WHAT THEY SAY
+                  </div>
+                  <p className="text-sm leading-snug mt-0.5 italic">"{location.blurb}"</p>
+                </div>
+              )}
+            </div>
+          )}
 
           <div className="space-y-3">
             {CATEGORIES.map((c) => (
