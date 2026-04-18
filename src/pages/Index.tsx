@@ -50,6 +50,15 @@ const Index = () => {
       }
       if (filter === "visited") return !!user?.visits[l.id];
       if (filter === "unvisited") return !user?.visits[l.id];
+      if (filter === "vegetarian")
+        return l.dietary.includes("vegetarian") || l.dietary.includes("vegan");
+      if (filter === "vegan") return l.dietary.includes("vegan");
+      if (filter === "gluten-free")
+        return (
+          l.glutenFree === "yes" ||
+          l.glutenFree === "available-same-price" ||
+          l.glutenFree === "available-with-surcharge"
+        );
       if (filter !== "all") return l.neighborhood === filter;
       return true;
     });
