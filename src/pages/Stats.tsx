@@ -12,6 +12,8 @@ const LOCATIONS = locationsData as Location[];
 const CATEGORY_LABELS: Record<RatingCategory, string> = {
   creativity: "Creativity",
   taste: "Taste",
+  service: "Service",
+  atmosphere: "Atmosphere",
   overall: "Overall",
 };
 
@@ -42,7 +44,7 @@ const Stats = () => {
 
   const avgPerCategory = useMemo(() => {
     const out: Record<RatingCategory, number> = {
-      creativity: 0, taste: 0, overall: 0,
+      creativity: 0, taste: 0, service: 0, atmosphere: 0, overall: 0,
     };
     if (count === 0) return out;
     (Object.keys(out) as RatingCategory[]).forEach((k) => {
