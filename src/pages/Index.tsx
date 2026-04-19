@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { BarChart3, Map as MapIcon, Pizza, Search, Settings as SettingsIcon } from "lucide-react";
+import { BarChart3, Map as MapIcon, Pizza, Search, Settings as SettingsIcon, Users } from "lucide-react";
 import locationsData from "@/data/locations.json";
 import type { Location, Visit } from "@/types/pizza";
 import { useVisits } from "@/hooks/useVisits";
+import { useFriends } from "@/hooks/useFriends";
 import { NicknameGate } from "@/components/NicknameGate";
 import { LocationCard } from "@/components/LocationCard";
 import { RatingDialog } from "@/components/RatingDialog";
@@ -42,6 +43,7 @@ const Index = () => {
     visits, nickname, isCloud, loading,
     upsertVisit, removeVisit, toggleFavorite, setNickname, clearLocal,
   } = useVisits();
+  const { friendVisitsByLocation } = useFriends();
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -141,6 +143,13 @@ const Index = () => {
             <MapIcon className="h-4 w-4" />
           </Link>
           <Link
+            to="/friends"
+            aria-label="Friends"
+            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
+          >
+            <Users className="h-4 w-4" />
+          </Link>
+          <Link
             to="/stats"
             aria-label="My stats"
             className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
@@ -207,6 +216,7 @@ const Index = () => {
                 key={l.id}
                 location={l}
                 visit={visits?.[l.id]}
+                friendVisits={friendVisitsByLocation[l.id]}
                 onClick={() => setActiveId(l.id)}
                 onToggleFavorite={() => void toggleFavorite(l.id)}
                 index={i}

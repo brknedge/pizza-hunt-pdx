@@ -1,12 +1,13 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Check, Heart, Pizza } from "lucide-react";
+import { ArrowLeft, BarChart3, Check, Heart, Pizza, Users } from "lucide-react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import locationsData from "@/data/locations.json";
 import type { Location } from "@/types/pizza";
 import { useVisits } from "@/hooks/useVisits";
+import { useFriends } from "@/hooks/useFriends";
 
 const LOCATIONS = locationsData as Location[];
 
@@ -37,6 +38,9 @@ const PORTLAND_CENTER: [number, number] = [45.5231, -122.6765];
 
 const MapPage = () => {
   const { visits, loading } = useVisits();
+  const { friends, friendVisitsByLocation } = useFriends();
+  const friendNickname = (id: string) =>
+    friends.find((f) => f.id === id)?.nickname ?? "Friend";
 
   const pinned = useMemo(
     () => LOCATIONS.filter((l) => typeof l.lat === "number" && typeof l.lng === "number"),
@@ -71,6 +75,20 @@ const MapPage = () => {
               {skipped > 0 ? ` · ${skipped} missing coords` : ""}
             </p>
           </div>
+          <Link
+            to="/friends"
+            aria-label="Friends"
+            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
+          >
+            <Users className="h-4 w-4" />
+          </Link>
+          <Link
+            to="/stats"
+            aria-label="My stats"
+            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
+          >
+            <BarChart3 className="h-4 w-4" />
+          </Link>
         </div>
       </header>
 
@@ -116,6 +134,21 @@ const MapPage = () => {
                         {visit && (
                           <span>· {visit.ratings.overall.toFixed(1)}★</span>
                         )}
+                      </div>
+                    )}
+                    {(friendVisitsByLocation[l.id]?.length ?? 0) > 0 && (
+                      <div className="mt-1 pt-1 border-t border-dashed border-muted">
+                        <div className="text-xs font-semibold flex items-center gap-1">
+                          <Users className="h-3 w-3" /> Friends
+                        </div>
+                        <ul className="text-xs space-y-0.5 mt-0.5">
+                          {friendVisitsByLocation[l.id].slice(0, 3).map((fv) => (
+                            <li key={fv.friendId}>
+                              {friendNickname(fv.friendId)} · {fv.ratings.overall}★
+                              {fv.favorite ? " ♥" : ""}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     )}
                     <Link
