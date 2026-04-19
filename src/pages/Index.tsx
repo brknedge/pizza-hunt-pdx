@@ -86,6 +86,7 @@ const Index = () => {
       if (filter === "visited") return !!v[l.id];
       if (filter === "unvisited") return !v[l.id];
       if (filter === "favorites") return !!v[l.id]?.favorite;
+      if (filter === "wishlist") return wishlist.has(l.id);
       if (filter === "vegetarian")
         return l.dietary.includes("vegetarian") || l.dietary.includes("vegan");
       if (filter === "vegan") return l.dietary.includes("vegan");
@@ -93,7 +94,7 @@ const Index = () => {
       if (filter !== "all") return l.neighborhood === filter;
       return true;
     });
-  }, [query, filter, visits]);
+  }, [query, filter, visits, wishlist]);
 
   const visitedCount = visits ? Object.keys(visits).length : 0;
   const total = LOCATIONS.length;
