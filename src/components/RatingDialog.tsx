@@ -85,7 +85,7 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
             aria-pressed={isWished(location.id)}
             className={cn(
               "absolute top-3 right-12 z-10 h-9 w-9 grid place-items-center rounded-full border-2 border-ink shadow-zine-sm transition-transform hover:-translate-y-0.5",
-              isWished(location.id) ? "bg-ink text-mozz" : "bg-card text-ink",
+              isWished(location.id) ? "bg-mozz text-ink" : "bg-card text-ink",
             )}
           >
             <Bookmark className="h-4 w-4" strokeWidth={2.5} fill={isWished(location.id) ? "currentColor" : "none"} />

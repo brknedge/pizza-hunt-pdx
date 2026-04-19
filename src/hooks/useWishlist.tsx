@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
@@ -17,6 +17,22 @@ const readLocal = (): string[] => {
 const writeLocal = (ids: string[]) =>
   localStorage.setItem(LOCAL_KEY, JSON.stringify(ids));
 
+// ---- Module-level shared store so every useWishlist() instance stays in sync.
+let wishStore: Set<string> = new Set();
+const wishListeners = new Set<() => void>();
+const setWishStore = (next: Set<string>) => {
+  wishStore = next;
+  wishListeners.forEach((l) => l());
+};
+const subscribeWish = (l: () => void) => {
+  wishListeners.add(l);
+  return () => wishListeners.delete(l);
+};
+const getWishSnapshot = () => wishStore;
+
+// Boot is per-user; track to avoid duplicate fetches across mounts.
+let bootedForUserId: string | null | undefined = undefined;
+
 export interface WishlistState {
   /** Set of locationIds the current user wants to try */
   wishlist: Set<string>;
@@ -29,15 +45,21 @@ export interface WishlistState {
 
 export const useWishlist = (friendIds: string[] = []): WishlistState => {
   const { user, loading: authLoading } = useAuth();
-  const [wishlist, setWishlist] = useState<Set<string>>(new Set());
+  const wishlist = useSyncExternalStore(subscribeWish, getWishSnapshot, getWishSnapshot);
   const [friendWishlistByLocation, setFriendWishlistByLocation] = useState<
     Record<string, string[]>
   >({});
   const [loading, setLoading] = useState(true);
 
-  // Boot: load own wishlist (cloud or local), and migrate local → cloud once
+  // Boot: load own wishlist (cloud or local), and migrate local → cloud once.
+  // Only runs once per user across all hook instances.
   useEffect(() => {
     if (authLoading) return;
+    const currentKey = user?.id ?? "__anon__";
+    if (bootedForUserId === currentKey) {
+      setLoading(false);
+      return;
+    }
     let cancelled = false;
 
     const boot = async () => {
@@ -45,7 +67,8 @@ export const useWishlist = (friendIds: string[] = []): WishlistState => {
 
       if (!user) {
         if (!cancelled) {
-          setWishlist(new Set(readLocal()));
+          setWishStore(new Set(readLocal()));
+          bootedForUserId = currentKey;
           setLoading(false);
         }
         return;
@@ -59,7 +82,8 @@ export const useWishlist = (friendIds: string[] = []): WishlistState => {
       if (cancelled) return;
       if (error) {
         toast({ title: "Couldn't load wishlist", description: error.message, variant: "destructive" });
-        setWishlist(new Set());
+        setWishStore(new Set());
+        bootedForUserId = currentKey;
         setLoading(false);
         return;
       }
@@ -82,13 +106,21 @@ export const useWishlist = (friendIds: string[] = []): WishlistState => {
         localStorage.setItem(flagKey, "1");
       }
 
-      setWishlist(cloud);
+      setWishStore(cloud);
+      bootedForUserId = currentKey;
       setLoading(false);
     };
 
     void boot();
     return () => { cancelled = true; };
   }, [authLoading, user]);
+
+  // Reset boot flag if user changes
+  useEffect(() => {
+    return () => {
+      // no-op; the boot effect re-evaluates on user change
+    };
+  }, [user?.id]);
 
   // Load friends' wishlists for badges on cards/map
   useEffect(() => {
@@ -116,14 +148,12 @@ export const useWishlist = (friendIds: string[] = []): WishlistState => {
 
   const toggleWish = useCallback(
     async (locationId: string) => {
-      const has = wishlist.has(locationId);
-      // Optimistic
-      setWishlist((prev) => {
-        const next = new Set(prev);
-        if (has) next.delete(locationId);
-        else next.add(locationId);
-        return next;
-      });
+      const has = wishStore.has(locationId);
+      // Optimistic — update shared store so all subscribers re-render.
+      const next = new Set(wishStore);
+      if (has) next.delete(locationId);
+      else next.add(locationId);
+      setWishStore(next);
 
       if (user) {
         if (has) {
@@ -143,11 +173,11 @@ export const useWishlist = (friendIds: string[] = []): WishlistState => {
         }
       } else {
         const local = readLocal();
-        const next = has ? local.filter((id) => id !== locationId) : [...local, locationId];
-        writeLocal(next);
+        const stored = has ? local.filter((id) => id !== locationId) : [...local, locationId];
+        writeLocal(stored);
       }
     },
-    [wishlist, user],
+    [user],
   );
 
   return {
