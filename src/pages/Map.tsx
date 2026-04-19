@@ -114,11 +114,13 @@ const MapPage = () => {
             const visit = visits?.[l.id];
             const visited = !!visit;
             const favorite = !!visit?.favorite;
+            const wished = isWished(l.id);
+            const friendWishes = friendWishlistByLocation[l.id] ?? [];
             return (
               <Marker
                 key={l.id}
                 position={[l.lat as number, l.lng as number]}
-                icon={makeIcon(visited, favorite)}
+                icon={makeIcon(visited, favorite, wished)}
               >
                 <Popup>
                   <div className="font-sans">
@@ -142,10 +144,22 @@ const MapPage = () => {
                         )}
                       </div>
                     )}
+                    {!visited && (
+                      <div className="mt-1">
+                        <button
+                          type="button"
+                          onClick={() => void toggleWish(l.id)}
+                          className="inline-flex items-center gap-1 text-xs font-semibold underline"
+                        >
+                          <Bookmark className="h-3 w-3" fill={wished ? "currentColor" : "none"} />
+                          {wished ? "Saved · remove" : "Want to try"}
+                        </button>
+                      </div>
+                    )}
                     {(friendVisitsByLocation[l.id]?.length ?? 0) > 0 && (
                       <div className="mt-1 pt-1 border-t border-dashed border-muted">
                         <div className="text-xs font-semibold flex items-center gap-1">
-                          <Users className="h-3 w-3" /> Friends
+                          <Users className="h-3 w-3" /> Friends rated
                         </div>
                         <ul className="text-xs space-y-0.5 mt-0.5">
                           {friendVisitsByLocation[l.id].slice(0, 3).map((fv) => (
@@ -153,6 +167,18 @@ const MapPage = () => {
                               {friendNickname(fv.friendId)} · {fv.ratings.overall}★
                               {fv.favorite ? " ♥" : ""}
                             </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {friendWishes.length > 0 && (
+                      <div className="mt-1 pt-1 border-t border-dashed border-muted">
+                        <div className="text-xs font-semibold flex items-center gap-1">
+                          <Bookmark className="h-3 w-3" /> Friends want to try
+                        </div>
+                        <ul className="text-xs space-y-0.5 mt-0.5">
+                          {friendWishes.slice(0, 3).map((fid) => (
+                            <li key={fid}>{friendNickname(fid)}</li>
                           ))}
                         </ul>
                       </div>
