@@ -27,7 +27,16 @@ interface Props {
 }
 
 export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, onDelete }: Props) => {
-  const { isWished, toggleWish } = useWishlist();
+  const { friends } = useFriends();
+  const friendIds = useMemo(() => friends.map((f) => f.id), [friends]);
+  const { isWished, toggleWish, friendWishlistByLocation } = useWishlist(friendIds);
+  const friendWishNames = useMemo(() => {
+    if (!location) return [];
+    const ids = friendWishlistByLocation[location.id] ?? [];
+    const nameById: Record<string, string> = {};
+    for (const f of friends) nameById[f.id] = f.nickname || f.username;
+    return ids.map((id) => nameById[id]).filter(Boolean);
+  }, [location, friendWishlistByLocation, friends]);
   const [ratings, setRatings] = useState<Record<RatingCategory, number>>({
     creativity: 0, taste: 0, service: 0, atmosphere: 0, overall: 0,
   });
