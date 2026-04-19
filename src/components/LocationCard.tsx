@@ -119,13 +119,26 @@ export const LocationCard = ({
             ★ {overall}/5
           </div>
         )}
-        {friendCount > 0 && (
-          <div
-            title={`${friendCount} friend${friendCount === 1 ? "" : "s"} rated this`}
-            className="absolute bottom-2 right-2 bg-card border-2 border-ink rounded-md px-2 py-0.5 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1"
-          >
-            <Users className="h-3 w-3" />
-            {friendCount} · ★{friendAvg}
+        {(friendCount > 0 || friendWishCount > 0) && (
+          <div className="absolute bottom-2 right-2 flex flex-col items-end gap-1">
+            {friendCount > 0 && (
+              <div
+                title={`${friendCount} friend${friendCount === 1 ? "" : "s"} rated this`}
+                className="bg-card border-2 border-ink rounded-md px-2 py-0.5 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1"
+              >
+                <Users className="h-3 w-3" />
+                {friendCount} · ★{friendAvg}
+              </div>
+            )}
+            {friendWishCount > 0 && (
+              <div
+                title={`${friendWishCount} friend${friendWishCount === 1 ? "" : "s"} want to try this`}
+                className="bg-card border-2 border-ink rounded-md px-2 py-0.5 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1"
+              >
+                <Bookmark className="h-3 w-3" />
+                {friendWishCount}
+              </div>
+            )}
           </div>
         )}
       </div>
