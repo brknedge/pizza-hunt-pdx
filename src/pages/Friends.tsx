@@ -1,10 +1,11 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, Pizza, Search, UserPlus, Users, X } from "lucide-react";
+import { ArrowLeft, Bookmark, Pizza, Search, UserPlus, Users, X } from "lucide-react";
 import locationsData from "@/data/locations.json";
 import type { Location } from "@/types/pizza";
 import { useAuth } from "@/hooks/useAuth";
 import { useFriends, type FriendProfile } from "@/hooks/useFriends";
+import { useWishlist } from "@/hooks/useWishlist";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
@@ -23,6 +24,9 @@ const FriendsPage = () => {
   const [busy, setBusy] = useState(false);
   const [activeFriendId, setActiveFriendId] = useState<string | null>(null);
 
+  const friendIds = useMemo(() => friends.map((f) => f.id), [friends]);
+  const { friendWishlistByLocation } = useWishlist(friendIds);
+
   const activeFriend = useMemo(
     () => friends.find((f) => f.id === activeFriendId) ?? null,
     [friends, activeFriendId],
@@ -33,6 +37,16 @@ const FriendsPage = () => {
       .slice()
       .sort((a, b) => b.ratings.overall - a.ratings.overall);
   }, [visitsByFriend, activeFriendId]);
+  const activeWishlist = useMemo(() => {
+    if (!activeFriendId) return [] as Location[];
+    const ids = Object.entries(friendWishlistByLocation)
+      .filter(([, userIds]) => userIds.includes(activeFriendId))
+      .map(([locId]) => locId);
+    return ids
+      .map((id) => LOC_BY_ID.get(id))
+      .filter((l): l is Location => !!l)
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [friendWishlistByLocation, activeFriendId]);
 
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -151,25 +165,25 @@ const FriendsPage = () => {
               </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-4">
-              {activeVisits.length === 0 ? (
-                <p className="text-sm text-muted-foreground text-center py-10">
-                  Hasn't rated any slices yet.
-                </p>
-              ) : (
-                <ul className="space-y-2">
-                  {activeVisits.map((v) => {
-                    const loc = LOC_BY_ID.get(v.locationId);
-                    if (!loc) return null;
-                    return (
+            <div className="flex-1 overflow-y-auto p-4 space-y-5">
+              {/* Wishlist */}
+              <section>
+                <h3 className="font-display text-sm tracking-widest text-muted-foreground mb-2 flex items-center gap-1.5">
+                  <Bookmark className="h-3.5 w-3.5" /> WISHLIST ({activeWishlist.length})
+                </h3>
+                {activeWishlist.length === 0 ? (
+                  <p className="text-xs text-muted-foreground italic">No bookmarks yet.</p>
+                ) : (
+                  <ul className="space-y-2">
+                    {activeWishlist.map((loc) => (
                       <li
-                        key={v.locationId}
-                        className="flex gap-3 border-2 border-ink rounded-lg p-2 bg-mozz/30"
+                        key={loc.id}
+                        className="flex gap-3 border-2 border-ink rounded-lg p-2 bg-mozz/20"
                       >
                         <img
                           src={loc.imageUrl}
                           alt={loc.pizzaName}
-                          className="h-16 w-16 rounded-md border-2 border-ink object-cover shrink-0"
+                          className="h-14 w-14 rounded-md border-2 border-ink object-cover shrink-0"
                         />
                         <div className="min-w-0 flex-1">
                           <p className="font-display text-base leading-tight tracking-wide line-clamp-1">
@@ -178,23 +192,62 @@ const FriendsPage = () => {
                           <p className="text-xs text-marinara font-semibold line-clamp-1">
                             {loc.name} · {loc.neighborhood}
                           </p>
-                          {v.notes && (
-                            <p className="text-xs text-muted-foreground italic line-clamp-2 mt-0.5">
-                              "{v.notes}"
-                            </p>
-                          )}
-                        </div>
-                        <div className="text-right shrink-0">
-                          <div className="font-display text-xl text-marinara leading-none">
-                            ★{v.ratings.overall}
-                          </div>
-                          {v.favorite && <div className="text-xs text-marinara mt-1">♥ fav</div>}
                         </div>
                       </li>
-                    );
-                  })}
-                </ul>
-              )}
+                    ))}
+                  </ul>
+                )}
+              </section>
+
+              {/* Rated visits */}
+              <section>
+                <h3 className="font-display text-sm tracking-widest text-muted-foreground mb-2">
+                  RATED ({activeVisits.length})
+                </h3>
+                {activeVisits.length === 0 ? (
+                  <p className="text-xs text-muted-foreground italic">
+                    Hasn't rated any slices yet.
+                  </p>
+                ) : (
+                  <ul className="space-y-2">
+                    {activeVisits.map((v) => {
+                      const loc = LOC_BY_ID.get(v.locationId);
+                      if (!loc) return null;
+                      return (
+                        <li
+                          key={v.locationId}
+                          className="flex gap-3 border-2 border-ink rounded-lg p-2 bg-mozz/30"
+                        >
+                          <img
+                            src={loc.imageUrl}
+                            alt={loc.pizzaName}
+                            className="h-16 w-16 rounded-md border-2 border-ink object-cover shrink-0"
+                          />
+                          <div className="min-w-0 flex-1">
+                            <p className="font-display text-base leading-tight tracking-wide line-clamp-1">
+                              {loc.pizzaName}
+                            </p>
+                            <p className="text-xs text-marinara font-semibold line-clamp-1">
+                              {loc.name} · {loc.neighborhood}
+                            </p>
+                            {v.notes && (
+                              <p className="text-xs text-muted-foreground italic line-clamp-2 mt-0.5">
+                                "{v.notes}"
+                              </p>
+                            )}
+                          </div>
+                          <div className="text-right shrink-0">
+                            <div className="font-display text-xl text-marinara leading-none">
+                              ★{v.ratings.overall}
+                            </div>
+                            {v.favorite && <div className="text-xs text-marinara mt-1">♥ fav</div>}
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </section>
             </div>
           </div>
         </div>
