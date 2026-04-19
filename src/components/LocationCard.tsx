@@ -1,19 +1,23 @@
 import type { Location, Visit } from "@/types/pizza";
 import type { FriendVisit } from "@/hooks/useFriends";
-import { Check, Heart, MapPin, Users } from "lucide-react";
+import { Bookmark, Check, Heart, MapPin, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Props {
   location: Location;
   visit?: Visit;
   friendVisits?: FriendVisit[];
+  wished?: boolean;
+  friendWishCount?: number;
   onClick: () => void;
   onToggleFavorite?: () => void;
+  onToggleWish?: () => void;
   index: number;
 }
 
 export const LocationCard = ({
-  location, visit, friendVisits, onClick, onToggleFavorite, index,
+  location, visit, friendVisits, wished, friendWishCount = 0,
+  onClick, onToggleFavorite, onToggleWish, index,
 }: Props) => {
   const visited = !!visit;
   const overall = visit?.ratings.overall ?? 0;
