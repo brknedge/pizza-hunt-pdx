@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { BarChart3, Map as MapIcon, Pizza, Search, Settings as SettingsIcon } from "lucide-react";
 import locationsData from "@/data/locations.json";
 import type { Location, User, Visit } from "@/types/pizza";
@@ -45,11 +45,23 @@ const Index = () => {
   const [filter, setFilter] = useState<Filter>("all");
   const [activeId, setActiveId] = useState<string | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     setUser(getUser());
     setLoaded(true);
   }, []);
+
+  // Open the rating dialog when navigated with ?rate=<id> (e.g. from the Map)
+  useEffect(() => {
+    const rateId = searchParams.get("rate");
+    if (rateId && LOCATIONS.some((l) => l.id === rateId)) {
+      setActiveId(rateId);
+      const next = new URLSearchParams(searchParams);
+      next.delete("rate");
+      setSearchParams(next, { replace: true });
+    }
+  }, [searchParams, setSearchParams]);
 
   const neighborhoods = useMemo(
     () => Array.from(new Set(LOCATIONS.map((l) => l.neighborhood).filter(Boolean))).sort(),
