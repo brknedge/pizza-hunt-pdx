@@ -3,8 +3,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { StarRating } from "./StarRating";
-import { ExternalLink, Heart, Trash2 } from "lucide-react";
+import { Bookmark, ExternalLink, Heart, Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useWishlist } from "@/hooks/useWishlist";
 import type { Location, RatingCategory, Visit } from "@/types/pizza";
 
 const CATEGORIES: { key: RatingCategory; label: string; desc: string }[] = [
