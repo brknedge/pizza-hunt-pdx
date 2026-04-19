@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BarChart3, Check, Heart, Pizza, Users } from "lucide-react";
+import { ArrowLeft, BarChart3, Bookmark, Check, Heart, Pizza, Users } from "lucide-react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -8,17 +8,20 @@ import locationsData from "@/data/locations.json";
 import type { Location } from "@/types/pizza";
 import { useVisits } from "@/hooks/useVisits";
 import { useFriends } from "@/hooks/useFriends";
+import { useWishlist } from "@/hooks/useWishlist";
 
 const LOCATIONS = locationsData as Location[];
 
-const makeIcon = (visited: boolean, favorite: boolean) => {
+const makeIcon = (visited: boolean, favorite: boolean, wished: boolean) => {
   const bg = favorite
     ? "hsl(var(--marinara))"
     : visited
     ? "hsl(var(--ink))"
+    : wished
+    ? "hsl(var(--mozz))"
     : "hsl(var(--card))";
   const fg = visited || favorite ? "#fff" : "hsl(var(--ink))";
-  const inner = favorite ? "♥" : visited ? "✓" : "🍕";
+  const inner = favorite ? "♥" : visited ? "✓" : wished ? "🔖" : "🍕";
   return L.divIcon({
     className: "",
     html: `<div style="
