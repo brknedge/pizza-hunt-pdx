@@ -24,6 +24,9 @@ const FriendsPage = () => {
   const [busy, setBusy] = useState(false);
   const [activeFriendId, setActiveFriendId] = useState<string | null>(null);
 
+  const friendIds = useMemo(() => friends.map((f) => f.id), [friends]);
+  const { friendWishlistByLocation } = useWishlist(friendIds);
+
   const activeFriend = useMemo(
     () => friends.find((f) => f.id === activeFriendId) ?? null,
     [friends, activeFriendId],
@@ -34,6 +37,16 @@ const FriendsPage = () => {
       .slice()
       .sort((a, b) => b.ratings.overall - a.ratings.overall);
   }, [visitsByFriend, activeFriendId]);
+  const activeWishlist = useMemo(() => {
+    if (!activeFriendId) return [] as Location[];
+    const ids = Object.entries(friendWishlistByLocation)
+      .filter(([, userIds]) => userIds.includes(activeFriendId))
+      .map(([locId]) => locId);
+    return ids
+      .map((id) => LOC_BY_ID.get(id))
+      .filter((l): l is Location => !!l)
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [friendWishlistByLocation, activeFriendId]);
 
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
