@@ -103,7 +103,7 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
           {friendWishNames.length > 0 && (
             <div
               title={`On wishlist: ${friendWishNames.join(", ")}`}
-              className="absolute bottom-3 right-3 z-10 bg-mozz border-2 border-ink rounded-md px-2 py-1 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1 max-w-[14rem]"
+              className="absolute top-3 left-3 z-10 bg-mozz border-2 border-ink rounded-md px-2 py-1 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1 max-w-[14rem]"
             >
               <Bookmark className="h-3.5 w-3.5 shrink-0" fill="currentColor" />
               <span className="line-clamp-1">
