@@ -19,6 +19,8 @@ export interface Location {
   servingStyle: ServingStyle[];
   ingredients?: string | null;
   blurb?: string | null;
+  lat?: number;
+  lng?: number;
 }
 
 export type RatingCategory = "creativity" | "taste" | "service" | "atmosphere" | "overall";
