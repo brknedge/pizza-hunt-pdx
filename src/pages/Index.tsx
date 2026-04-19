@@ -199,6 +199,7 @@ const Index = () => {
               <SelectItem value="visited">Visited only</SelectItem>
               <SelectItem value="unvisited">Unvisited only</SelectItem>
               <SelectItem value="favorites">❤️ Favorites</SelectItem>
+              <SelectItem value="wishlist">🔖 Want to try</SelectItem>
               <SelectItem value="vegetarian">🥬 Vegetarian</SelectItem>
               <SelectItem value="vegan">🌱 Vegan</SelectItem>
               <SelectItem value="gluten-free">🌾 Gluten-free option</SelectItem>
