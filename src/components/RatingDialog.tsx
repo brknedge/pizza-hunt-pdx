@@ -77,7 +77,7 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
         <div className="relative aspect-[16/9] overflow-hidden bg-muted shrink-0">
           <img src={location.imageUrl} alt={location.pizzaName} className="w-full h-full object-cover" />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent px-5 pt-10 pb-4">
-            <p className="text-mozz font-semibold text-sm leading-tight">
+            <p className="text-white font-semibold text-sm leading-tight">
               {location.name} · {location.neighborhood}
             </p>
             <DialogTitle className="font-display text-2xl sm:text-3xl text-white tracking-wide leading-tight mt-0.5">
