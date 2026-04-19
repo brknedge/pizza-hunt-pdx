@@ -3,8 +3,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { StarRating } from "./StarRating";
-import { ExternalLink, Heart, Trash2 } from "lucide-react";
+import { Bookmark, ExternalLink, Heart, Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useWishlist } from "@/hooks/useWishlist";
 import type { Location, RatingCategory, Visit } from "@/types/pizza";
 
 const CATEGORIES: { key: RatingCategory; label: string; desc: string }[] = [
@@ -25,6 +26,7 @@ interface Props {
 }
 
 export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, onDelete }: Props) => {
+  const { isWished, toggleWish } = useWishlist();
   const [ratings, setRatings] = useState<Record<RatingCategory, number>>({
     creativity: 0, taste: 0, service: 0, atmosphere: 0, overall: 0,
   });
@@ -76,6 +78,18 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
       <DialogContent className="max-w-lg max-h-[90dvh] overflow-hidden bg-card border-2 border-ink shadow-zine-lg p-0 rounded-xl flex flex-col">
         <div className="relative aspect-[16/9] overflow-hidden bg-muted shrink-0">
           <img src={location.imageUrl} alt={location.pizzaName} className="w-full h-full object-cover" />
+          <button
+            type="button"
+            onClick={() => void toggleWish(location.id)}
+            aria-label={isWished(location.id) ? "Remove from wishlist" : "Add to wishlist"}
+            aria-pressed={isWished(location.id)}
+            className={cn(
+              "absolute top-3 right-12 z-10 h-9 w-9 grid place-items-center rounded-full border-2 border-ink shadow-zine-sm transition-transform hover:-translate-y-0.5",
+              isWished(location.id) ? "bg-ink text-mozz" : "bg-card text-ink",
+            )}
+          >
+            <Bookmark className="h-4 w-4" strokeWidth={2.5} fill={isWished(location.id) ? "currentColor" : "none"} />
+          </button>
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent px-5 pt-10 pb-4">
             <p className="text-white font-semibold text-sm leading-tight">
               {location.name} · {location.neighborhood}
