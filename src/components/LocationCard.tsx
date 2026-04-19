@@ -48,9 +48,23 @@ export const LocationCard = ({
             visited && "grayscale-card group-hover:grayscale-0",
           )}
         />
-        {visited && (
+        {(visited || onToggleWish) && (
           <div className="absolute top-2 right-2 flex items-center gap-1.5">
-            {onToggleFavorite && (
+            {!visited && onToggleWish && (
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); onToggleWish(); }}
+                aria-label={wished ? "Remove from wishlist" : "Add to wishlist"}
+                aria-pressed={!!wished}
+                className={cn(
+                  "h-8 w-8 grid place-items-center rounded-full border-2 border-ink shadow-zine-sm transition-transform hover:-translate-y-0.5",
+                  wished ? "bg-ink text-mozz" : "bg-card text-ink",
+                )}
+              >
+                <Bookmark className="h-4 w-4" strokeWidth={2.5} fill={wished ? "currentColor" : "none"} />
+              </button>
+            )}
+            {visited && onToggleFavorite && (
               <button
                 type="button"
                 onClick={(e) => { e.stopPropagation(); onToggleFavorite(); }}
@@ -64,10 +78,12 @@ export const LocationCard = ({
                 <Heart className="h-4 w-4" strokeWidth={2.5} fill={isFavorite ? "currentColor" : "none"} />
               </button>
             )}
-            <div className="bg-mozz border-2 border-ink rounded-full px-2 py-1 flex items-center gap-1 shadow-zine-sm">
-              <Check className="h-3.5 w-3.5" strokeWidth={3} />
-              <span className="font-display text-sm tracking-wide">VISITED</span>
-            </div>
+            {visited && (
+              <div className="bg-mozz border-2 border-ink rounded-full px-2 py-1 flex items-center gap-1 shadow-zine-sm">
+                <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                <span className="font-display text-sm tracking-wide">VISITED</span>
+              </div>
+            )}
           </div>
         )}
         <div className="absolute top-2 left-2 flex flex-col gap-1 items-start">
