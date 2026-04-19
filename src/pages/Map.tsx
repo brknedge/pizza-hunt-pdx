@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BarChart3, Bookmark, Check, Heart, Pizza, Users } from "lucide-react";
+import { ArrowLeft, Bookmark, Check, Heart, Pizza, Users } from "lucide-react";
+import { HeaderNav } from "@/components/HeaderNav";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -93,20 +94,7 @@ const MapPage = () => {
               {skipped > 0 ? ` · ${skipped} missing coords` : ""}
             </p>
           </div>
-          <Link
-            to="/friends"
-            aria-label="Friends"
-            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
-          >
-            <Users className="h-4 w-4" />
-          </Link>
-          <Link
-            to="/stats"
-            aria-label="My stats"
-            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
-          >
-            <BarChart3 className="h-4 w-4" />
-          </Link>
+          <HeaderNav />
         </div>
       </header>
 
