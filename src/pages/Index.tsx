@@ -202,6 +202,7 @@ const Index = () => {
                 friendVisits={friendVisitsByLocation[l.id]}
                 wished={isWished(l.id)}
                 friendWishCount={friendWishlistByLocation[l.id]?.length ?? 0}
+                friendWishNames={(friendWishlistByLocation[l.id] ?? []).map((id) => friendNameById[id]).filter(Boolean)}
                 onClick={() => setActiveId(l.id)}
                 onToggleFavorite={() => void toggleFavorite(l.id)}
                 onToggleWish={() => void toggleWish(l.id)}
