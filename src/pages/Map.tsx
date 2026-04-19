@@ -18,8 +18,6 @@ const makeIcon = (visited: boolean, favorite: boolean, wished: boolean) => {
     ? "hsl(var(--marinara))"
     : visited
     ? "hsl(var(--ink))"
-    : wished
-    ? "hsl(var(--mozz))"
     : "hsl(var(--card))";
   const fg = visited || favorite ? "#fff" : "hsl(var(--ink))";
   const inner = favorite ? "♥" : visited ? "✓" : "🍕";
