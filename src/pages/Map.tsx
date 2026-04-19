@@ -1,16 +1,15 @@
-import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useMemo } from "react";
+import { Link } from "react-router-dom";
 import { ArrowLeft, Check, Heart, Pizza } from "lucide-react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import locationsData from "@/data/locations.json";
-import type { Location, User } from "@/types/pizza";
-import { getUser } from "@/lib/storage";
+import type { Location } from "@/types/pizza";
+import { useVisits } from "@/hooks/useVisits";
 
 const LOCATIONS = locationsData as Location[];
 
-// Build a custom divIcon so we can color visited / favorite pins
 const makeIcon = (visited: boolean, favorite: boolean) => {
   const bg = favorite
     ? "hsl(var(--marinara))"
@@ -37,26 +36,17 @@ const makeIcon = (visited: boolean, favorite: boolean) => {
 const PORTLAND_CENTER: [number, number] = [45.5231, -122.6765];
 
 const MapPage = () => {
-  const navigate = useNavigate();
-  const [user, setUser] = useState<User | null>(null);
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    const u = getUser();
-    setUser(u);
-    setLoaded(true);
-    if (!u) navigate("/", { replace: true });
-  }, [navigate]);
+  const { visits, loading } = useVisits();
 
   const pinned = useMemo(
     () => LOCATIONS.filter((l) => typeof l.lat === "number" && typeof l.lng === "number"),
     [],
   );
 
-  const visitedCount = user ? Object.keys(user.visits).length : 0;
+  const visitedCount = visits ? Object.keys(visits).length : 0;
   const skipped = LOCATIONS.length - pinned.length;
 
-  if (!loaded || !user) return null;
+  if (loading) return null;
 
   return (
     <div className="min-h-[100dvh] bg-background flex flex-col">
@@ -97,7 +87,7 @@ const MapPage = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           {pinned.map((l) => {
-            const visit = user.visits[l.id];
+            const visit = visits?.[l.id];
             const visited = !!visit;
             const favorite = !!visit?.favorite;
             return (

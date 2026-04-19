@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { createUser } from "@/lib/storage";
-import type { User } from "@/types/pizza";
+import { Link } from "react-router-dom";
 
-export const NicknameGate = ({ onReady }: { onReady: (u: User) => void }) => {
+interface Props {
+  onReady: (nickname: string) => void;
+}
+
+export const NicknameGate = ({ onReady }: Props) => {
   const [name, setName] = useState("");
   const [err, setErr] = useState("");
 
@@ -15,7 +18,7 @@ export const NicknameGate = ({ onReady }: { onReady: (u: User) => void }) => {
       setErr("Need a name to track your slices!");
       return;
     }
-    onReady(createUser(trimmed.slice(0, 20)));
+    onReady(trimmed.slice(0, 20));
   };
 
   return (
@@ -51,8 +54,9 @@ export const NicknameGate = ({ onReady }: { onReady: (u: User) => void }) => {
             LET'S EAT 🍕
           </Button>
         </form>
-        <p className="mt-6 text-xs text-center text-muted-foreground">
-          Saved on this device only. No accounts. No tracking.
+        <p className="mt-4 text-xs text-center text-muted-foreground">
+          Saved on this device. Want it across devices?{" "}
+          <Link to="/auth" className="underline font-semibold">Sign up</Link>.
         </p>
       </div>
     </main>

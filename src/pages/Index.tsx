@@ -2,8 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { BarChart3, Map as MapIcon, Pizza, Search, Settings as SettingsIcon } from "lucide-react";
 import locationsData from "@/data/locations.json";
-import type { Location, User, Visit } from "@/types/pizza";
-import { getUser, saveUser, upsertVisit, removeVisit, clearAll, toggleFavorite } from "@/lib/storage";
+import type { Location, Visit } from "@/types/pizza";
+import { useVisits } from "@/hooks/useVisits";
 import { NicknameGate } from "@/components/NicknameGate";
 import { LocationCard } from "@/components/LocationCard";
 import { RatingDialog } from "@/components/RatingDialog";
@@ -28,7 +28,6 @@ type Filter =
 const hasGF = (gf: Location["glutenFree"]) =>
   gf === "yes" || gf === "available-same-price" || gf === "available-with-surcharge";
 
-// Synonyms a user might type in the search box that should match dietary metadata
 const matchesTagQuery = (l: Location, q: string): boolean => {
   if (l.dietary.includes("vegan") && /\bvegan\b/.test(q)) return true;
   if ((l.dietary.includes("vegetarian") || l.dietary.includes("vegan")) &&
@@ -39,18 +38,15 @@ const matchesTagQuery = (l: Location, q: string): boolean => {
 };
 
 const Index = () => {
-  const [user, setUser] = useState<User | null>(null);
-  const [loaded, setLoaded] = useState(false);
+  const {
+    visits, nickname, isCloud, loading,
+    upsertVisit, removeVisit, toggleFavorite, setNickname, clearLocal,
+  } = useVisits();
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
   const [activeId, setActiveId] = useState<string | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
-
-  useEffect(() => {
-    setUser(getUser());
-    setLoaded(true);
-  }, []);
 
   // Open the rating dialog when navigated with ?rate=<id> (e.g. from the Map)
   useEffect(() => {
@@ -69,26 +65,21 @@ const Index = () => {
   );
 
   const filtered = useMemo(() => {
+    const v = visits ?? {};
     const tokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
     return LOCATIONS.filter((l) => {
-      // Search: every token must match somewhere (name, pizza, neighborhood,
-      // ingredients, blurb, OR a dietary/GF synonym).
       if (tokens.length) {
         const haystack = [
-          l.name,
-          l.pizzaName,
-          l.neighborhood,
-          l.ingredients ?? "",
-          l.blurb ?? "",
+          l.name, l.pizzaName, l.neighborhood, l.ingredients ?? "", l.blurb ?? "",
         ].join(" ").toLowerCase();
         const everyHit = tokens.every(
           (t) => haystack.includes(t) || matchesTagQuery(l, t),
         );
         if (!everyHit) return false;
       }
-      if (filter === "visited") return !!user?.visits[l.id];
-      if (filter === "unvisited") return !user?.visits[l.id];
-      if (filter === "favorites") return !!user?.visits[l.id]?.favorite;
+      if (filter === "visited") return !!v[l.id];
+      if (filter === "unvisited") return !v[l.id];
+      if (filter === "favorites") return !!v[l.id]?.favorite;
       if (filter === "vegetarian")
         return l.dietary.includes("vegetarian") || l.dietary.includes("vegan");
       if (filter === "vegan") return l.dietary.includes("vegan");
@@ -96,39 +87,31 @@ const Index = () => {
       if (filter !== "all") return l.neighborhood === filter;
       return true;
     });
-  }, [query, filter, user]);
+  }, [query, filter, visits]);
 
-  const visitedCount = user ? Object.keys(user.visits).length : 0;
+  const visitedCount = visits ? Object.keys(visits).length : 0;
   const total = LOCATIONS.length;
   const pct = Math.round((visitedCount / total) * 100);
 
-  if (!loaded) return null;
-  if (!user) return <NicknameGate onReady={setUser} />;
+  if (loading) return null;
+  // Offline mode w/ no nickname yet → ask for one
+  if (!isCloud && !nickname) {
+    return <NicknameGate onReady={(n) => setNickname(n)} />;
+  }
 
   const active = LOCATIONS.find((l) => l.id === activeId) || null;
-  const activeVisit = active ? user.visits[active.id] : undefined;
+  const activeVisit = active && visits ? visits[active.id] : undefined;
 
-  const handleSave = (visit: Visit) => {
+  const handleSave = async (visit: Visit) => {
     if (!active) return;
-    setUser(upsertVisit(active.id, visit));
+    await upsertVisit(active.id, visit);
     setActiveId(null);
   };
 
-  const handleDelete = () => {
+  const handleDelete = async () => {
     if (!active) return;
-    setUser(removeVisit(active.id));
+    await removeVisit(active.id);
     setActiveId(null);
-  };
-
-  const handleClear = () => {
-    clearAll();
-    setUser(null);
-    setSettingsOpen(false);
-  };
-
-  const handleUserUpdate = (u: User) => {
-    saveUser(u);
-    setUser(u);
   };
 
   return (
@@ -143,7 +126,8 @@ const Index = () => {
               PDX PIZZA WEEK <span className="text-marinara">'26</span>
             </h1>
             <p className="text-xs text-muted-foreground truncate">
-              Hey <span className="font-semibold text-foreground">{user.nickname}</span> · {visitedCount}/{total} slices
+              Hey <span className="font-semibold text-foreground">{nickname || "friend"}</span>
+              {isCloud ? " ☁️" : ""} · {visitedCount}/{total} slices
             </p>
           </div>
           <div className="hidden sm:block bg-mozz border-2 border-ink px-3 py-1 rounded-md font-display tracking-widest text-sm">
@@ -222,9 +206,9 @@ const Index = () => {
               <LocationCard
                 key={l.id}
                 location={l}
-                visit={user.visits[l.id]}
+                visit={visits?.[l.id]}
                 onClick={() => setActiveId(l.id)}
-                onToggleFavorite={() => setUser(toggleFavorite(l.id))}
+                onToggleFavorite={() => void toggleFavorite(l.id)}
                 index={i}
               />
             ))}
@@ -232,7 +216,7 @@ const Index = () => {
         )}
 
         <footer className="mt-12 pt-6 border-t-2 border-dashed border-ink/30 text-center text-xs text-muted-foreground">
-          Data scraped from <a href="https://everout.com/portland/events/the-portland-mercurys-pizza-week-2026/e222744/" target="_blank" rel="noreferrer" className="underline">EverOut</a> · Saved on this device only · Made with 🍕 in Portland
+          Data scraped from <a href="https://everout.com/portland/events/the-portland-mercurys-pizza-week-2026/e222744/" target="_blank" rel="noreferrer" className="underline">EverOut</a> · {isCloud ? "Synced to your account" : "Saved on this device only"} · Made with 🍕 in Portland
         </footer>
       </main>
 
@@ -248,9 +232,9 @@ const Index = () => {
       <SettingsDialog
         open={settingsOpen}
         onOpenChange={setSettingsOpen}
-        user={user}
-        onUpdate={handleUserUpdate}
-        onClear={handleClear}
+        nickname={nickname}
+        onRename={setNickname}
+        onClear={() => { clearLocal(); setSettingsOpen(false); }}
       />
     </div>
   );
