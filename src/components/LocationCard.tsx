@@ -1,19 +1,28 @@
 import type { Location, Visit } from "@/types/pizza";
-import { Check, Heart, MapPin } from "lucide-react";
+import type { FriendVisit } from "@/hooks/useFriends";
+import { Check, Heart, MapPin, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Props {
   location: Location;
   visit?: Visit;
+  friendVisits?: FriendVisit[];
   onClick: () => void;
   onToggleFavorite?: () => void;
   index: number;
 }
 
-export const LocationCard = ({ location, visit, onClick, onToggleFavorite, index }: Props) => {
+export const LocationCard = ({
+  location, visit, friendVisits, onClick, onToggleFavorite, index,
+}: Props) => {
   const visited = !!visit;
   const overall = visit?.ratings.overall ?? 0;
   const isFavorite = !!visit?.favorite;
+
+  const friendCount = friendVisits?.length ?? 0;
+  const friendAvg = friendCount
+    ? (friendVisits!.reduce((s, v) => s + v.ratings.overall, 0) / friendCount).toFixed(1)
+    : null;
 
   return (
     <button
@@ -59,18 +68,12 @@ export const LocationCard = ({ location, visit, onClick, onToggleFavorite, index
         )}
         <div className="absolute top-2 left-2 flex flex-col gap-1 items-start">
           {location.dietary.includes("vegan") && (
-            <span
-              title="Vegan"
-              className="bg-card border-2 border-ink rounded-md px-1.5 py-0.5 font-display text-xs tracking-wide shadow-zine-sm"
-            >
+            <span title="Vegan" className="bg-card border-2 border-ink rounded-md px-1.5 py-0.5 font-display text-xs tracking-wide shadow-zine-sm">
               🌱 VEGAN
             </span>
           )}
           {location.dietary.includes("vegetarian") && !location.dietary.includes("vegan") && (
-            <span
-              title="Vegetarian"
-              className="bg-card border-2 border-ink rounded-md px-1.5 py-0.5 font-display text-xs tracking-wide shadow-zine-sm"
-            >
+            <span title="Vegetarian" className="bg-card border-2 border-ink rounded-md px-1.5 py-0.5 font-display text-xs tracking-wide shadow-zine-sm">
               🥬 VEG
             </span>
           )}
@@ -94,6 +97,15 @@ export const LocationCard = ({ location, visit, onClick, onToggleFavorite, index
         {visited && overall > 0 && (
           <div className="absolute bottom-2 left-2 bg-marinara text-primary-foreground border-2 border-ink rounded-md px-2 py-0.5 font-display text-base tracking-wide shadow-zine-sm">
             ★ {overall}/5
+          </div>
+        )}
+        {friendCount > 0 && (
+          <div
+            title={`${friendCount} friend${friendCount === 1 ? "" : "s"} rated this`}
+            className="absolute bottom-2 right-2 bg-card border-2 border-ink rounded-md px-2 py-0.5 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1"
+          >
+            <Users className="h-3 w-3" />
+            {friendCount} · ★{friendAvg}
           </div>
         )}
       </div>
