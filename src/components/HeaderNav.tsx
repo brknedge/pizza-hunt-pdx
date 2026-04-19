@@ -3,12 +3,7 @@ import { useState } from "react";
 import { BarChart3, Map as MapIcon, Settings as SettingsIcon, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SettingsDialog } from "@/components/SettingsDialog";
-
-interface HeaderNavProps {
-  /** Optional callback when a nickname is set via the Settings dialog. */
-  onNicknameChange?: (nickname: string) => void;
-  currentNickname?: string;
-}
+import { useVisits } from "@/hooks/useVisits";
 
 const baseBtn =
   "h-10 w-10 grid place-items-center rounded-lg border-2 border-ink shadow-zine-sm shrink-0 transition-colors";
@@ -17,11 +12,13 @@ const active = "bg-marinara text-primary-foreground";
 
 /**
  * Shared top-right nav cluster: Map, Friends, Stats, Settings.
- * Highlights the icon matching the current route.
+ * Highlights the icon matching the current route. Self-contained — wires
+ * the Settings dialog to the same nickname/clear handlers used on Index.
  */
-export const HeaderNav = ({ onNicknameChange, currentNickname }: HeaderNavProps) => {
+export const HeaderNav = () => {
   const { pathname } = useLocation();
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const { nickname, setNickname, clearLocal } = useVisits();
 
   const isMap = pathname.startsWith("/map");
   const isFriends = pathname.startsWith("/friends");
@@ -64,8 +61,12 @@ export const HeaderNav = ({ onNicknameChange, currentNickname }: HeaderNavProps)
       <SettingsDialog
         open={settingsOpen}
         onOpenChange={setSettingsOpen}
-        currentNickname={currentNickname ?? ""}
-        onNicknameChange={onNicknameChange ?? (() => {})}
+        nickname={nickname}
+        onRename={setNickname}
+        onClear={() => {
+          clearLocal();
+          setSettingsOpen(false);
+        }}
       />
     </>
   );
