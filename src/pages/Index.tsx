@@ -216,6 +216,7 @@ const Index = () => {
                 key={l.id}
                 location={l}
                 visit={visits?.[l.id]}
+                friendVisits={friendVisitsByLocation[l.id]}
                 onClick={() => setActiveId(l.id)}
                 onToggleFavorite={() => void toggleFavorite(l.id)}
                 index={i}
