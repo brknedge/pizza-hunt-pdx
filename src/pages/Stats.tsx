@@ -81,7 +81,9 @@ const Stats = () => {
           >
             <ArrowLeft className="h-4 w-4" />
           </Link>
-          <Pizza className="h-7 w-7 text-marinara shrink-0" />
+          <Link to="/" aria-label="Home" className="shrink-0">
+            <Pizza className="h-7 w-7 text-marinara" />
+          </Link>
           <div className="min-w-0 flex-1">
             <h1 className="font-display text-2xl sm:text-3xl leading-none tracking-wide truncate">
               MY PIZZA <span className="text-marinara">STATS</span>
