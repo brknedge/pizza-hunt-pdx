@@ -38,6 +38,9 @@ const PORTLAND_CENTER: [number, number] = [45.5231, -122.6765];
 
 const MapPage = () => {
   const { visits, loading } = useVisits();
+  const { friends, friendVisitsByLocation } = useFriends();
+  const friendNickname = (id: string) =>
+    friends.find((f) => f.id === id)?.nickname ?? "Friend";
 
   const pinned = useMemo(
     () => LOCATIONS.filter((l) => typeof l.lat === "number" && typeof l.lng === "number"),
@@ -72,6 +75,20 @@ const MapPage = () => {
               {skipped > 0 ? ` · ${skipped} missing coords` : ""}
             </p>
           </div>
+          <Link
+            to="/friends"
+            aria-label="Friends"
+            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
+          >
+            <Users className="h-4 w-4" />
+          </Link>
+          <Link
+            to="/stats"
+            aria-label="My stats"
+            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
+          >
+            <BarChart3 className="h-4 w-4" />
+          </Link>
         </div>
       </header>
 
