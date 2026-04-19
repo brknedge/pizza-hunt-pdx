@@ -6,13 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-import type { User } from "@/types/pizza";
 
 interface Props {
   open: boolean;
   onOpenChange: (o: boolean) => void;
-  user: User;
-  onUpdate: (u: User) => void;
+  nickname: string;
+  onRename: (n: string) => void;
   onClear: () => void;
 }
 
@@ -21,13 +20,14 @@ interface AuthInfo {
   nickname: string;
 }
 
-export const SettingsDialog = ({ open, onOpenChange, user, onUpdate, onClear }: Props) => {
+export const SettingsDialog = ({ open, onOpenChange, nickname, onRename, onClear }: Props) => {
   const navigate = useNavigate();
-  const [name, setName] = useState(user.nickname);
+  const [name, setName] = useState(nickname);
   const [confirm, setConfirm] = useState(false);
   const [auth, setAuth] = useState<AuthInfo | null>(null);
 
-  // Fetch the current account (if any) whenever the dialog opens
+  useEffect(() => { setName(nickname); }, [nickname]);
+
   useEffect(() => {
     if (!open) return;
     let cancelled = false;
@@ -61,7 +61,6 @@ export const SettingsDialog = ({ open, onOpenChange, user, onUpdate, onClear }: 
           <DialogTitle className="font-display text-3xl tracking-wide">SETTINGS</DialogTitle>
         </DialogHeader>
         <div className="space-y-4">
-          {/* Account section */}
           <div>
             <label className="font-display text-lg tracking-wide block mb-1">Account</label>
             {auth ? (
@@ -99,7 +98,7 @@ export const SettingsDialog = ({ open, onOpenChange, user, onUpdate, onClear }: 
               onClick={() => {
                 const trimmed = name.trim();
                 if (trimmed) {
-                  onUpdate({ ...user, nickname: trimmed });
+                  onRename(trimmed);
                   onOpenChange(false);
                 }
               }}
@@ -109,29 +108,31 @@ export const SettingsDialog = ({ open, onOpenChange, user, onUpdate, onClear }: 
             </Button>
           </div>
 
-          <div className="border-t-2 border-dashed border-muted pt-4">
-            {!confirm ? (
-              <Button
-                variant="outline"
-                onClick={() => setConfirm(true)}
-                className="w-full border-2 border-ink text-destructive shadow-zine-sm rounded-lg"
-              >
-                Clear all my data
-              </Button>
-            ) : (
-              <div className="space-y-2">
-                <p className="text-sm text-center">This wipes your nickname and all visits. Sure?</p>
-                <div className="flex gap-2">
-                  <Button variant="outline" onClick={() => setConfirm(false)} className="flex-1 border-2 border-ink rounded-lg">
-                    Cancel
-                  </Button>
-                  <Button onClick={onClear} className="flex-1 bg-destructive text-destructive-foreground border-2 border-ink rounded-lg">
-                    Yes, clear it
-                  </Button>
+          {!auth && (
+            <div className="border-t-2 border-dashed border-muted pt-4">
+              {!confirm ? (
+                <Button
+                  variant="outline"
+                  onClick={() => setConfirm(true)}
+                  className="w-full border-2 border-ink text-destructive shadow-zine-sm rounded-lg"
+                >
+                  Clear local data
+                </Button>
+              ) : (
+                <div className="space-y-2">
+                  <p className="text-sm text-center">This wipes the local nickname and any unsynced visits. Sure?</p>
+                  <div className="flex gap-2">
+                    <Button variant="outline" onClick={() => setConfirm(false)} className="flex-1 border-2 border-ink rounded-lg">
+                      Cancel
+                    </Button>
+                    <Button onClick={onClear} className="flex-1 bg-destructive text-destructive-foreground border-2 border-ink rounded-lg">
+                      Yes, clear it
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          )}
 
           <p className="text-xs text-center text-muted-foreground">
             PDX Pizza Week 2026 Tracker · v1.0

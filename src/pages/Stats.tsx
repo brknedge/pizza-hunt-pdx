@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowLeft, Pizza, Trophy } from "lucide-react";
 import locationsData from "@/data/locations.json";
-import type { Location, RatingCategory, User, Visit } from "@/types/pizza";
-import { getUser, upsertVisit, removeVisit } from "@/lib/storage";
+import type { Location, RatingCategory, Visit } from "@/types/pizza";
+import { useVisits } from "@/hooks/useVisits";
 import { LocationCard } from "@/components/LocationCard";
 import { RatingDialog } from "@/components/RatingDialog";
 
@@ -18,25 +18,16 @@ const CATEGORY_LABELS: Record<RatingCategory, string> = {
 };
 
 const Stats = () => {
-  const navigate = useNavigate();
-  const [user, setUser] = useState<User | null>(null);
-  const [loaded, setLoaded] = useState(false);
+  const { visits, nickname, loading, upsertVisit, removeVisit } = useVisits();
   const [activeId, setActiveId] = useState<string | null>(null);
 
-  useEffect(() => {
-    const u = getUser();
-    setUser(u);
-    setLoaded(true);
-    if (!u) navigate("/", { replace: true });
-  }, [navigate]);
-
   const visited = useMemo(() => {
-    if (!user) return [] as { location: Location; visit: Visit }[];
+    if (!visits) return [] as { location: Location; visit: Visit }[];
     return LOCATIONS
-      .filter((l) => user.visits[l.id])
-      .map((l) => ({ location: l, visit: user.visits[l.id] }))
+      .filter((l) => visits[l.id])
+      .map((l) => ({ location: l, visit: visits[l.id] }))
       .sort((a, b) => b.visit.ratings.overall - a.visit.ratings.overall);
-  }, [user]);
+  }, [visits]);
 
   const total = LOCATIONS.length;
   const count = visited.length;
@@ -48,12 +39,7 @@ const Stats = () => {
     };
     if (count === 0) return out;
     (Object.keys(out) as RatingCategory[]).forEach((k) => {
-      const sum = visited.reduce((s, v) => {
-        const r = v.visit.ratings as Partial<Record<string, number>>;
-        // migrate: old "flavor" → "taste"
-        const val = k === "taste" ? (r.taste ?? r.flavor ?? 0) : (r[k] ?? 0);
-        return s + val;
-      }, 0);
+      const sum = visited.reduce((s, v) => s + (v.visit.ratings[k] ?? 0), 0);
       out[k] = sum / count;
     });
     return out;
@@ -65,10 +51,10 @@ const Stats = () => {
     [visited],
   );
 
-  if (!loaded || !user) return null;
+  if (loading) return null;
 
   const active = LOCATIONS.find((l) => l.id === activeId) || null;
-  const activeVisit = active ? user.visits[active.id] : undefined;
+  const activeVisit = active && visits ? visits[active.id] : undefined;
 
   return (
     <div className="min-h-[100dvh] bg-background">
@@ -89,14 +75,13 @@ const Stats = () => {
               MY PIZZA <span className="text-marinara">STATS</span>
             </h1>
             <p className="text-xs text-muted-foreground truncate">
-              {user.nickname} · {count}/{total} slices
+              {nickname || "Friend"} · {count}/{total} slices
             </p>
           </div>
         </div>
       </header>
 
       <main className="max-w-6xl mx-auto px-4 py-5 space-y-6">
-        {/* Top stats row */}
         <section className="grid grid-cols-2 md:grid-cols-4 gap-3">
           <StatCard label="Visited" value={`${count}`} sub={`of ${total}`} />
           <StatCard label="Progress" value={`${pct}%`} sub="complete" />
@@ -124,7 +109,6 @@ const Stats = () => {
           </div>
         ) : (
           <>
-            {/* Champion + averages */}
             <section className="grid md:grid-cols-2 gap-4">
               {top && (
                 <div className="bg-card border-2 border-ink shadow-zine rounded-xl p-4">
@@ -175,7 +159,6 @@ const Stats = () => {
               </div>
             </section>
 
-            {/* Visited grid */}
             <section>
               <h2 className="font-display text-3xl tracking-wide mb-3">
                 VISITED <span className="text-marinara">({count})</span>
@@ -201,14 +184,14 @@ const Stats = () => {
         existing={activeVisit}
         open={!!active}
         onOpenChange={(o) => !o && setActiveId(null)}
-        onSave={(visit) => {
+        onSave={async (visit) => {
           if (!active) return;
-          setUser(upsertVisit(active.id, visit));
+          await upsertVisit(active.id, visit);
           setActiveId(null);
         }}
-        onDelete={activeVisit ? () => {
+        onDelete={activeVisit ? async () => {
           if (!active) return;
-          setUser(removeVisit(active.id));
+          await removeVisit(active.id);
           setActiveId(null);
         } : undefined}
       />
