@@ -36,9 +36,25 @@ export const LocationCard = ({ location, visit, onClick, onToggleFavorite, index
           )}
         />
         {visited && (
-          <div className="absolute top-2 right-2 bg-mozz border-2 border-ink rounded-full px-2 py-1 flex items-center gap-1 shadow-zine-sm">
-            <Check className="h-3.5 w-3.5" strokeWidth={3} />
-            <span className="font-display text-sm tracking-wide">VISITED</span>
+          <div className="absolute top-2 right-2 flex items-center gap-1.5">
+            {onToggleFavorite && (
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); onToggleFavorite(); }}
+                aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+                aria-pressed={isFavorite}
+                className={cn(
+                  "h-8 w-8 grid place-items-center rounded-full border-2 border-ink shadow-zine-sm transition-transform hover:-translate-y-0.5",
+                  isFavorite ? "bg-marinara text-primary-foreground" : "bg-card text-ink",
+                )}
+              >
+                <Heart className="h-4 w-4" strokeWidth={2.5} fill={isFavorite ? "currentColor" : "none"} />
+              </button>
+            )}
+            <div className="bg-mozz border-2 border-ink rounded-full px-2 py-1 flex items-center gap-1 shadow-zine-sm">
+              <Check className="h-3.5 w-3.5" strokeWidth={3} />
+              <span className="font-display text-sm tracking-wide">VISITED</span>
+            </div>
           </div>
         )}
         <div className="absolute top-2 left-2 flex flex-col gap-1 items-start">
