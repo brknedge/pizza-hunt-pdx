@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { LogIn, LogOut } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 import type { User } from "@/types/pizza";
 
 interface Props {
@@ -12,9 +16,43 @@ interface Props {
   onClear: () => void;
 }
 
+interface AuthInfo {
+  username: string;
+  nickname: string;
+}
+
 export const SettingsDialog = ({ open, onOpenChange, user, onUpdate, onClear }: Props) => {
+  const navigate = useNavigate();
   const [name, setName] = useState(user.nickname);
   const [confirm, setConfirm] = useState(false);
+  const [auth, setAuth] = useState<AuthInfo | null>(null);
+
+  // Fetch the current account (if any) whenever the dialog opens
+  useEffect(() => {
+    if (!open) return;
+    let cancelled = false;
+    (async () => {
+      const { data: { user: u } } = await supabase.auth.getUser();
+      if (!u) {
+        if (!cancelled) setAuth(null);
+        return;
+      }
+      const { data } = await supabase
+        .from("profiles")
+        .select("username, nickname")
+        .eq("id", u.id)
+        .maybeSingle();
+      if (!cancelled) setAuth(data ?? null);
+    })();
+    return () => { cancelled = true; };
+  }, [open]);
+
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+    setAuth(null);
+    toast({ title: "Signed out" });
+    onOpenChange(false);
+  };
 
   return (
     <Dialog open={open} onOpenChange={(o) => { onOpenChange(o); if (!o) setConfirm(false); }}>
@@ -23,7 +61,33 @@ export const SettingsDialog = ({ open, onOpenChange, user, onUpdate, onClear }: 
           <DialogTitle className="font-display text-3xl tracking-wide">SETTINGS</DialogTitle>
         </DialogHeader>
         <div className="space-y-4">
+          {/* Account section */}
           <div>
+            <label className="font-display text-lg tracking-wide block mb-1">Account</label>
+            {auth ? (
+              <div className="space-y-2">
+                <div className="border-2 border-ink rounded-lg bg-mozz/40 px-3 py-2 text-sm">
+                  Signed in as <span className="font-semibold">@{auth.username}</span>
+                </div>
+                <Button
+                  onClick={handleSignOut}
+                  variant="outline"
+                  className="w-full border-2 border-ink shadow-zine-sm rounded-lg"
+                >
+                  <LogOut className="h-4 w-4 mr-2" /> Sign out
+                </Button>
+              </div>
+            ) : (
+              <Button
+                onClick={() => { onOpenChange(false); navigate("/auth"); }}
+                className="w-full bg-ink text-background border-2 border-ink shadow-zine-sm font-display tracking-wider rounded-lg"
+              >
+                <LogIn className="h-4 w-4 mr-2" /> SIGN IN / SIGN UP
+              </Button>
+            )}
+          </div>
+
+          <div className="border-t-2 border-dashed border-muted pt-4">
             <label className="font-display text-lg tracking-wide block mb-1">Your name</label>
             <Input
               value={name}
