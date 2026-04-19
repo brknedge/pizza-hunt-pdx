@@ -128,14 +128,12 @@ const MapPage = () => {
                         )}
                       </div>
                     )}
-                    <a
-                      href={l.everoutUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-xs underline mt-1 inline-block"
+                    <Link
+                      to={`/?rate=${encodeURIComponent(l.id)}`}
+                      className="text-xs underline mt-1 inline-block font-semibold"
                     >
-                      EverOut →
-                    </a>
+                      {visited ? "Edit rating →" : "Rate this slice →"}
+                    </Link>
                   </div>
                 </Popup>
               </Marker>
