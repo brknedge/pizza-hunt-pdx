@@ -45,7 +45,9 @@ const Index = () => {
     visits, nickname, isCloud, loading,
     upsertVisit, removeVisit, toggleFavorite, setNickname, clearLocal,
   } = useVisits();
-  const { friendVisitsByLocation } = useFriends();
+  const { friends, friendVisitsByLocation } = useFriends();
+  const friendIds = useMemo(() => friends.map((f) => f.id), [friends]);
+  const { wishlist, friendWishlistByLocation, isWished, toggleWish } = useWishlist(friendIds);
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
   const [activeId, setActiveId] = useState<string | null>(null);
