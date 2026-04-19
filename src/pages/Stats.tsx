@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Pizza, Trophy, Users } from "lucide-react";
+import { ArrowLeft, Pizza, Trophy } from "lucide-react";
+import { HeaderNav } from "@/components/HeaderNav";
 import locationsData from "@/data/locations.json";
 import type { Location, RatingCategory, Visit } from "@/types/pizza";
 import { useVisits } from "@/hooks/useVisits";
@@ -78,13 +79,7 @@ const Stats = () => {
               {nickname || "Friend"} · {count}/{total} slices
             </p>
           </div>
-          <Link
-            to="/friends"
-            aria-label="Friends"
-            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
-          >
-            <Users className="h-4 w-4" />
-          </Link>
+          <HeaderNav />
         </div>
       </header>
 

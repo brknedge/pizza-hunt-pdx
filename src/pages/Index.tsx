@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { BarChart3, Map as MapIcon, Pizza, Search, Settings as SettingsIcon, Users } from "lucide-react";
+import { Pizza, Search } from "lucide-react";
 import locationsData from "@/data/locations.json";
 import type { Location, Visit } from "@/types/pizza";
 import { useVisits } from "@/hooks/useVisits";
@@ -9,7 +9,7 @@ import { useWishlist } from "@/hooks/useWishlist";
 import { NicknameGate } from "@/components/NicknameGate";
 import { LocationCard } from "@/components/LocationCard";
 import { RatingDialog } from "@/components/RatingDialog";
-import { SettingsDialog } from "@/components/SettingsDialog";
+import { HeaderNav } from "@/components/HeaderNav";
 import { Input } from "@/components/ui/input";
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
@@ -140,34 +140,7 @@ const Index = () => {
           <div className="hidden sm:block bg-mozz border-2 border-ink px-3 py-1 rounded-md font-display tracking-widest text-sm">
             APR 20–26
           </div>
-          <Link
-            to="/map"
-            aria-label="Map"
-            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
-          >
-            <MapIcon className="h-4 w-4" />
-          </Link>
-          <Link
-            to="/friends"
-            aria-label="Friends"
-            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
-          >
-            <Users className="h-4 w-4" />
-          </Link>
-          <Link
-            to="/stats"
-            aria-label="My stats"
-            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
-          >
-            <BarChart3 className="h-4 w-4" />
-          </Link>
-          <button
-            onClick={() => setSettingsOpen(true)}
-            aria-label="Settings"
-            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
-          >
-            <SettingsIcon className="h-4 w-4" />
-          </button>
+          <HeaderNav />
         </div>
         <div className="max-w-6xl mx-auto px-4 pb-3">
           <div className="h-3 w-full bg-card border-2 border-ink rounded-full overflow-hidden shadow-zine-sm">

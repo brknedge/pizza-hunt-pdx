@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Bookmark, Pizza, Search, UserPlus, Users, X } from "lucide-react";
+import { HeaderNav } from "@/components/HeaderNav";
 import locationsData from "@/data/locations.json";
 import type { Location } from "@/types/pizza";
 import { useAuth } from "@/hooks/useAuth";
