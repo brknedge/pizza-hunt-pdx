@@ -136,6 +136,21 @@ const MapPage = () => {
                         )}
                       </div>
                     )}
+                    {(friendVisitsByLocation[l.id]?.length ?? 0) > 0 && (
+                      <div className="mt-1 pt-1 border-t border-dashed border-muted">
+                        <div className="text-xs font-semibold flex items-center gap-1">
+                          <Users className="h-3 w-3" /> Friends
+                        </div>
+                        <ul className="text-xs space-y-0.5 mt-0.5">
+                          {friendVisitsByLocation[l.id].slice(0, 3).map((fv) => (
+                            <li key={fv.friendId}>
+                              {friendNickname(fv.friendId)} · {fv.ratings.overall}★
+                              {fv.favorite ? " ♥" : ""}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                     <Link
                       to={`/?rate=${encodeURIComponent(l.id)}`}
                       className="text-xs underline mt-1 inline-block font-semibold"
