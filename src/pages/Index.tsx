@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { BarChart3, Map as MapIcon, Pizza, Search, Settings as SettingsIcon } from "lucide-react";
+import { BarChart3, Map as MapIcon, Pizza, Search, Settings as SettingsIcon, Users } from "lucide-react";
 import locationsData from "@/data/locations.json";
 import type { Location, Visit } from "@/types/pizza";
 import { useVisits } from "@/hooks/useVisits";
+import { useFriends } from "@/hooks/useFriends";
 import { NicknameGate } from "@/components/NicknameGate";
 import { LocationCard } from "@/components/LocationCard";
 import { RatingDialog } from "@/components/RatingDialog";
