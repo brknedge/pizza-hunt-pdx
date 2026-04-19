@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BarChart3, Pizza, Search, Settings as SettingsIcon } from "lucide-react";
 import locationsData from "@/data/locations.json";
 import type { Location, User, Visit } from "@/types/pizza";
-import { getUser, saveUser, upsertVisit, removeVisit, clearAll } from "@/lib/storage";
+import { getUser, saveUser, upsertVisit, removeVisit, clearAll, toggleFavorite } from "@/lib/storage";
 import { NicknameGate } from "@/components/NicknameGate";
 import { LocationCard } from "@/components/LocationCard";
 import { RatingDialog } from "@/components/RatingDialog";
@@ -19,10 +19,24 @@ type Filter =
   | "all"
   | "visited"
   | "unvisited"
+  | "favorites"
   | "vegetarian"
   | "vegan"
   | "gluten-free"
   | string;
+
+const hasGF = (gf: Location["glutenFree"]) =>
+  gf === "yes" || gf === "available-same-price" || gf === "available-with-surcharge";
+
+// Synonyms a user might type in the search box that should match dietary metadata
+const matchesTagQuery = (l: Location, q: string): boolean => {
+  if (l.dietary.includes("vegan") && /\bvegan\b/.test(q)) return true;
+  if ((l.dietary.includes("vegetarian") || l.dietary.includes("vegan")) &&
+      /\b(veg|vegetarian|veggie)\b/.test(q)) return true;
+  if (hasGF(l.glutenFree) && /\b(gf|gluten[\s-]?free|gluten)\b/.test(q)) return true;
+  if (l.dietary.includes("meat") && /\b(meat|carnivore)\b/.test(q)) return true;
+  return false;
+};
 
 const Index = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -45,20 +59,21 @@ const Index = () => {
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return LOCATIONS.filter((l) => {
-      if (q && !(l.name.toLowerCase().includes(q) || l.pizzaName.toLowerCase().includes(q) || l.neighborhood.toLowerCase().includes(q))) {
-        return false;
+      if (q) {
+        const textHit =
+          l.name.toLowerCase().includes(q) ||
+          l.pizzaName.toLowerCase().includes(q) ||
+          l.neighborhood.toLowerCase().includes(q) ||
+          (l.ingredients?.toLowerCase().includes(q) ?? false);
+        if (!textHit && !matchesTagQuery(l, q)) return false;
       }
       if (filter === "visited") return !!user?.visits[l.id];
       if (filter === "unvisited") return !user?.visits[l.id];
+      if (filter === "favorites") return !!user?.visits[l.id]?.favorite;
       if (filter === "vegetarian")
         return l.dietary.includes("vegetarian") || l.dietary.includes("vegan");
       if (filter === "vegan") return l.dietary.includes("vegan");
-      if (filter === "gluten-free")
-        return (
-          l.glutenFree === "yes" ||
-          l.glutenFree === "available-same-price" ||
-          l.glutenFree === "available-with-surcharge"
-        );
+      if (filter === "gluten-free") return hasGF(l.glutenFree);
       if (filter !== "all") return l.neighborhood === filter;
       return true;
     });
@@ -157,6 +172,7 @@ const Index = () => {
               <SelectItem value="all">All locations</SelectItem>
               <SelectItem value="visited">Visited only</SelectItem>
               <SelectItem value="unvisited">Unvisited only</SelectItem>
+              <SelectItem value="favorites">❤️ Favorites</SelectItem>
               <SelectItem value="vegetarian">🥬 Vegetarian</SelectItem>
               <SelectItem value="vegan">🌱 Vegan</SelectItem>
               <SelectItem value="gluten-free">🌾 Gluten-free option</SelectItem>
@@ -180,6 +196,7 @@ const Index = () => {
                 location={l}
                 visit={user.visits[l.id]}
                 onClick={() => setActiveId(l.id)}
+                onToggleFavorite={() => setUser(toggleFavorite(l.id))}
                 index={i}
               />
             ))}
