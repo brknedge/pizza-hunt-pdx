@@ -115,12 +115,6 @@ export const useWishlist = (friendIds: string[] = []): WishlistState => {
     return () => { cancelled = true; };
   }, [authLoading, user]);
 
-  // Reset boot flag if user changes
-  useEffect(() => {
-    return () => {
-      // no-op; the boot effect re-evaluates on user change
-    };
-  }, [user?.id]);
 
   // Load friends' wishlists for badges on cards/map
   useEffect(() => {
