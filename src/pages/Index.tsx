@@ -5,6 +5,7 @@ import locationsData from "@/data/locations.json";
 import type { Location, Visit } from "@/types/pizza";
 import { useVisits } from "@/hooks/useVisits";
 import { useFriends } from "@/hooks/useFriends";
+import { useWishlist } from "@/hooks/useWishlist";
 import { NicknameGate } from "@/components/NicknameGate";
 import { LocationCard } from "@/components/LocationCard";
 import { RatingDialog } from "@/components/RatingDialog";
