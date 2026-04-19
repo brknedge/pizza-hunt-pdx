@@ -3,7 +3,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { StarRating } from "./StarRating";
-import { ExternalLink, Trash2 } from "lucide-react";
+import { ExternalLink, Heart, Trash2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import type { Location, RatingCategory, Visit } from "@/types/pizza";
 
 const CATEGORIES: { key: RatingCategory; label: string; desc: string }[] = [
@@ -29,6 +30,7 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
   });
   const [notes, setNotes] = useState("");
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
+  const [favorite, setFavorite] = useState(false);
 
   useEffect(() => {
     if (open && location) {
@@ -44,10 +46,12 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
         });
         setNotes(existing.notes);
         setDate(existing.visitedAt.slice(0, 10));
+        setFavorite(!!existing.favorite);
       } else {
         setRatings({ creativity: 0, taste: 0, service: 0, atmosphere: 0, overall: 0 });
         setNotes("");
         setDate(new Date().toISOString().slice(0, 10));
+        setFavorite(false);
       }
     }
   }, [open, location, existing]);
@@ -63,6 +67,7 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
       visitedAt: new Date(date).toISOString(),
       ratings,
       notes: notes.slice(0, 280),
+      favorite,
     });
   };
 
@@ -162,6 +167,19 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
               className="w-full h-11 px-3 rounded-lg border-2 border-ink shadow-zine-sm bg-background text-base"
             />
           </div>
+
+          <button
+            type="button"
+            onClick={() => setFavorite((f) => !f)}
+            aria-pressed={favorite}
+            className={cn(
+              "w-full h-12 rounded-lg border-2 border-ink shadow-zine-sm flex items-center justify-center gap-2 font-display tracking-widest transition-colors",
+              favorite ? "bg-marinara text-primary-foreground" : "bg-card hover:bg-mozz",
+            )}
+          >
+            <Heart className="h-5 w-5" strokeWidth={2.5} fill={favorite ? "currentColor" : "none"} />
+            {favorite ? "FAVORITED" : "ADD TO FAVORITES"}
+          </button>
 
           <div className="flex gap-2 pt-2">
             {existing && onDelete && (
