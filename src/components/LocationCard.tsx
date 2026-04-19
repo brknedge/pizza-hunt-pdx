@@ -58,7 +58,7 @@ export const LocationCard = ({
                 aria-pressed={!!wished}
                 className={cn(
                   "h-8 w-8 grid place-items-center rounded-full border-2 border-ink shadow-zine-sm transition-transform hover:-translate-y-0.5",
-                  wished ? "bg-ink text-mozz" : "bg-card text-ink",
+                  wished ? "bg-mozz text-ink" : "bg-card text-ink",
                 )}
               >
                 <Bookmark className="h-4 w-4" strokeWidth={2.5} fill={wished ? "currentColor" : "none"} />
