@@ -51,7 +51,6 @@ const Index = () => {
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [settingsOpen, setSettingsOpen] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
 
   // Open the rating dialog when navigated with ?rate=<id> (e.g. from the Map)
@@ -219,14 +218,6 @@ const Index = () => {
         onOpenChange={(o) => !o && setActiveId(null)}
         onSave={handleSave}
         onDelete={activeVisit ? handleDelete : undefined}
-      />
-
-      <SettingsDialog
-        open={settingsOpen}
-        onOpenChange={setSettingsOpen}
-        nickname={nickname}
-        onRename={setNickname}
-        onClear={() => { clearLocal(); setSettingsOpen(false); }}
       />
     </div>
   );

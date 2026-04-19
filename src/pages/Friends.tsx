@@ -278,6 +278,7 @@ const Header = () => (
           Track your crew's slice game
         </p>
       </div>
+      <HeaderNav />
     </div>
   </header>
 );

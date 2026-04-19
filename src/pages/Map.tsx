@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Bookmark, Check, Heart, Pizza } from "lucide-react";
+import { ArrowLeft, Bookmark, Check, Heart, Pizza, Users } from "lucide-react";
 import { HeaderNav } from "@/components/HeaderNav";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
