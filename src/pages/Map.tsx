@@ -123,7 +123,13 @@ const MapPage = () => {
                 icon={makeIcon(visited, favorite, wished)}
               >
                 <Popup>
-                  <div className="font-sans">
+                  <div className="font-sans" style={{ minWidth: 200 }}>
+                    <img
+                      src={l.imageUrl}
+                      alt={`${l.pizzaName} from ${l.name}`}
+                      loading="lazy"
+                      className="w-full h-32 object-cover rounded-md border-2 border-ink mb-2"
+                    />
                     <div className="font-display text-base leading-tight tracking-wide">
                       {l.name}
                     </div>
