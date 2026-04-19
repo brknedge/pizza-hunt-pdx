@@ -143,6 +143,13 @@ const Index = () => {
             <MapIcon className="h-4 w-4" />
           </Link>
           <Link
+            to="/friends"
+            aria-label="Friends"
+            className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
+          >
+            <Users className="h-4 w-4" />
+          </Link>
+          <Link
             to="/stats"
             aria-label="My stats"
             className="h-10 w-10 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-mozz transition-colors shadow-zine-sm shrink-0"
