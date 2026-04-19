@@ -42,6 +42,8 @@ const PORTLAND_CENTER: [number, number] = [45.5231, -122.6765];
 const MapPage = () => {
   const { visits, loading } = useVisits();
   const { friends, friendVisitsByLocation } = useFriends();
+  const friendIds = useMemo(() => friends.map((f) => f.id), [friends]);
+  const { wishlist, friendWishlistByLocation, isWished, toggleWish } = useWishlist(friendIds);
   const friendNickname = (id: string) =>
     friends.find((f) => f.id === id)?.nickname ?? "Friend";
 
@@ -51,6 +53,7 @@ const MapPage = () => {
   );
 
   const visitedCount = visits ? Object.keys(visits).length : 0;
+  const wishCount = wishlist.size;
   const skipped = LOCATIONS.length - pinned.length;
 
   if (loading) return null;
