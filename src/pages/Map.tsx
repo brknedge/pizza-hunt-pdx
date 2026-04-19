@@ -77,7 +77,7 @@ const MapPage = () => {
               THE MAP
             </h1>
             <p className="text-xs text-muted-foreground truncate">
-              {pinned.length} venues pinned · {visitedCount} visited
+              {pinned.length} pinned · {visitedCount} visited · {wishCount} wishlist
               {skipped > 0 ? ` · ${skipped} missing coords` : ""}
             </p>
           </div>
