@@ -21,16 +21,28 @@ const makeIcon = (visited: boolean, favorite: boolean, wished: boolean) => {
     ? "hsl(var(--mozz))"
     : "hsl(var(--card))";
   const fg = visited || favorite ? "#fff" : "hsl(var(--ink))";
-  const inner = favorite ? "♥" : visited ? "✓" : wished ? "🔖" : "🍕";
+  const inner = favorite ? "♥" : visited ? "✓" : "🍕";
+  const badge = wished && !visited && !favorite
+    ? `<div style="
+        position:absolute;top:-4px;right:-4px;
+        width:16px;height:16px;border-radius:50%;
+        background:hsl(var(--ink));color:hsl(var(--mozz));
+        border:2px solid hsl(var(--mozz));
+        display:grid;place-items:center;
+        font-size:9px;line-height:1;font-weight:700;">🔖</div>`
+    : "";
   return L.divIcon({
     className: "",
-    html: `<div style="
-      width:32px;height:32px;border-radius:50%;
-      background:${bg};color:${fg};
-      border:2px solid hsl(var(--ink));
-      box-shadow:2px 2px 0 hsl(var(--ink));
-      display:grid;place-items:center;
-      font-weight:700;font-size:14px;line-height:1;">${inner}</div>`,
+    html: `<div style="position:relative;width:32px;height:32px;">
+      <div style="
+        width:32px;height:32px;border-radius:50%;
+        background:${bg};color:${fg};
+        border:2px solid hsl(var(--ink));
+        box-shadow:2px 2px 0 hsl(var(--ink));
+        display:grid;place-items:center;
+        font-weight:700;font-size:14px;line-height:1;">${inner}</div>
+      ${badge}
+    </div>`,
     iconSize: [32, 32],
     iconAnchor: [16, 16],
     popupAnchor: [0, -16],
