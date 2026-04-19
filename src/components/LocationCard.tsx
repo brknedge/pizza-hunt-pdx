@@ -9,6 +9,7 @@ interface Props {
   friendVisits?: FriendVisit[];
   wished?: boolean;
   friendWishCount?: number;
+  friendWishNames?: string[];
   onClick: () => void;
   onToggleFavorite?: () => void;
   onToggleWish?: () => void;
@@ -16,7 +17,7 @@ interface Props {
 }
 
 export const LocationCard = ({
-  location, visit, friendVisits, wished, friendWishCount = 0,
+  location, visit, friendVisits, wished, friendWishCount = 0, friendWishNames = [],
   onClick, onToggleFavorite, onToggleWish, index,
 }: Props) => {
   const visited = !!visit;
