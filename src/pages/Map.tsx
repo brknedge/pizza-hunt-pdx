@@ -206,6 +206,10 @@ const MapPage = () => {
             Visited
           </div>
           <div className="flex items-center gap-2">
+            <span className="inline-block h-4 w-4 rounded-full bg-mozz border-2 border-ink" />
+            Want to try
+          </div>
+          <div className="flex items-center gap-2">
             <span className="inline-block h-4 w-4 rounded-full bg-marinara border-2 border-ink" />
             Top pick
           </div>
