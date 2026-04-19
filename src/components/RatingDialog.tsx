@@ -100,6 +100,18 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
           >
             <Bookmark className="h-4 w-4" strokeWidth={2.5} fill={isWished(location.id) ? "currentColor" : "none"} />
           </button>
+          {friendWishNames.length > 0 && (
+            <div
+              title={`On wishlist: ${friendWishNames.join(", ")}`}
+              className="absolute bottom-3 right-3 z-10 bg-mozz border-2 border-ink rounded-md px-2 py-1 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1 max-w-[14rem]"
+            >
+              <Bookmark className="h-3.5 w-3.5 shrink-0" fill="currentColor" />
+              <span className="line-clamp-1">
+                {friendWishNames.slice(0, 2).join(", ")}
+                {friendWishNames.length > 2 ? ` +${friendWishNames.length - 2}` : ""}
+              </span>
+            </div>
+          )}
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent px-5 pt-10 pb-4">
             <p className="text-white font-semibold text-sm leading-tight">
               {location.name} · {location.neighborhood}
