@@ -49,6 +49,16 @@ export function removeVisit(locationId: string): User {
   return u;
 }
 
+export function toggleFavorite(locationId: string): User {
+  const u = getUser();
+  if (!u) throw new Error("No user");
+  const v = u.visits[locationId];
+  if (!v) return u;
+  v.favorite = !v.favorite;
+  saveUser(u);
+  return u;
+}
+
 export function clearAll() {
   localStorage.removeItem(KEY);
 }
