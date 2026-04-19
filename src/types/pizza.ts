@@ -27,6 +27,7 @@ export interface Visit {
   visitedAt: string;
   ratings: Record<RatingCategory, number>;
   notes: string;
+  favorite?: boolean;
 }
 
 export interface User {
