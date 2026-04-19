@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,6 +6,7 @@ import { StarRating } from "./StarRating";
 import { Bookmark, ExternalLink, Heart, Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useWishlist } from "@/hooks/useWishlist";
+import { useFriends } from "@/hooks/useFriends";
 import type { Location, RatingCategory, Visit } from "@/types/pizza";
 
 const CATEGORIES: { key: RatingCategory; label: string; desc: string }[] = [
@@ -26,7 +27,16 @@ interface Props {
 }
 
 export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, onDelete }: Props) => {
-  const { isWished, toggleWish } = useWishlist();
+  const { friends } = useFriends();
+  const friendIds = useMemo(() => friends.map((f) => f.id), [friends]);
+  const { isWished, toggleWish, friendWishlistByLocation } = useWishlist(friendIds);
+  const friendWishNames = useMemo(() => {
+    if (!location) return [];
+    const ids = friendWishlistByLocation[location.id] ?? [];
+    const nameById: Record<string, string> = {};
+    for (const f of friends) nameById[f.id] = f.nickname || f.username;
+    return ids.map((id) => nameById[id]).filter(Boolean);
+  }, [location, friendWishlistByLocation, friends]);
   const [ratings, setRatings] = useState<Record<RatingCategory, number>>({
     creativity: 0, taste: 0, service: 0, atmosphere: 0, overall: 0,
   });
@@ -90,6 +100,18 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
           >
             <Bookmark className="h-4 w-4" strokeWidth={2.5} fill={isWished(location.id) ? "currentColor" : "none"} />
           </button>
+          {friendWishNames.length > 0 && (
+            <div
+              title={`On wishlist: ${friendWishNames.join(", ")}`}
+              className="absolute bottom-3 right-3 z-10 bg-mozz border-2 border-ink rounded-md px-2 py-1 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1 max-w-[14rem]"
+            >
+              <Bookmark className="h-3.5 w-3.5 shrink-0" fill="currentColor" />
+              <span className="line-clamp-1">
+                {friendWishNames.slice(0, 2).join(", ")}
+                {friendWishNames.length > 2 ? ` +${friendWishNames.length - 2}` : ""}
+              </span>
+            </div>
+          )}
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent px-5 pt-10 pb-4">
             <p className="text-white font-semibold text-sm leading-tight">
               {location.name} · {location.neighborhood}
