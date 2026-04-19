@@ -133,11 +133,16 @@ export const LocationCard = ({
             )}
             {friendWishCount > 0 && (
               <div
-                title={`${friendWishCount} friend${friendWishCount === 1 ? "" : "s"} want to try this`}
-                className="bg-card border-2 border-ink rounded-md px-2 py-0.5 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1"
+                title={`On wishlist: ${friendWishNames.join(", ")}`}
+                className="bg-mozz border-2 border-ink rounded-md px-2 py-0.5 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1 max-w-[10rem]"
               >
-                <Bookmark className="h-3 w-3" />
-                {friendWishCount}
+                <Bookmark className="h-3 w-3 shrink-0" fill="currentColor" />
+                <span className="line-clamp-1">
+                  {friendWishNames.length > 0
+                    ? friendWishNames.slice(0, 2).join(", ") +
+                      (friendWishNames.length > 2 ? ` +${friendWishNames.length - 2}` : "")
+                    : friendWishCount}
+                </span>
               </div>
             )}
           </div>
