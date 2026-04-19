@@ -57,15 +57,22 @@ const Index = () => {
   );
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const tokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
     return LOCATIONS.filter((l) => {
-      if (q) {
-        const textHit =
-          l.name.toLowerCase().includes(q) ||
-          l.pizzaName.toLowerCase().includes(q) ||
-          l.neighborhood.toLowerCase().includes(q) ||
-          (l.ingredients?.toLowerCase().includes(q) ?? false);
-        if (!textHit && !matchesTagQuery(l, q)) return false;
+      // Search: every token must match somewhere (name, pizza, neighborhood,
+      // ingredients, blurb, OR a dietary/GF synonym).
+      if (tokens.length) {
+        const haystack = [
+          l.name,
+          l.pizzaName,
+          l.neighborhood,
+          l.ingredients ?? "",
+          l.blurb ?? "",
+        ].join(" ").toLowerCase();
+        const everyHit = tokens.every(
+          (t) => haystack.includes(t) || matchesTagQuery(l, t),
+        );
+        if (!everyHit) return false;
       }
       if (filter === "visited") return !!user?.visits[l.id];
       if (filter === "unvisited") return !user?.visits[l.id];
