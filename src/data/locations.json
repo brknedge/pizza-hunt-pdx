@@ -14,7 +14,9 @@
       "whole-pie"
     ],
     "ingredients": "Whipped potato base, shredded mozzarella and cheddar cheese, smoked bacon, pickled jalapeños topped with green onions, garden herbs, parmesan cheese and sour cream.",
-    "blurb": "You've had your mom's baked potato, throw that out the window and jump on this hype train to the future! CHOO CHOO! Babes will cry, longtime enemies will become old friends, and the dead will come back to life for these flavors. They say world peace is unobtainable, not with this on the menu."
+    "blurb": "You've had your mom's baked potato, throw that out the window and jump on this hype train to the future! CHOO CHOO! Babes will cry, longtime enemies will become old friends, and the dead will come back to life for these flavors. They say world peace is unobtainable, not with this on the menu.",
+    "lat": 45.5258997,
+    "lng": -122.6854954
   },
   {
     "id": "the-farm-feast",
@@ -32,7 +34,9 @@
       "whole-pie"
     ],
     "ingredients": "Spinach, sun-dried tomatoes, chicken, topped with Italian seasoning. Made with house marinara red sauce.",
-    "blurb": "Back to our Italian roots, this Tuscany-inspired slice packs a simple punch! Chicken raised exclusively on our local Oregon city farm! Looking forward sharing with everyone!"
+    "blurb": "Back to our Italian roots, this Tuscany-inspired slice packs a simple punch! Chicken raised exclusively on our local Oregon city farm! Looking forward sharing with everyone!",
+    "lat": 45.5167853,
+    "lng": -122.6866585
   },
   {
     "id": "crema-my-pork",
@@ -67,7 +71,9 @@
       "by-the-slice"
     ],
     "ingredients": "Candied bacon, chopped dates, caramelized onion, chèvre, balsamic glaze, arugula salad tossed in Newk’s Elderfire Mango Habanero hot sauce",
-    "blurb": "A smooth garlic oil base paves the way for this sweet and spicy mama. House candied bacon with a hint of cayenne pepper, chopped dates, caramelized onions, and goat cheese finished off with a balsamic glaze and topped with arugula tossed in Newk’s Elderfire Mango Habanero hot sauce. Sugar, spice, and everything nice. She’ll be waiting for ya ;)"
+    "blurb": "A smooth garlic oil base paves the way for this sweet and spicy mama. House candied bacon with a hint of cayenne pepper, chopped dates, caramelized onions, and goat cheese finished off with a balsamic glaze and topped with arugula tossed in Newk’s Elderfire Mango Habanero hot sauce. Sugar, spice, and everything nice. She’ll be waiting for ya ;)",
+    "lat": 45.5046379,
+    "lng": -122.6269611
   },
   {
     "id": "schwilly-pie",
@@ -84,7 +90,9 @@
       "by-the-slice"
     ],
     "ingredients": "We got tiny little slices of pizza on top of a big ol' slice of pizza.",
-    "blurb": "What’s better than pizza?!? How bout pizza ON pizza!!! We took our traditional New York plain cheese slice and dressed it up nice with mini slices of our beloved green pie. Threw in some smoked feta, Italian herbs, crushed chili flakes and finished it with some hot honey. 🤌"
+    "blurb": "What’s better than pizza?!? How bout pizza ON pizza!!! We took our traditional New York plain cheese slice and dressed it up nice with mini slices of our beloved green pie. Threw in some smoked feta, Italian herbs, crushed chili flakes and finished it with some hot honey. 🤌",
+    "lat": 45.4891634,
+    "lng": -122.5951669
   },
   {
     "id": "the-kim-chi-possible",
@@ -101,7 +109,9 @@
       "by-the-slice"
     ],
     "ingredients": "The Kim(chi)-possible pie: garlic base, spicy pork belly bulgogi, onion, baechu-kimchi, gochujang aioli drizzle, and scallions",
-    "blurb": "A Korean styled pie featuring our special sweet & spicy pork belly bulgogi, locally sourced baechu-kimchi, and finished up with a gochujang aioli drizzle! Decadent Korean flavors combined with our pizza prowess to make for a delicious pizza experience!!"
+    "blurb": "A Korean styled pie featuring our special sweet & spicy pork belly bulgogi, locally sourced baechu-kimchi, and finished up with a gochujang aioli drizzle! Decadent Korean flavors combined with our pizza prowess to make for a delicious pizza experience!!",
+    "lat": 45.5625542,
+    "lng": -122.6743348
   },
   {
     "id": "a-reuben-jamaica-ooh-i-wanna-take-ya-to-baby-doll-pizza",
@@ -119,7 +129,9 @@
       "by-the-slice"
     ],
     "ingredients": "Corned beef, sauerkraut, provolone & mozzarella cheese, green onion on a pepperoncini aioli base. (Allergy alert for Paprika)",
-    "blurb": "The rueben, your favorite deli sandwich, has reached its final form. Shaved slices of corned beef, sauerkraut for a slight kick, melded with provolone and mozzarella cheese on a base of pepperoncini aioli. Topped with diced green onions for those fresh high notes. Close your eyes and relive your favorite bodega memories."
+    "blurb": "The rueben, your favorite deli sandwich, has reached its final form. Shaved slices of corned beef, sauerkraut for a slight kick, melded with provolone and mozzarella cheese on a base of pepperoncini aioli. Topped with diced green onions for those fresh high notes. Close your eyes and relive your favorite bodega memories.",
+    "lat": 45.5194213,
+    "lng": -122.6365397
   },
   {
     "id": "belly-of-the-beast",
@@ -153,7 +165,9 @@
       "by-the-slice"
     ],
     "ingredients": "Monterey Jack, cheddar, cream cheese, chiles, cream, poblano, dough, butter, flour, milk.",
-    "blurb": "A slice that eats like your favorite late-night comfort ritual. Monterey Jack, cheddar, and cream cheese melt into a velvety base with smoky Hatch chiles and cream. Finished with fire-roasted poblano for a charred edge and just enough heat."
+    "blurb": "A slice that eats like your favorite late-night comfort ritual. Monterey Jack, cheddar, and cream cheese melt into a velvety base with smoky Hatch chiles and cream. Finished with fire-roasted poblano for a charred edge and just enough heat.",
+    "lat": 45.4543862,
+    "lng": -122.7200123
   },
   {
     "id": "chicken-bacon-ranch-pizza",
@@ -171,7 +185,9 @@
       "whole-pie"
     ],
     "ingredients": "Ranch base with chicken, mozzarella cheese, crispy bacon, and a light dusting of cheddar. Finished with a ranch drizzle and fresh herbs.",
-    "blurb": "Fan favorite in-house and by customers, this pizza has only been limited availability until now. Our inspiration? Who doesn't love ranch! A delightful combination of flavors and texture: this pizza is light and fresh yet indulgent."
+    "blurb": "Fan favorite in-house and by customers, this pizza has only been limited availability until now. Our inspiration? Who doesn't love ranch! A delightful combination of flavors and texture: this pizza is light and fresh yet indulgent.",
+    "lat": 45.5353661,
+    "lng": -122.6298027
   },
   {
     "id": "the-caeza",
@@ -208,7 +224,9 @@
       "whole-pie"
     ],
     "ingredients": "Mozzarella-cheddar blend, yellow curry chicken, jalapeño, pickled carrot & daikon, cilantro, sweet chili mayo",
-    "blurb": "This is a bánh mì-inspired pizza, completely vegan, and available gluten free for an additional charge."
+    "blurb": "This is a bánh mì-inspired pizza, completely vegan, and available gluten free for an additional charge.",
+    "lat": 45.5289041,
+    "lng": -122.6382278
   },
   {
     "id": "thai-chicken-pizza",
@@ -225,7 +243,9 @@
       "whole-pie"
     ],
     "ingredients": "Hand-stretched crust with savory peanut sauce, mozzarella, marinated chicken, and roasted peppers. Topped with fresh bean sprouts, Sriracha, cilantro, and a crunchy crushed peanut finish.",
-    "blurb": "Trust us, just get it."
+    "blurb": "Trust us, just get it.",
+    "lat": 45.5270778,
+    "lng": -122.6848826
   },
   {
     "id": "snyder-weccacoe",
@@ -314,7 +334,9 @@
       "whole-pie"
     ],
     "ingredients": "Spicy vodka sauce, bacon, fermented chili hot honey, mozzarella, Grana Padano, Pecorino, and fried basil",
-    "blurb": "No overthinking, just keeping it simple and delicious! We're trying to give the people what they want! Whole pies available vegetarian, slices are not."
+    "blurb": "No overthinking, just keeping it simple and delicious! We're trying to give the people what they want! Whole pies available vegetarian, slices are not.",
+    "lat": 45.5233431,
+    "lng": -122.6583963
   },
   {
     "id": "taos",
@@ -331,7 +353,9 @@
       "whole-pie"
     ],
     "ingredients": "Cilantro pesto, mozzarella, southwest marinated pork belly lardons, oven roasted corn and onions, sliced roasted red peppers, finished with cotija cheese.",
-    "blurb": "A little heat, a little brightness, a lot of soul. Taos brings it all together with smoky pork, sweet corn, and a lift of cilantro that cuts through in the best way. It’s bold without trying too hard, layered without feeling heavy, and somehow tastes like sunshine, fire, and good company in every bite."
+    "blurb": "A little heat, a little brightness, a lot of soul. Taos brings it all together with smoky pork, sweet corn, and a lift of cilantro that cuts through in the best way. It’s bold without trying too hard, layered without feeling heavy, and somehow tastes like sunshine, fire, and good company in every bite.",
+    "lat": 45.5625216,
+    "lng": -122.6851196
   },
   {
     "id": "belly-up-to-the-orchard",
@@ -367,7 +391,9 @@
       "whole-pie"
     ],
     "ingredients": "3 cheese blend, roasted pepper cream cheese, house-pickled jalapeño, berry drizzle, house hot jalapeño honey, Frito crumbs, with or without bacon.",
-    "blurb": "We know...another Pizza Week, another jalapeño popper riff—that's all Shane—but we're inviting Ilya to this game with haaaaaaaawt honey & just a little bit sweet berry situation. Plus Frito crumbs because fun, and have some bacon too if you're into it."
+    "blurb": "We know...another Pizza Week, another jalapeño popper riff—that's all Shane—but we're inviting Ilya to this game with haaaaaaaawt honey & just a little bit sweet berry situation. Plus Frito crumbs because fun, and have some bacon too if you're into it.",
+    "lat": 45.5265866,
+    "lng": -122.5812434
   },
   {
     "id": "smoky-4-2026",
@@ -439,7 +465,9 @@
       "whole-pie"
     ],
     "ingredients": "Capicola ham, hot cherry bomb peppers, chèvre, hot honey.",
-    "blurb": "Salty, funky, sweet—just like Fire on the Mountain!"
+    "blurb": "Salty, funky, sweet—just like Fire on the Mountain!",
+    "lat": 45.5480432,
+    "lng": -122.6049402
   },
   {
     "id": "haters-gonna-hate",
@@ -508,7 +536,9 @@
       "whole-pie"
     ],
     "ingredients": "Beer cheese & stone ground mustard, mozzarella, caramelized onion, sauerkraut, and beer sausage.",
-    "blurb": "Direct from our German beer heritage, we're bringing the spirit of Oktoberfest to your pizza. This bold, unexpected combination is the wurst idea we've ever had."
+    "blurb": "Direct from our German beer heritage, we're bringing the spirit of Oktoberfest to your pizza. This bold, unexpected combination is the wurst idea we've ever had.",
+    "lat": 45.4968753,
+    "lng": -122.6348432
   },
   {
     "id": "the-lilia",
@@ -525,7 +555,9 @@
       "by-the-slice"
     ],
     "ingredients": "Guajillo chipotle sauce, mozzarella, potato, chorizo, red onion, roasted red pepper, crema, salsa cerde, cilantro",
-    "blurb": "When I was in high school my best friend's mom was an integral part of me wanting to pursue cooking. I would go over to their house for barbeques; while everyone else was outside in the yard, I would be in the kitchen with her. This pizza was inspired by one of the dishes she used to make."
+    "blurb": "When I was in high school my best friend's mom was an integral part of me wanting to pursue cooking. I would go over to their house for barbeques; while everyone else was outside in the yard, I would be in the kitchen with her. This pizza was inspired by one of the dishes she used to make.",
+    "lat": 45.4799234,
+    "lng": -122.5684268
   },
   {
     "id": "you-asked-for-it",
@@ -543,7 +575,9 @@
       "whole-pie"
     ],
     "ingredients": "It's a burger. On a pizza. We took a Detroit-style pizza and built a burger on top. A miniature beef slider patty on every slice, topped with American cheese, shredded lettuce, our burger sauce and dill pickles, and a tiny little bun.",
-    "blurb": "We really loved the pizza burger we made for Burger Week last year, so it was pretty clear what we had to do."
+    "blurb": "We really loved the pizza burger we made for Burger Week last year, so it was pretty clear what we had to do.",
+    "lat": 45.5400205,
+    "lng": -122.6684146
   },
   {
     "id": "taco-the-town",
@@ -561,7 +595,9 @@
       "whole-pie"
     ],
     "ingredients": "Detroit-style pizza base, refried beans, brick cheese, slow simmered spiced beef, lettuce, tomato, lime crema, tortilla chips, oven roasted salsa and lime on side. Can be ordered without beef to be vegetarian.",
-    "blurb": "A crispy-edged Detroit slab stacked with creamy refried beans, molten brick cheese, and bold taco-spiced beef. Baked to golden perfection, then topped with cool lettuce, juicy tomatoes, zesty lime crema, and crunchy tortilla chips. Served with smoky oven-roasted salsa and a lime on the side for good measure. Messy, loud, and absolutely loaded."
+    "blurb": "A crispy-edged Detroit slab stacked with creamy refried beans, molten brick cheese, and bold taco-spiced beef. Baked to golden perfection, then topped with cool lettuce, juicy tomatoes, zesty lime crema, and crunchy tortilla chips. Served with smoky oven-roasted salsa and a lime on the side for good measure. Messy, loud, and absolutely loaded.",
+    "lat": 45.5400205,
+    "lng": -122.6684146
   },
   {
     "id": "the-gravy-train",
@@ -596,7 +632,9 @@
       "whole-pie"
     ],
     "ingredients": "Chicken thigh, capers, Taggiasca olives, provolone, parsley, pecorino",
-    "blurb": "A classic east coast Italian-American dish that’s close to my heart! I added cream and olives to make it delicious and unforgettable!"
+    "blurb": "A classic east coast Italian-American dish that’s close to my heart! I added cream and olives to make it delicious and unforgettable!",
+    "lat": 45.4968561,
+    "lng": -122.6538323
   },
   {
     "id": "whipped-mascarpone-smoked-salmon-pizza",
@@ -613,7 +651,9 @@
       "whole-pie"
     ],
     "ingredients": "Whipped mascarpone, smoked salmon, broccoli raab, shaved fennel, arugula, sweet vermouth reduction.",
-    "blurb": "Our pizza is a balanced play of smoke, bitterness, and brightness."
+    "blurb": "Our pizza is a balanced play of smoke, bitterness, and brightness.",
+    "lat": 45.5306349,
+    "lng": -122.6612887
   },
   {
     "id": "zingo-starr-it-dont-come-cheesy",
@@ -685,7 +725,9 @@
       "whole-pie"
     ],
     "ingredients": "Built on our artisan gluten-free crust, this pizza is topped with a bold Buffalo blue cheese sauce, butter-and-cheesy cracker-battered chicken baked to perfection, then finished with fresh scallions and crumbled blue cheese.",
-    "blurb": "Built on our artisan gluten-free crust, this pizza brings the heat and the taste. A bold buffalo blue cheese sauce delivers just the right kick, layered with tender chicken that’s been dredged in butter and crushed cheesy crackers then roasted for an irresistible taste. Finished with fresh scallions for a pop of brightness, every slice hits spicy, savory and creamy. Oh, and it’s all gluten-free."
+    "blurb": "Built on our artisan gluten-free crust, this pizza brings the heat and the taste. A bold buffalo blue cheese sauce delivers just the right kick, layered with tender chicken that’s been dredged in butter and crushed cheesy crackers then roasted for an irresistible taste. Finished with fresh scallions for a pop of brightness, every slice hits spicy, savory and creamy. Oh, and it’s all gluten-free.",
+    "lat": 45.5045945,
+    "lng": -122.6402368
   },
   {
     "id": "shatta-pizza",
@@ -702,7 +744,9 @@
       "whole-pie"
     ],
     "ingredients": "A tender, flaky crust covered with fermented red chili paste and topped with a blend of imported Lebanese cheeses. Can be made vegan by omitting the cheese.",
-    "blurb": "Our inspiration is the flavors and spices of Mediterranean foods, family recipes, and not to mention our delicious pita."
+    "blurb": "Our inspiration is the flavors and spices of Mediterranean foods, family recipes, and not to mention our delicious pita.",
+    "lat": 45.5133391,
+    "lng": -122.6544984
   },
   {
     "id": "lets-get-baked-potato-pizza",
@@ -719,7 +763,9 @@
       "whole-pie"
     ],
     "ingredients": "Potatoes, smoked bacon, mozzarella and cheddar cheese, green onion, sour cream.",
-    "blurb": "Po-ta-toes! Boil 'em, mash 'em, stick 'em on a pizza."
+    "blurb": "Po-ta-toes! Boil 'em, mash 'em, stick 'em on a pizza.",
+    "lat": 45.5593238,
+    "lng": -122.6206284
   },
   {
     "id": "the-carmela",
@@ -737,7 +783,9 @@
       "whole-pie"
     ],
     "ingredients": "Original Dream marinara, garlic-parsley ricotta dollops and spicy Italian sausage. All atop our house-made dough with a honey-butter hand-braided crust.",
-    "blurb": "At Original Dream Pizza, we keep it simple and delicious! If you like lasagna, you will love this pizza. After all, what's better than Sunday supper at Nonna's house? Please note we are opening early on Saturday and Sunday (4/25 & 4/26) just for Pizza Week!"
+    "blurb": "At Original Dream Pizza, we keep it simple and delicious! If you like lasagna, you will love this pizza. After all, what's better than Sunday supper at Nonna's house? Please note we are opening early on Saturday and Sunday (4/25 & 4/26) just for Pizza Week!",
+    "lat": 45.5262805,
+    "lng": -122.6152828
   },
   {
     "id": "bend-and-snap",
@@ -754,7 +802,9 @@
       "whole-pie"
     ],
     "ingredients": "Rhubarb and strawberry base, goat cheese, fresh snap peas, Pecorino, and kaiware.",
-    "blurb": "Endorphins make you happy. Happy people just don't skip pizza... they just don't! Why you'll love it: The Bend- Perfectly foldable crust with our house made sourdough The Snap- Fresh snap peas that pop The Verdict- Objection! (WAIT- sustained. It's delicious) \"What, like it's hard to eat the whole thing?\""
+    "blurb": "Endorphins make you happy. Happy people just don't skip pizza... they just don't! Why you'll love it: The Bend- Perfectly foldable crust with our house made sourdough The Snap- Fresh snap peas that pop The Verdict- Objection! (WAIT- sustained. It's delicious) \"What, like it's hard to eat the whole thing?\"",
+    "lat": 45.5249598,
+    "lng": -122.6827897
   },
   {
     "id": "the-pauper-prince",
@@ -860,7 +910,9 @@
       "whole-pie"
     ],
     "ingredients": "Prosciutto di Parma, broccoli rabe, house white sauce, our three cheese blend, mushroom confit, Calabrian chilies",
-    "blurb": "This pizza is a twist on a classic Italian pasta dish with broccoli rabe (cime di rapa), traditionally paired with orecchiette from Puglia. It features blanched, slightly bitter broccoli rabe sautéed in olive oil with garlic, red pepper flakes, and sometimes anchovies, tossed with pasta and finished with Pecorino Romano cheese."
+    "blurb": "This pizza is a twist on a classic Italian pasta dish with broccoli rabe (cime di rapa), traditionally paired with orecchiette from Puglia. It features blanched, slightly bitter broccoli rabe sautéed in olive oil with garlic, red pepper flakes, and sometimes anchovies, tossed with pasta and finished with Pecorino Romano cheese.",
+    "lat": 45.5170756,
+    "lng": -122.6595573
   },
   {
     "id": "you-gotta-ricotta",
@@ -894,7 +946,9 @@
       "by-the-slice"
     ],
     "ingredients": "Garlic parmesan base topped with artichoke hearts, spinach, and green onion, finished with a garlic herb crust.",
-    "blurb": "This pizza feels like something you’d eat after sinking the winning shot on the last table of the night. It’s rich, garlicky and a little boujee. The garlic parmesan base brings that creamy, indulgent punch, while the artichokes + spinach keep it fresh and just fancy enough to feel like you made a good decision (even if it’s your third slice). The garlic herb crust? That’s the closer. That’s the “yeah… this is the one” bite."
+    "blurb": "This pizza feels like something you’d eat after sinking the winning shot on the last table of the night. It’s rich, garlicky and a little boujee. The garlic parmesan base brings that creamy, indulgent punch, while the artichokes + spinach keep it fresh and just fancy enough to feel like you made a good decision (even if it’s your third slice). The garlic herb crust? That’s the closer. That’s the “yeah… this is the one” bite.",
+    "lat": 45.5194258,
+    "lng": -122.6763389
   },
   {
     "id": "super-mario-galaxy-pizza",
@@ -912,7 +966,9 @@
       "whole-pie"
     ],
     "ingredients": "Red sauce base loaded with mozzarella cheese, Italian sausage, red and green bell peppers, mushrooms, peaches and basil.",
-    "blurb": "Born from a Mario galaxy sized imagination, this pizza exists to play. We pull power-ups from everywhere, blending comfort with surprise. It’s a delicious warp-pipe to fun because every bite should help you level up. Vegan, vegetarian and gluten free substitutions available."
+    "blurb": "Born from a Mario galaxy sized imagination, this pizza exists to play. We pull power-ups from everywhere, blending comfort with surprise. It’s a delicious warp-pipe to fun because every bite should help you level up. Vegan, vegetarian and gluten free substitutions available.",
+    "lat": 45.4984062,
+    "lng": -122.6408784
   },
   {
     "id": "one-hit-wonder",
@@ -929,7 +985,9 @@
       "whole-pie"
     ],
     "ingredients": "Mozzarella, brick cheddar, sweet corn, green chili, crema Mexicana, Flaming Hot Cheetos, lime pickled onion, cilantro",
-    "blurb": "Chef Dino got a little too baked this time."
+    "blurb": "Chef Dino got a little too baked this time.",
+    "lat": 45.5335796,
+    "lng": -122.6948785
   },
   {
     "id": "sausage-pesto",
@@ -947,7 +1005,9 @@
       "whole-pie"
     ],
     "ingredients": "Creamy pesto base, house made sausage on a garlic herb crust, topped with fresh basil, mushrooms, and parmesean.",
-    "blurb": "We love our house made Italian sausage and want to share that love with the world. Pesto, sausage, mushroom and fresh basil = perfection."
+    "blurb": "We love our house made Italian sausage and want to share that love with the world. Pesto, sausage, mushroom and fresh basil = perfection.",
+    "lat": 45.5599535,
+    "lng": -122.6825632
   },
   {
     "id": "bada-bing",
@@ -965,7 +1025,9 @@
       "whole-pie"
     ],
     "ingredients": "Cherry pizza with brie, lemon zesty pistachio pesto, and balsamic drizzle.",
-    "blurb": "An Italian-inspired cherry pie, Bada Bing! blends the flavors of savory baked brie, sweet and tart cherries, and pistachio pesto into a rich, balanced bite that’s both nostalgic and unexpected. Big flavor, no apologies. Come and get it!"
+    "blurb": "An Italian-inspired cherry pie, Bada Bing! blends the flavors of savory baked brie, sweet and tart cherries, and pistachio pesto into a rich, balanced bite that’s both nostalgic and unexpected. Big flavor, no apologies. Come and get it!",
+    "lat": 45.5276012,
+    "lng": -122.6947443
   },
   {
     "id": "bada-bing-hosford-abernethy",
@@ -1001,7 +1063,9 @@
       "whole-pie"
     ],
     "ingredients": "Olive oil, mozzarella, mojo-marinated pulled pork, ham, dill pickles, Swiss cheese, and squirt of classic yellow mustard.",
-    "blurb": "Transport to Miami with this Cubano inspired slice. “Say Hello To My Little Friend”"
+    "blurb": "Transport to Miami with this Cubano inspired slice. “Say Hello To My Little Friend”",
+    "lat": 45.5892075,
+    "lng": -122.7523183
   },
   {
     "id": "happiness-is-a-shawarm-gun",
@@ -1019,7 +1083,9 @@
       "whole-pie"
     ],
     "ingredients": "Tzatziki, ground lamb, red onion, pickled turnip, diced tomato, feta.",
-    "blurb": "Mother Ewe-perior jumped the gun."
+    "blurb": "Mother Ewe-perior jumped the gun.",
+    "lat": 45.512192,
+    "lng": -122.6257495
   },
   {
     "id": "the-pork-store",
@@ -1037,7 +1103,9 @@
       "whole-pie"
     ],
     "ingredients": "House marinara, provolone, capocollo, salami, vinegar peppers.",
-    "blurb": "You know what they say: \"Revenge is like serving cold cuts.\""
+    "blurb": "You know what they say: \"Revenge is like serving cold cuts.\"",
+    "lat": 45.5163478,
+    "lng": -122.6302699
   },
   {
     "id": "chicken-breast-and-artichoke-pizza",
@@ -1054,7 +1122,9 @@
       "whole-pie"
     ],
     "ingredients": "Roasted chicken breast, garlic oil, mozzarella cheese, artichoke hearts, pickled peppers, and pesto sauce.",
-    "blurb": "Simple, but it hits every note."
+    "blurb": "Simple, but it hits every note.",
+    "lat": 45.5181619,
+    "lng": -122.6815528
   },
   {
     "id": "staten-island-trio",
@@ -1072,7 +1142,9 @@
       "whole-pie"
     ],
     "ingredients": "Focaccia topped with mozzarella, provolone, red sauce, pesto, vodka sauce",
-    "blurb": "Feeling saucy? Why choose one sauce when you can have three? Meet our Staten Island Trio; fluffy homemade focaccia topped with melted mozzarella, provolone, savory pesto, zesty red sauce AND creamy vodka sauce! You can purchase The Staten Island Trio by the square or the slab! Limited quantity daily."
+    "blurb": "Feeling saucy? Why choose one sauce when you can have three? Meet our Staten Island Trio; fluffy homemade focaccia topped with melted mozzarella, provolone, savory pesto, zesty red sauce AND creamy vodka sauce! You can purchase The Staten Island Trio by the square or the slab! Limited quantity daily.",
+    "lat": 45.473836,
+    "lng": -122.6496214
   },
   {
     "id": "taumoeba",
@@ -1108,7 +1180,9 @@
       "whole-pie"
     ],
     "ingredients": "Olympia Provisions Soppressata, Mama Lil's Peppers, pickled fennel, creme fraiche, parsley, mozzarella, provolone, Asiago, and a guanciale-Calabrian chile marinara",
-    "blurb": "Pizza is the ultimate culinary tabula rasa. It can be a vehicle for anything, as Pizza Week proves, so why not have it be a vehicle for greatness? Unctuous Soppressata, juicy Mama Lil's, house-pickled fennel, creme fraiche, and a sauce rich with cubes of guanciale and the tangy heat of Calabrian chiles. Mangia!"
+    "blurb": "Pizza is the ultimate culinary tabula rasa. It can be a vehicle for anything, as Pizza Week proves, so why not have it be a vehicle for greatness? Unctuous Soppressata, juicy Mama Lil's, house-pickled fennel, creme fraiche, and a sauce rich with cubes of guanciale and the tangy heat of Calabrian chiles. Mangia!",
+    "lat": 45.5214827,
+    "lng": -122.6770778
   },
   {
     "id": "country-reuben-pizza",
@@ -1125,7 +1199,9 @@
       "whole-pie"
     ],
     "ingredients": "Homemade thousand island dressing, classic mozzarella, corned beef, sauerkraut, red onions, and Swiss cheese.",
-    "blurb": "In the fast-paced world of trending cuisine, we decided to go back to a humble classic. Our Country Reuben pizza brings back savory memories of any small town diner, or just your local favorite corner sandwich shop."
+    "blurb": "In the fast-paced world of trending cuisine, we decided to go back to a humble classic. Our Country Reuben pizza brings back savory memories of any small town diner, or just your local favorite corner sandwich shop.",
+    "lat": 45.5273446,
+    "lng": -122.68462
   },
   {
     "id": "athena-dion",
@@ -1143,7 +1219,9 @@
       "whole-pie"
     ],
     "ingredients": "Homemade arugula pesto, feta and sliced red onions",
-    "blurb": "Delicious Greek-inspired pie, Chicago Style!"
+    "blurb": "Delicious Greek-inspired pie, Chicago Style!",
+    "lat": 45.5592546,
+    "lng": -122.6444452
   },
   {
     "id": "flaming-mac-n-cheeto",
@@ -1161,7 +1239,9 @@
       "whole-pie"
     ],
     "ingredients": "We want to highlight comfort food all on one pie! Pizza, mac' n cheese, and Flaming Hots are a trio guaranteed to bring you a few moments of comfort and nostalgia!",
-    "blurb": "Creamy buffalo béchamel base, mac n' cheese layered between cheddar and mozzarella, topped with crushed Flaming Hots and fresh jalapeño."
+    "blurb": "Creamy buffalo béchamel base, mac n' cheese layered between cheddar and mozzarella, topped with crushed Flaming Hots and fresh jalapeño.",
+    "lat": 45.5270564,
+    "lng": -122.5183898
   },
   {
     "id": "everything-but-the-bagel",
@@ -1196,7 +1276,9 @@
       "by-the-slice"
     ],
     "ingredients": "Red pepper, feta, eggplant, artichokes, sausage, mint, dough, olive oil.",
-    "blurb": "Savory, smoky, and just a touch wild. A roasted red pepper–feta sauce anchors roasted eggplant, marinated artichokes, and spicy sausage. Sheep’s milk feta and fresh mint brighten every bite."
+    "blurb": "Savory, smoky, and just a touch wild. A roasted red pepper–feta sauce anchors roasted eggplant, marinated artichokes, and spicy sausage. Sheep’s milk feta and fresh mint brighten every bite.",
+    "lat": 45.5249212,
+    "lng": -122.6798449
   },
   {
     "id": "baa-baa-boom",
@@ -1214,7 +1296,9 @@
       "whole-pie"
     ],
     "ingredients": "Tomato, harissa, lamb, onions, feta, pomegranate molasses, mint, dough, olive oil.",
-    "blurb": "Bold and deeply satisfying. Roasted tomato, harissa, and whipped feta set the stage for spiced lamb, onions, and a drizzle of pomegranate molasses. Finished with garlicky sheep’s milk feta and mint."
+    "blurb": "Bold and deeply satisfying. Roasted tomato, harissa, and whipped feta set the stage for spiced lamb, onions, and a drizzle of pomegranate molasses. Finished with garlicky sheep’s milk feta and mint.",
+    "lat": 45.5192603,
+    "lng": -122.5813084
   },
   {
     "id": "the-italian-big-mac",
