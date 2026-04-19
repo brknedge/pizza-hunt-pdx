@@ -22,6 +22,7 @@ type Filter =
   | "visited"
   | "unvisited"
   | "favorites"
+  | "wishlist"
   | "vegetarian"
   | "vegan"
   | "gluten-free"
