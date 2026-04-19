@@ -1,17 +1,19 @@
 import type { Location, Visit } from "@/types/pizza";
-import { Check, MapPin } from "lucide-react";
+import { Check, Heart, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Props {
   location: Location;
   visit?: Visit;
   onClick: () => void;
+  onToggleFavorite?: () => void;
   index: number;
 }
 
-export const LocationCard = ({ location, visit, onClick, index }: Props) => {
+export const LocationCard = ({ location, visit, onClick, onToggleFavorite, index }: Props) => {
   const visited = !!visit;
   const overall = visit?.ratings.overall ?? 0;
+  const isFavorite = !!visit?.favorite;
 
   return (
     <button
