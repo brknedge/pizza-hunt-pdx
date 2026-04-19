@@ -5,6 +5,7 @@ import locationsData from "@/data/locations.json";
 import type { Location, Visit } from "@/types/pizza";
 import { useVisits } from "@/hooks/useVisits";
 import { useFriends } from "@/hooks/useFriends";
+import { useWishlist } from "@/hooks/useWishlist";
 import { NicknameGate } from "@/components/NicknameGate";
 import { LocationCard } from "@/components/LocationCard";
 import { RatingDialog } from "@/components/RatingDialog";
@@ -21,6 +22,7 @@ type Filter =
   | "visited"
   | "unvisited"
   | "favorites"
+  | "wishlist"
   | "vegetarian"
   | "vegan"
   | "gluten-free"
@@ -43,7 +45,9 @@ const Index = () => {
     visits, nickname, isCloud, loading,
     upsertVisit, removeVisit, toggleFavorite, setNickname, clearLocal,
   } = useVisits();
-  const { friendVisitsByLocation } = useFriends();
+  const { friends, friendVisitsByLocation } = useFriends();
+  const friendIds = useMemo(() => friends.map((f) => f.id), [friends]);
+  const { wishlist, friendWishlistByLocation, isWished, toggleWish } = useWishlist(friendIds);
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -82,6 +86,7 @@ const Index = () => {
       if (filter === "visited") return !!v[l.id];
       if (filter === "unvisited") return !v[l.id];
       if (filter === "favorites") return !!v[l.id]?.favorite;
+      if (filter === "wishlist") return wishlist.has(l.id);
       if (filter === "vegetarian")
         return l.dietary.includes("vegetarian") || l.dietary.includes("vegan");
       if (filter === "vegan") return l.dietary.includes("vegan");
@@ -89,7 +94,7 @@ const Index = () => {
       if (filter !== "all") return l.neighborhood === filter;
       return true;
     });
-  }, [query, filter, visits]);
+  }, [query, filter, visits, wishlist]);
 
   const visitedCount = visits ? Object.keys(visits).length : 0;
   const total = LOCATIONS.length;
@@ -194,6 +199,7 @@ const Index = () => {
               <SelectItem value="visited">Visited only</SelectItem>
               <SelectItem value="unvisited">Unvisited only</SelectItem>
               <SelectItem value="favorites">❤️ Favorites</SelectItem>
+              <SelectItem value="wishlist">🔖 Want to try</SelectItem>
               <SelectItem value="vegetarian">🥬 Vegetarian</SelectItem>
               <SelectItem value="vegan">🌱 Vegan</SelectItem>
               <SelectItem value="gluten-free">🌾 Gluten-free option</SelectItem>
@@ -217,8 +223,11 @@ const Index = () => {
                 location={l}
                 visit={visits?.[l.id]}
                 friendVisits={friendVisitsByLocation[l.id]}
+                wished={isWished(l.id)}
+                friendWishCount={friendWishlistByLocation[l.id]?.length ?? 0}
                 onClick={() => setActiveId(l.id)}
                 onToggleFavorite={() => void toggleFavorite(l.id)}
+                onToggleWish={() => void toggleWish(l.id)}
                 index={i}
               />
             ))}

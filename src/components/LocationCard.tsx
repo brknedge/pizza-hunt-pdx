@@ -1,19 +1,23 @@
 import type { Location, Visit } from "@/types/pizza";
 import type { FriendVisit } from "@/hooks/useFriends";
-import { Check, Heart, MapPin, Users } from "lucide-react";
+import { Bookmark, Check, Heart, MapPin, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Props {
   location: Location;
   visit?: Visit;
   friendVisits?: FriendVisit[];
+  wished?: boolean;
+  friendWishCount?: number;
   onClick: () => void;
   onToggleFavorite?: () => void;
+  onToggleWish?: () => void;
   index: number;
 }
 
 export const LocationCard = ({
-  location, visit, friendVisits, onClick, onToggleFavorite, index,
+  location, visit, friendVisits, wished, friendWishCount = 0,
+  onClick, onToggleFavorite, onToggleWish, index,
 }: Props) => {
   const visited = !!visit;
   const overall = visit?.ratings.overall ?? 0;
@@ -44,9 +48,23 @@ export const LocationCard = ({
             visited && "grayscale-card group-hover:grayscale-0",
           )}
         />
-        {visited && (
+        {(visited || onToggleWish) && (
           <div className="absolute top-2 right-2 flex items-center gap-1.5">
-            {onToggleFavorite && (
+            {!visited && onToggleWish && (
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); onToggleWish(); }}
+                aria-label={wished ? "Remove from wishlist" : "Add to wishlist"}
+                aria-pressed={!!wished}
+                className={cn(
+                  "h-8 w-8 grid place-items-center rounded-full border-2 border-ink shadow-zine-sm transition-transform hover:-translate-y-0.5",
+                  wished ? "bg-ink text-mozz" : "bg-card text-ink",
+                )}
+              >
+                <Bookmark className="h-4 w-4" strokeWidth={2.5} fill={wished ? "currentColor" : "none"} />
+              </button>
+            )}
+            {visited && onToggleFavorite && (
               <button
                 type="button"
                 onClick={(e) => { e.stopPropagation(); onToggleFavorite(); }}
@@ -60,10 +78,12 @@ export const LocationCard = ({
                 <Heart className="h-4 w-4" strokeWidth={2.5} fill={isFavorite ? "currentColor" : "none"} />
               </button>
             )}
-            <div className="bg-mozz border-2 border-ink rounded-full px-2 py-1 flex items-center gap-1 shadow-zine-sm">
-              <Check className="h-3.5 w-3.5" strokeWidth={3} />
-              <span className="font-display text-sm tracking-wide">VISITED</span>
-            </div>
+            {visited && (
+              <div className="bg-mozz border-2 border-ink rounded-full px-2 py-1 flex items-center gap-1 shadow-zine-sm">
+                <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                <span className="font-display text-sm tracking-wide">VISITED</span>
+              </div>
+            )}
           </div>
         )}
         <div className="absolute top-2 left-2 flex flex-col gap-1 items-start">
@@ -99,13 +119,26 @@ export const LocationCard = ({
             ★ {overall}/5
           </div>
         )}
-        {friendCount > 0 && (
-          <div
-            title={`${friendCount} friend${friendCount === 1 ? "" : "s"} rated this`}
-            className="absolute bottom-2 right-2 bg-card border-2 border-ink rounded-md px-2 py-0.5 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1"
-          >
-            <Users className="h-3 w-3" />
-            {friendCount} · ★{friendAvg}
+        {(friendCount > 0 || friendWishCount > 0) && (
+          <div className="absolute bottom-2 right-2 flex flex-col items-end gap-1">
+            {friendCount > 0 && (
+              <div
+                title={`${friendCount} friend${friendCount === 1 ? "" : "s"} rated this`}
+                className="bg-card border-2 border-ink rounded-md px-2 py-0.5 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1"
+              >
+                <Users className="h-3 w-3" />
+                {friendCount} · ★{friendAvg}
+              </div>
+            )}
+            {friendWishCount > 0 && (
+              <div
+                title={`${friendWishCount} friend${friendWishCount === 1 ? "" : "s"} want to try this`}
+                className="bg-card border-2 border-ink rounded-md px-2 py-0.5 font-display text-xs tracking-wide shadow-zine-sm flex items-center gap-1"
+              >
+                <Bookmark className="h-3 w-3" />
+                {friendWishCount}
+              </div>
+            )}
           </div>
         )}
       </div>

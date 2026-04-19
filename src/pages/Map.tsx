@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BarChart3, Check, Heart, Pizza, Users } from "lucide-react";
+import { ArrowLeft, BarChart3, Bookmark, Check, Heart, Pizza, Users } from "lucide-react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -8,17 +8,20 @@ import locationsData from "@/data/locations.json";
 import type { Location } from "@/types/pizza";
 import { useVisits } from "@/hooks/useVisits";
 import { useFriends } from "@/hooks/useFriends";
+import { useWishlist } from "@/hooks/useWishlist";
 
 const LOCATIONS = locationsData as Location[];
 
-const makeIcon = (visited: boolean, favorite: boolean) => {
+const makeIcon = (visited: boolean, favorite: boolean, wished: boolean) => {
   const bg = favorite
     ? "hsl(var(--marinara))"
     : visited
     ? "hsl(var(--ink))"
+    : wished
+    ? "hsl(var(--mozz))"
     : "hsl(var(--card))";
   const fg = visited || favorite ? "#fff" : "hsl(var(--ink))";
-  const inner = favorite ? "♥" : visited ? "✓" : "🍕";
+  const inner = favorite ? "♥" : visited ? "✓" : wished ? "🔖" : "🍕";
   return L.divIcon({
     className: "",
     html: `<div style="
@@ -39,6 +42,8 @@ const PORTLAND_CENTER: [number, number] = [45.5231, -122.6765];
 const MapPage = () => {
   const { visits, loading } = useVisits();
   const { friends, friendVisitsByLocation } = useFriends();
+  const friendIds = useMemo(() => friends.map((f) => f.id), [friends]);
+  const { wishlist, friendWishlistByLocation, isWished, toggleWish } = useWishlist(friendIds);
   const friendNickname = (id: string) =>
     friends.find((f) => f.id === id)?.nickname ?? "Friend";
 
@@ -48,6 +53,7 @@ const MapPage = () => {
   );
 
   const visitedCount = visits ? Object.keys(visits).length : 0;
+  const wishCount = wishlist.size;
   const skipped = LOCATIONS.length - pinned.length;
 
   if (loading) return null;
@@ -71,7 +77,7 @@ const MapPage = () => {
               THE MAP
             </h1>
             <p className="text-xs text-muted-foreground truncate">
-              {pinned.length} venues pinned · {visitedCount} visited
+              {pinned.length} pinned · {visitedCount} visited · {wishCount} wishlist
               {skipped > 0 ? ` · ${skipped} missing coords` : ""}
             </p>
           </div>
@@ -108,11 +114,13 @@ const MapPage = () => {
             const visit = visits?.[l.id];
             const visited = !!visit;
             const favorite = !!visit?.favorite;
+            const wished = isWished(l.id);
+            const friendWishes = friendWishlistByLocation[l.id] ?? [];
             return (
               <Marker
                 key={l.id}
                 position={[l.lat as number, l.lng as number]}
-                icon={makeIcon(visited, favorite)}
+                icon={makeIcon(visited, favorite, wished)}
               >
                 <Popup>
                   <div className="font-sans">
@@ -136,10 +144,22 @@ const MapPage = () => {
                         )}
                       </div>
                     )}
+                    {!visited && (
+                      <div className="mt-1">
+                        <button
+                          type="button"
+                          onClick={() => void toggleWish(l.id)}
+                          className="inline-flex items-center gap-1 text-xs font-semibold underline"
+                        >
+                          <Bookmark className="h-3 w-3" fill={wished ? "currentColor" : "none"} />
+                          {wished ? "Saved · remove" : "Want to try"}
+                        </button>
+                      </div>
+                    )}
                     {(friendVisitsByLocation[l.id]?.length ?? 0) > 0 && (
                       <div className="mt-1 pt-1 border-t border-dashed border-muted">
                         <div className="text-xs font-semibold flex items-center gap-1">
-                          <Users className="h-3 w-3" /> Friends
+                          <Users className="h-3 w-3" /> Friends rated
                         </div>
                         <ul className="text-xs space-y-0.5 mt-0.5">
                           {friendVisitsByLocation[l.id].slice(0, 3).map((fv) => (
@@ -147,6 +167,18 @@ const MapPage = () => {
                               {friendNickname(fv.friendId)} · {fv.ratings.overall}★
                               {fv.favorite ? " ♥" : ""}
                             </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {friendWishes.length > 0 && (
+                      <div className="mt-1 pt-1 border-t border-dashed border-muted">
+                        <div className="text-xs font-semibold flex items-center gap-1">
+                          <Bookmark className="h-3 w-3" /> Friends want to try
+                        </div>
+                        <ul className="text-xs space-y-0.5 mt-0.5">
+                          {friendWishes.slice(0, 3).map((fid) => (
+                            <li key={fid}>{friendNickname(fid)}</li>
                           ))}
                         </ul>
                       </div>
@@ -172,6 +204,10 @@ const MapPage = () => {
           <div className="flex items-center gap-2">
             <span className="inline-block h-4 w-4 rounded-full bg-ink border-2 border-ink" />
             Visited
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="inline-block h-4 w-4 rounded-full bg-mozz border-2 border-ink" />
+            Want to try
           </div>
           <div className="flex items-center gap-2">
             <span className="inline-block h-4 w-4 rounded-full bg-marinara border-2 border-ink" />
