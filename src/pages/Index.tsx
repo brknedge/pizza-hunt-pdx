@@ -43,6 +43,7 @@ const Index = () => {
     visits, nickname, isCloud, loading,
     upsertVisit, removeVisit, toggleFavorite, setNickname, clearLocal,
   } = useVisits();
+  const { friendVisitsByLocation } = useFriends();
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
   const [activeId, setActiveId] = useState<string | null>(null);
