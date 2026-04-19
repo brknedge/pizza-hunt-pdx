@@ -26,6 +26,7 @@ interface Props {
 }
 
 export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, onDelete }: Props) => {
+  const { isWished, toggleWish } = useWishlist();
   const [ratings, setRatings] = useState<Record<RatingCategory, number>>({
     creativity: 0, taste: 0, service: 0, atmosphere: 0, overall: 0,
   });
