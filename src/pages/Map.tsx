@@ -1,12 +1,13 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Check, Heart, Pizza } from "lucide-react";
+import { ArrowLeft, BarChart3, Check, Heart, Pizza, Users } from "lucide-react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import locationsData from "@/data/locations.json";
 import type { Location } from "@/types/pizza";
 import { useVisits } from "@/hooks/useVisits";
+import { useFriends } from "@/hooks/useFriends";
 
 const LOCATIONS = locationsData as Location[];
 
