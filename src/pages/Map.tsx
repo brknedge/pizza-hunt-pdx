@@ -127,12 +127,18 @@ const MapPage = () => {
               >
                 <Popup>
                   <div className="font-sans" style={{ minWidth: 200 }}>
-                    <img
-                      src={l.imageUrl}
-                      alt={`${l.pizzaName} from ${l.name}`}
-                      loading="lazy"
-                      className="w-full h-32 object-cover rounded-md border-2 border-ink mb-2"
-                    />
+                    <Link
+                      to={`/?rate=${encodeURIComponent(l.id)}`}
+                      aria-label={`Rate ${l.pizzaName}`}
+                      className="block"
+                    >
+                      <img
+                        src={l.imageUrl}
+                        alt={`${l.pizzaName} from ${l.name}`}
+                        loading="lazy"
+                        className="w-full h-32 object-cover rounded-md border-2 border-ink mb-2 cursor-pointer hover:opacity-90 transition-opacity"
+                      />
+                    </Link>
                     <div className="font-display text-base leading-tight tracking-wide">
                       {l.name}
                     </div>
