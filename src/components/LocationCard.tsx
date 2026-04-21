@@ -24,6 +24,7 @@ export const LocationCard = ({
   const visited = !!visit;
   const overall = visit?.ratings.overall ?? 0;
   const isFavorite = !!visit?.favorite;
+  const isClosed = getOpenStatus(location.hours) === "closed";
 
   const friendCount = friendVisits?.length ?? 0;
   const friendAvg = friendCount
