@@ -218,6 +218,48 @@ export const RatingDialog = ({ location, existing, open, onOpenChange, onSave, o
             {favorite ? "FAVORITED" : "ADD TO FAVORITES"}
           </button>
 
+          <Collapsible>
+            <CollapsibleTrigger
+              className={cn(
+                "w-full h-12 rounded-lg border-2 border-ink shadow-zine-sm bg-card hover:bg-mozz",
+                "flex items-center justify-between px-4 font-display tracking-widest text-base",
+                "group transition-colors",
+              )}
+            >
+              <span className="flex items-center gap-2">
+                <Clock className="h-5 w-5" strokeWidth={2.5} />
+                BUSINESS HOURS
+              </span>
+              <ChevronDown className="h-5 w-5 transition-transform group-data-[state=open]:rotate-180" strokeWidth={2.5} />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+              <div className="mt-2 border-2 border-ink rounded-lg bg-mozz/40 p-3">
+                {location.hours && Object.keys(location.hours).length > 0 ? (
+                  <ul className="space-y-1 text-sm">
+                    {Object.entries(location.hours).map(([day, time]) => (
+                      <li key={day} className="flex justify-between gap-3 border-b border-dashed border-muted/60 pb-1 last:border-0 last:pb-0">
+                        <span className="font-display tracking-wide">{day}</span>
+                        <span className="text-muted-foreground">{time}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div className="space-y-2 text-sm">
+                    <p className="text-muted-foreground italic">Hours not available yet.</p>
+                    <a
+                      href={location.everoutUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-marinara font-semibold inline-flex items-center gap-1 hover:underline"
+                    >
+                      View hours on EverOut <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                )}
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
+
           <div className="flex gap-2 pt-2">
             {existing && onDelete && (
               <Button
