@@ -2,6 +2,7 @@ import type { Location, Visit } from "@/types/pizza";
 import type { FriendVisit } from "@/hooks/useFriends";
 import { Bookmark, Check, Heart, MapPin, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getOpenStatus } from "@/lib/hours";
 
 interface Props {
   location: Location;
