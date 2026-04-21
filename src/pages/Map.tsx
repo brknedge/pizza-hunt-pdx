@@ -10,6 +10,7 @@ import type { Location } from "@/types/pizza";
 import { useVisits } from "@/hooks/useVisits";
 import { useFriends } from "@/hooks/useFriends";
 import { useWishlist } from "@/hooks/useWishlist";
+import { getOpenStatus } from "@/lib/hours";
 
 const LOCATIONS = locationsData as Location[];
 
