@@ -333,4 +333,35 @@ const FriendRow = ({
   </li>
 );
 
+const PendingRow = ({
+  request, onAccept, onReject,
+}: {
+  request: PendingRequest;
+  onAccept: () => void;
+  onReject: () => void;
+}) => (
+  <li className="bg-mozz/40 border-2 border-ink rounded-xl shadow-zine-sm p-3 flex items-center gap-3">
+    <div className="flex-1 min-w-0">
+      <p className="font-display text-lg tracking-wide truncate">{request.nickname}</p>
+      <p className="text-xs text-muted-foreground truncate">
+        @{request.username} wants to be friends
+      </p>
+    </div>
+    <button
+      onClick={onAccept}
+      aria-label={`Accept ${request.username}`}
+      className="h-9 w-9 grid place-items-center rounded-lg border-2 border-ink bg-marinara text-primary-foreground hover:opacity-90 shadow-zine-sm shrink-0"
+    >
+      <Check className="h-4 w-4" />
+    </button>
+    <button
+      onClick={onReject}
+      aria-label={`Reject ${request.username}`}
+      className="h-9 w-9 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-destructive hover:text-destructive-foreground shadow-zine-sm shrink-0"
+    >
+      <X className="h-4 w-4" />
+    </button>
+  </li>
+);
+
 export default FriendsPage;
