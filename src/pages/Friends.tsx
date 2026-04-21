@@ -56,8 +56,8 @@ const FriendsPage = () => {
     const res = await addFriendByUsername(query);
     setBusy(false);
     toast({
-      title: res.ok ? "Friend added 🍕" : "Couldn't add",
-      description: res.message,
+      title: res.ok ? "🍕 " + res.message : "Couldn't add",
+      description: res.ok ? undefined : res.message,
       variant: res.ok ? "default" : "destructive",
     });
     if (res.ok) setQuery("");
