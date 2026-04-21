@@ -53,17 +53,16 @@ const AuthPage = () => {
       const { data, error } = await supabase.auth.signUp({
         email: usernameToEmail(username),
         password,
-        options: { emailRedirectTo: `${window.location.origin}/` },
+        options: {
+          emailRedirectTo: `${window.location.origin}/`,
+          data: {
+            username: username.trim(),
+            nickname: (nickname.trim() || username.trim()).slice(0, 20),
+          },
+        },
       });
       if (error) throw error;
       if (!data.user) throw new Error("Sign up failed");
-
-      const { error: pErr } = await supabase.from("profiles").insert({
-        id: data.user.id,
-        username: username.trim(),
-        nickname: (nickname.trim() || username.trim()).slice(0, 20),
-      });
-      if (pErr) throw pErr;
 
       toast({ title: "Welcome!", description: `Signed in as @${username}` });
       navigate("/", { replace: true });
