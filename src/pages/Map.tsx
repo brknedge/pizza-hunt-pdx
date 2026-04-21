@@ -117,12 +117,13 @@ const MapPage = () => {
             const visited = !!visit;
             const favorite = !!visit?.favorite;
             const wished = isWished(l.id);
+            const closed = getOpenStatus(l.hours) === "closed";
             const friendWishes = friendWishlistByLocation[l.id] ?? [];
             return (
               <Marker
                 key={l.id}
                 position={[l.lat as number, l.lng as number]}
-                icon={makeIcon(visited, favorite, wished)}
+                icon={makeIcon(visited, favorite, wished, closed)}
               >
                 <Popup>
                   <div className="font-sans" style={{ minWidth: 200 }}>
