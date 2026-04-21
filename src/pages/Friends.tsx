@@ -18,8 +18,8 @@ const FriendsPage = () => {
   const navigate = useNavigate();
   const { user, loading: authLoading } = useAuth();
   const {
-    friends, visitsByFriend, loading,
-    addFriendByUsername, removeFriend,
+    friends, pendingIncoming, pendingOutgoingCount, visitsByFriend, loading,
+    addFriendByUsername, acceptRequest, rejectRequest, removeFriend,
   } = useFriends();
   const [query, setQuery] = useState("");
   const [busy, setBusy] = useState(false);
