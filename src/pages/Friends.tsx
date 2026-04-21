@@ -112,6 +112,31 @@ const FriendsPage = () => {
           </Button>
         </form>
 
+        {/* Pending incoming requests */}
+        {pendingIncoming.length > 0 && (
+          <section className="space-y-2">
+            <h2 className="font-display text-sm tracking-widest text-muted-foreground">
+              FRIEND REQUESTS ({pendingIncoming.length})
+            </h2>
+            <ul className="space-y-2">
+              {pendingIncoming.map((req) => (
+                <PendingRow
+                  key={req.rowId}
+                  request={req}
+                  onAccept={() => void acceptRequest(req)}
+                  onReject={() => void rejectRequest(req)}
+                />
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {pendingOutgoingCount > 0 && (
+          <p className="text-xs text-muted-foreground italic">
+            {pendingOutgoingCount} request{pendingOutgoingCount === 1 ? "" : "s"} waiting on the other person to accept.
+          </p>
+        )}
+
         {/* Friends list */}
         {loading ? (
           <div className="text-center py-10 text-sm text-muted-foreground">Loading…</div>
