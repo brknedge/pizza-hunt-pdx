@@ -68,11 +68,27 @@ const AuthPage = () => {
       toast({ title: "Welcome!", description: `Signed in as @${username}` });
       navigate("/", { replace: true });
     } catch (err) {
-      toast({
-        title: "Sign up failed",
-        description: err instanceof Error ? err.message : "Try again.",
-        variant: "destructive",
-      });
+      // Surface the *actual* reason so users know how to fix it. The most
+      // common silent failure is the leaked-password (HIBP) check rejecting
+      // a common password like "password1" or "pizza123".
+      const raw = err instanceof Error ? err.message : "";
+      const lower = raw.toLowerCase();
+      let title = "Sign up failed";
+      let description = raw || "Try again.";
+      if (lower.includes("pwned") || lower.includes("compromised") || lower.includes("leaked") || lower.includes("breach")) {
+        title = "Password is too common";
+        description = "That password has shown up in a known data breach. Please pick a different, less common password.";
+      } else if (lower.includes("weak") || lower.includes("password should") || lower.includes("password is")) {
+        title = "Password too weak";
+        description = "Try a longer password with a mix of letters, numbers, and symbols.";
+      } else if (lower.includes("already") && lower.includes("registered")) {
+        title = "Username taken";
+        description = "An account with that username already exists. Try signing in instead.";
+      } else if (lower.includes("rate") || lower.includes("too many")) {
+        title = "Slow down";
+        description = "Too many attempts — wait a minute and try again.";
+      }
+      toast({ title, description, variant: "destructive" });
     } finally {
       setBusy(false);
     }
@@ -189,7 +205,7 @@ const AuthPage = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     autoComplete="new-password"
-                    placeholder="At least 6 characters"
+                    placeholder="6+ chars — avoid common passwords"
                     className="border-2 border-ink shadow-zine-sm h-11 rounded-lg"
                     required
                   />
