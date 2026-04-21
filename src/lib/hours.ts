@@ -28,13 +28,9 @@ const parseTimeToken = (raw: string, fallbackMeridiem: "AM" | "PM" | null): numb
   return hours * 60 + minutes;
 };
 
-/** Returns [openMinutes, closeMinutes] where minutes are minutes since midnight,
- *  or null if the string is "Closed" / unparseable. Close may be ≤ open if the
- *  venue closes after midnight; in that case we add 24h to close. */
-const parseRange = (raw: string): [number, number] | null => {
-  if (!raw) return null;
-  const s = normalizeDash(raw).trim();
-  if (/^closed$/i.test(s)) return null;
+const parseSingleRange = (raw: string): [number, number] | null => {
+  const s = normalizeDash(raw).replace(/\u2009|\u202f/g, " ").trim();
+  if (!s || /^closed$/i.test(s)) return null;
   const parts = s.split("-").map((p) => p.trim());
   if (parts.length !== 2) return null;
   const endMeridiemMatch = parts[1].match(/(AM|PM)\s*$/i);
@@ -45,9 +41,20 @@ const parseRange = (raw: string): [number, number] | null => {
   const open = parseTimeToken(parts[0], startMeridiem ?? endMeridiem);
   const close = parseTimeToken(parts[1], endMeridiem);
   if (open == null || close == null) return null;
-  // Past-midnight close (e.g. "11 AM – 1 AM")
   const adjustedClose = close <= open ? close + 24 * 60 : close;
   return [open, adjustedClose];
+};
+
+/** Returns array of [open, close] ranges. Supports comma-separated ranges
+ *  like "11:30 AM – 2:00 PM, 4:00 – 8:00 PM". */
+const parseRanges = (raw: string): Array<[number, number]> => {
+  if (!raw) return [];
+  const s = normalizeDash(raw).replace(/\u2009|\u202f/g, " ").trim();
+  if (/^closed$/i.test(s)) return [];
+  return s
+    .split(",")
+    .map((seg) => parseSingleRange(seg))
+    .filter((r): r is [number, number] => r !== null);
 };
 
 export type OpenStatus = "open" | "closed" | "unknown";
@@ -62,21 +69,20 @@ export const getOpenStatus = (
   const yesterdayName = DAY_NAMES[(now.getDay() + 6) % 7];
   const nowMinutes = now.getHours() * 60 + now.getMinutes();
 
-  // Check today's window first
-  const today = parseRange(hours[todayName] ?? "");
-  if (today) {
-    const [open, close] = today;
+  // Check today's windows first
+  const todayRanges = parseRanges(hours[todayName] ?? "");
+  for (const [open, close] of todayRanges) {
     if (nowMinutes >= open && nowMinutes < close) return "open";
   }
 
-  // Also check yesterday's range in case it spans past midnight (e.g. closes 1 AM)
-  const yesterday = parseRange(hours[yesterdayName] ?? "");
-  if (yesterday) {
-    const [, close] = yesterday;
+  // Also check yesterday's ranges in case any spans past midnight
+  const yesterdayRanges = parseRanges(hours[yesterdayName] ?? "");
+  for (const [, close] of yesterdayRanges) {
     if (close > 24 * 60 && nowMinutes < close - 24 * 60) return "open";
   }
 
   // We had hours for today but not currently in-window → closed
+  if (hours[todayName] && !/^closed$/i.test(hours[todayName].trim())) return "closed";
   if (hours[todayName]) return "closed";
   // No data for today at all
   return "unknown";
