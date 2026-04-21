@@ -2,6 +2,7 @@ import type { Location, Visit } from "@/types/pizza";
 import type { FriendVisit } from "@/hooks/useFriends";
 import { Bookmark, Check, Heart, MapPin, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getOpenStatus } from "@/lib/hours";
 
 interface Props {
   location: Location;
@@ -23,6 +24,7 @@ export const LocationCard = ({
   const visited = !!visit;
   const overall = visit?.ratings.overall ?? 0;
   const isFavorite = !!visit?.favorite;
+  const isClosed = getOpenStatus(location.hours) === "closed";
 
   const friendCount = friendVisits?.length ?? 0;
   const friendAvg = friendCount
@@ -47,8 +49,14 @@ export const LocationCard = ({
           className={cn(
             "w-full h-full object-cover transition-all duration-500",
             visited && "grayscale-card group-hover:grayscale-0",
+            isClosed && "opacity-70",
           )}
         />
+        {isClosed && (
+          <div className="absolute inset-x-0 top-0 bg-ink/85 text-mozz border-b-2 border-ink py-1 text-center font-display text-sm tracking-widest shadow-zine-sm">
+            CLOSED NOW
+          </div>
+        )}
         {(visited || onToggleWish) && (
           <div className="absolute top-2 right-2 flex items-center gap-1.5">
             {!visited && onToggleWish && (
