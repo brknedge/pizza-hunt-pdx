@@ -19,18 +19,21 @@ export type Database = {
           created_at: string
           friend_id: string
           id: string
+          status: Database["public"]["Enums"]["friendship_status"]
           user_id: string
         }
         Insert: {
           created_at?: string
           friend_id: string
           id?: string
+          status?: Database["public"]["Enums"]["friendship_status"]
           user_id: string
         }
         Update: {
           created_at?: string
           friend_id?: string
           id?: string
+          status?: Database["public"]["Enums"]["friendship_status"]
           user_id?: string
         }
         Relationships: []
@@ -124,7 +127,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      friendship_status: "pending" | "accepted"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -251,6 +254,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      friendship_status: ["pending", "accepted"],
+    },
   },
 } as const

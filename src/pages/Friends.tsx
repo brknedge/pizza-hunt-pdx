@@ -1,11 +1,11 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, Bookmark, Pizza, Search, UserPlus, Users, X } from "lucide-react";
+import { ArrowLeft, Bookmark, Check, Pizza, Search, UserPlus, Users, X } from "lucide-react";
 import { HeaderNav } from "@/components/HeaderNav";
 import locationsData from "@/data/locations.json";
 import type { Location } from "@/types/pizza";
 import { useAuth } from "@/hooks/useAuth";
-import { useFriends, type FriendProfile } from "@/hooks/useFriends";
+import { useFriends, type FriendProfile, type PendingRequest } from "@/hooks/useFriends";
 import { useWishlist } from "@/hooks/useWishlist";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,8 +18,8 @@ const FriendsPage = () => {
   const navigate = useNavigate();
   const { user, loading: authLoading } = useAuth();
   const {
-    friends, visitsByFriend, loading,
-    addFriendByUsername, removeFriend,
+    friends, pendingIncoming, pendingOutgoingCount, visitsByFriend, loading,
+    addFriendByUsername, acceptRequest, rejectRequest, removeFriend,
   } = useFriends();
   const [query, setQuery] = useState("");
   const [busy, setBusy] = useState(false);
@@ -56,8 +56,8 @@ const FriendsPage = () => {
     const res = await addFriendByUsername(query);
     setBusy(false);
     toast({
-      title: res.ok ? "Friend added 🍕" : "Couldn't add",
-      description: res.message,
+      title: res.ok ? "🍕 " + res.message : "Couldn't add",
+      description: res.ok ? undefined : res.message,
       variant: res.ok ? "default" : "destructive",
     });
     if (res.ok) setQuery("");
@@ -111,6 +111,31 @@ const FriendsPage = () => {
             <UserPlus className="h-4 w-4 mr-1" /> ADD
           </Button>
         </form>
+
+        {/* Pending incoming requests */}
+        {pendingIncoming.length > 0 && (
+          <section className="space-y-2">
+            <h2 className="font-display text-sm tracking-widest text-muted-foreground">
+              FRIEND REQUESTS ({pendingIncoming.length})
+            </h2>
+            <ul className="space-y-2">
+              {pendingIncoming.map((req) => (
+                <PendingRow
+                  key={req.rowId}
+                  request={req}
+                  onAccept={() => void acceptRequest(req)}
+                  onReject={() => void rejectRequest(req)}
+                />
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {pendingOutgoingCount > 0 && (
+          <p className="text-xs text-muted-foreground italic">
+            {pendingOutgoingCount} request{pendingOutgoingCount === 1 ? "" : "s"} waiting on the other person to accept.
+          </p>
+        )}
 
         {/* Friends list */}
         {loading ? (
@@ -301,6 +326,37 @@ const FriendRow = ({
     <button
       onClick={onRemove}
       aria-label={`Remove ${friend.username}`}
+      className="h-9 w-9 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-destructive hover:text-destructive-foreground shadow-zine-sm shrink-0"
+    >
+      <X className="h-4 w-4" />
+    </button>
+  </li>
+);
+
+const PendingRow = ({
+  request, onAccept, onReject,
+}: {
+  request: PendingRequest;
+  onAccept: () => void;
+  onReject: () => void;
+}) => (
+  <li className="bg-mozz/40 border-2 border-ink rounded-xl shadow-zine-sm p-3 flex items-center gap-3">
+    <div className="flex-1 min-w-0">
+      <p className="font-display text-lg tracking-wide truncate">{request.nickname}</p>
+      <p className="text-xs text-muted-foreground truncate">
+        @{request.username} wants to be friends
+      </p>
+    </div>
+    <button
+      onClick={onAccept}
+      aria-label={`Accept ${request.username}`}
+      className="h-9 w-9 grid place-items-center rounded-lg border-2 border-ink bg-marinara text-primary-foreground hover:opacity-90 shadow-zine-sm shrink-0"
+    >
+      <Check className="h-4 w-4" />
+    </button>
+    <button
+      onClick={onReject}
+      aria-label={`Reject ${request.username}`}
       className="h-9 w-9 grid place-items-center rounded-lg border-2 border-ink bg-card hover:bg-destructive hover:text-destructive-foreground shadow-zine-sm shrink-0"
     >
       <X className="h-4 w-4" />
