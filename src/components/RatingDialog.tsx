@@ -3,7 +3,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { StarRating } from "./StarRating";
-import { Bookmark, ExternalLink, Heart, Trash2 } from "lucide-react";
+import { Bookmark, Clock, ChevronDown, ExternalLink, Heart, Trash2 } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 import { useWishlist } from "@/hooks/useWishlist";
 import { useFriends } from "@/hooks/useFriends";

@@ -21,6 +21,7 @@ export interface Location {
   blurb?: string | null;
   lat?: number;
   lng?: number;
+  hours?: Record<string, string> | null;
 }
 
 export type RatingCategory = "creativity" | "taste" | "service" | "atmosphere" | "overall";
