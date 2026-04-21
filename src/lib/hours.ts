@@ -69,21 +69,20 @@ export const getOpenStatus = (
   const yesterdayName = DAY_NAMES[(now.getDay() + 6) % 7];
   const nowMinutes = now.getHours() * 60 + now.getMinutes();
 
-  // Check today's window first
-  const today = parseRange(hours[todayName] ?? "");
-  if (today) {
-    const [open, close] = today;
+  // Check today's windows first
+  const todayRanges = parseRanges(hours[todayName] ?? "");
+  for (const [open, close] of todayRanges) {
     if (nowMinutes >= open && nowMinutes < close) return "open";
   }
 
-  // Also check yesterday's range in case it spans past midnight (e.g. closes 1 AM)
-  const yesterday = parseRange(hours[yesterdayName] ?? "");
-  if (yesterday) {
-    const [, close] = yesterday;
+  // Also check yesterday's ranges in case any spans past midnight
+  const yesterdayRanges = parseRanges(hours[yesterdayName] ?? "");
+  for (const [, close] of yesterdayRanges) {
     if (close > 24 * 60 && nowMinutes < close - 24 * 60) return "open";
   }
 
   // We had hours for today but not currently in-window → closed
+  if (hours[todayName] && !/^closed$/i.test(hours[todayName].trim())) return "closed";
   if (hours[todayName]) return "closed";
   // No data for today at all
   return "unknown";
