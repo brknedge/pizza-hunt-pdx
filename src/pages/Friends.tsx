@@ -1,11 +1,11 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, Bookmark, Pizza, Search, UserPlus, Users, X } from "lucide-react";
+import { ArrowLeft, Bookmark, Check, Pizza, Search, UserPlus, Users, X } from "lucide-react";
 import { HeaderNav } from "@/components/HeaderNav";
 import locationsData from "@/data/locations.json";
 import type { Location } from "@/types/pizza";
 import { useAuth } from "@/hooks/useAuth";
-import { useFriends, type FriendProfile } from "@/hooks/useFriends";
+import { useFriends, type FriendProfile, type PendingRequest } from "@/hooks/useFriends";
 import { useWishlist } from "@/hooks/useWishlist";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
