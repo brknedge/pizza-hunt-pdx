@@ -14,7 +14,7 @@ import { getOpenStatus } from "@/lib/hours";
 
 const LOCATIONS = locationsData as Location[];
 
-const makeIcon = (visited: boolean, favorite: boolean, wished: boolean) => {
+const makeIcon = (visited: boolean, favorite: boolean, wished: boolean, closed: boolean) => {
   const bg = favorite
     ? "hsl(var(--marinara))"
     : visited
@@ -31,9 +31,12 @@ const makeIcon = (visited: boolean, favorite: boolean, wished: boolean) => {
         display:grid;place-items:center;
         font-size:9px;line-height:1;font-weight:700;">🔖</div>`
     : "";
+  const wrapperStyle = closed
+    ? "position:relative;width:32px;height:32px;filter:grayscale(1);opacity:0.55;"
+    : "position:relative;width:32px;height:32px;";
   return L.divIcon({
     className: "",
-    html: `<div style="position:relative;width:32px;height:32px;">
+    html: `<div style="${wrapperStyle}">
       <div style="
         width:32px;height:32px;border-radius:50%;
         background:${bg};color:${fg};
