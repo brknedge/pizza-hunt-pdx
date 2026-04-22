@@ -122,6 +122,14 @@ export const LocationCard = ({
               🌾 GF
             </span>
           )}
+          {location.servingStyle.length === 1 && location.servingStyle[0] === "whole-pie" && (
+            <span
+              title="Whole pie only (no slices)"
+              className="bg-card border-2 border-ink rounded-md px-1.5 py-0.5 font-display text-xs tracking-wide shadow-zine-sm"
+            >
+              🥧 WHOLE PIE
+            </span>
+          )}
         </div>
         {visited && overall > 0 && (
           <div className="absolute bottom-2 left-2 bg-marinara text-primary-foreground border-2 border-ink rounded-md px-2 py-0.5 font-display text-base tracking-wide shadow-zine-sm">
