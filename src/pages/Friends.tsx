@@ -240,35 +240,7 @@ const FriendsPage = () => {
                       const loc = LOC_BY_ID.get(v.locationId);
                       if (!loc) return null;
                       return (
-                        <li
-                          key={v.locationId}
-                          className="flex gap-3 border-2 border-ink rounded-lg p-2 bg-mozz/30"
-                        >
-                          <img
-                            src={loc.imageUrl}
-                            alt={loc.pizzaName}
-                            className="h-16 w-16 rounded-md border-2 border-ink object-cover shrink-0"
-                          />
-                          <div className="min-w-0 flex-1">
-                            <p className="font-display text-base leading-tight tracking-wide line-clamp-1">
-                              {loc.pizzaName}
-                            </p>
-                            <p className="text-xs text-marinara font-semibold line-clamp-1">
-                              {loc.name} · {loc.neighborhood}
-                            </p>
-                            {v.notes && (
-                              <p className="text-xs text-muted-foreground italic line-clamp-2 mt-0.5">
-                                "{v.notes}"
-                              </p>
-                            )}
-                          </div>
-                          <div className="text-right shrink-0">
-                            <div className="font-display text-xl text-marinara leading-none">
-                              ★{v.ratings.overall}
-                            </div>
-                            {v.favorite && <div className="text-xs text-marinara mt-1">♥ fav</div>}
-                          </div>
-                        </li>
+                        <FriendVisitRow key={v.locationId} visit={v} location={loc} />
                       );
                     })}
                   </ul>
