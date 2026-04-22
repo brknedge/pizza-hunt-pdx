@@ -1,11 +1,12 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, Bookmark, Check, Pizza, Search, UserPlus, Users, X } from "lucide-react";
+import { ArrowLeft, Bookmark, Check, ChevronDown, Pizza, Search, UserPlus, Users, X } from "lucide-react";
 import { HeaderNav } from "@/components/HeaderNav";
 import locationsData from "@/data/locations.json";
 import type { Location } from "@/types/pizza";
 import { useAuth } from "@/hooks/useAuth";
-import { useFriends, type FriendProfile, type PendingRequest } from "@/hooks/useFriends";
+import { useFriends, type FriendProfile, type FriendVisit, type PendingRequest } from "@/hooks/useFriends";
+import { cn } from "@/lib/utils";
 import { useWishlist } from "@/hooks/useWishlist";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -240,35 +241,7 @@ const FriendsPage = () => {
                       const loc = LOC_BY_ID.get(v.locationId);
                       if (!loc) return null;
                       return (
-                        <li
-                          key={v.locationId}
-                          className="flex gap-3 border-2 border-ink rounded-lg p-2 bg-mozz/30"
-                        >
-                          <img
-                            src={loc.imageUrl}
-                            alt={loc.pizzaName}
-                            className="h-16 w-16 rounded-md border-2 border-ink object-cover shrink-0"
-                          />
-                          <div className="min-w-0 flex-1">
-                            <p className="font-display text-base leading-tight tracking-wide line-clamp-1">
-                              {loc.pizzaName}
-                            </p>
-                            <p className="text-xs text-marinara font-semibold line-clamp-1">
-                              {loc.name} · {loc.neighborhood}
-                            </p>
-                            {v.notes && (
-                              <p className="text-xs text-muted-foreground italic line-clamp-2 mt-0.5">
-                                "{v.notes}"
-                              </p>
-                            )}
-                          </div>
-                          <div className="text-right shrink-0">
-                            <div className="font-display text-xl text-marinara leading-none">
-                              ★{v.ratings.overall}
-                            </div>
-                            {v.favorite && <div className="text-xs text-marinara mt-1">♥ fav</div>}
-                          </div>
-                        </li>
+                        <FriendVisitRow key={v.locationId} visit={v} location={loc} />
                       );
                     })}
                   </ul>
@@ -332,6 +305,61 @@ const FriendRow = ({
     </button>
   </li>
 );
+
+const FriendVisitRow = ({ visit, location }: { visit: FriendVisit; location: Location }) => {
+  const [expanded, setExpanded] = useState(false);
+  const hasNotes = !!visit.notes;
+  return (
+    <li
+      className={cn(
+        "flex gap-3 border-2 border-ink rounded-lg p-2 bg-mozz/30 transition-colors",
+        hasNotes && "cursor-pointer hover:bg-mozz/50",
+      )}
+      onClick={hasNotes ? () => setExpanded((e) => !e) : undefined}
+      role={hasNotes ? "button" : undefined}
+      aria-expanded={hasNotes ? expanded : undefined}
+    >
+      <img
+        src={location.imageUrl}
+        alt={location.pizzaName}
+        className="h-16 w-16 rounded-md border-2 border-ink object-cover shrink-0"
+      />
+      <div className="min-w-0 flex-1">
+        <p className="font-display text-base leading-tight tracking-wide line-clamp-1">
+          {location.pizzaName}
+        </p>
+        <p className="text-xs text-marinara font-semibold line-clamp-1">
+          {location.name} · {location.neighborhood}
+        </p>
+        {hasNotes && (
+          <div className="mt-0.5 flex items-start gap-1">
+            <p
+              className={cn(
+                "text-xs text-muted-foreground italic flex-1",
+                !expanded && "line-clamp-2",
+              )}
+            >
+              "{visit.notes}"
+            </p>
+            <ChevronDown
+              className={cn(
+                "h-3.5 w-3.5 text-muted-foreground shrink-0 mt-0.5 transition-transform",
+                expanded && "rotate-180",
+              )}
+              strokeWidth={2.5}
+            />
+          </div>
+        )}
+      </div>
+      <div className="text-right shrink-0">
+        <div className="font-display text-xl text-marinara leading-none">
+          ★{visit.ratings.overall}
+        </div>
+        {visit.favorite && <div className="text-xs text-marinara mt-1">♥ fav</div>}
+      </div>
+    </li>
+  );
+};
 
 const PendingRow = ({
   request, onAccept, onReject,
