@@ -171,12 +171,17 @@ export const useFriends = () => {
         if (!p) return null;
         const list = byFriend[id] ?? [];
         const sum = list.reduce((s, v) => s + v.ratings.overall, 0);
+        const latestVisitAt = list.reduce<string | null>(
+          (acc, v) => (!acc || v.visitedAt > acc ? v.visitedAt : acc),
+          null,
+        );
         return {
           id: p.id,
           username: p.username,
           nickname: p.nickname,
           visitCount: list.length,
           avgOverall: list.length ? sum / list.length : null,
+          latestVisitAt,
         };
       })
       .filter((f): f is FriendProfile => !!f);
