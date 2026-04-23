@@ -193,6 +193,28 @@ const FriendsPage = () => {
             </div>
 
             <div className="flex-1 overflow-y-auto p-4 space-y-5">
+              {/* Rated visits */}
+              <section>
+                <h3 className="font-display text-sm tracking-widest text-muted-foreground mb-2">
+                  RATED ({activeVisits.length})
+                </h3>
+                {activeVisits.length === 0 ? (
+                  <p className="text-xs text-muted-foreground italic">
+                    Hasn't rated any slices yet.
+                  </p>
+                ) : (
+                  <ul className="space-y-2">
+                    {activeVisits.map((v) => {
+                      const loc = LOC_BY_ID.get(v.locationId);
+                      if (!loc) return null;
+                      return (
+                        <FriendVisitRow key={v.locationId} visit={v} location={loc} />
+                      );
+                    })}
+                  </ul>
+                )}
+              </section>
+
               {/* Wishlist */}
               <section>
                 <h3 className="font-display text-sm tracking-widest text-muted-foreground mb-2 flex items-center gap-1.5">
@@ -222,28 +244,6 @@ const FriendsPage = () => {
                         </div>
                       </li>
                     ))}
-                  </ul>
-                )}
-              </section>
-
-              {/* Rated visits */}
-              <section>
-                <h3 className="font-display text-sm tracking-widest text-muted-foreground mb-2">
-                  RATED ({activeVisits.length})
-                </h3>
-                {activeVisits.length === 0 ? (
-                  <p className="text-xs text-muted-foreground italic">
-                    Hasn't rated any slices yet.
-                  </p>
-                ) : (
-                  <ul className="space-y-2">
-                    {activeVisits.map((v) => {
-                      const loc = LOC_BY_ID.get(v.locationId);
-                      if (!loc) return null;
-                      return (
-                        <FriendVisitRow key={v.locationId} visit={v} location={loc} />
-                      );
-                    })}
                   </ul>
                 )}
               </section>
