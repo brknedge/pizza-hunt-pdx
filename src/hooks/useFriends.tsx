@@ -323,6 +323,7 @@ export const useFriends = () => {
     friendVisitsByLocation,
     visitsByFriend,
     loading,
+    latestFriendVisitAt,
     addFriendByUsername,
     acceptRequest,
     rejectRequest,
