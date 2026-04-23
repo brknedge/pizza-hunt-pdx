@@ -309,19 +309,28 @@ const Header = () => (
 );
 
 const FriendRow = ({
-  friend, onOpen, onRemove,
+  friend, hasNew, onOpen, onRemove,
 }: {
   friend: FriendProfile;
+  hasNew: boolean;
   onOpen: () => void;
   onRemove: () => void;
 }) => (
   <li className="bg-card border-2 border-ink rounded-xl shadow-zine-sm p-3 flex items-center gap-3">
-    <button onClick={onOpen} className="flex-1 text-left min-w-0">
-      <p className="font-display text-lg tracking-wide truncate">{friend.nickname}</p>
-      <p className="text-xs text-muted-foreground truncate">
-        @{friend.username} · {friend.visitCount} slice{friend.visitCount === 1 ? "" : "s"}
-        {friend.avgOverall != null && ` · ${friend.avgOverall.toFixed(1)}★`}
-      </p>
+    <button onClick={onOpen} className="flex-1 text-left min-w-0 flex items-center gap-2">
+      {hasNew && (
+        <span
+          aria-label="New activity"
+          className="h-2.5 w-2.5 rounded-full bg-marinara border border-ink shrink-0"
+        />
+      )}
+      <span className="min-w-0 flex-1">
+        <p className="font-display text-lg tracking-wide truncate">{friend.nickname}</p>
+        <p className="text-xs text-muted-foreground truncate">
+          @{friend.username} · {friend.visitCount} slice{friend.visitCount === 1 ? "" : "s"}
+          {friend.avgOverall != null && ` · ${friend.avgOverall.toFixed(1)}★`}
+        </p>
+      </span>
     </button>
     <button
       onClick={onRemove}
