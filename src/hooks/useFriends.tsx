@@ -10,6 +10,7 @@ export interface FriendProfile {
   nickname: string;
   visitCount: number;
   avgOverall: number | null;
+  latestVisitAt: string | null;
 }
 
 export interface PendingRequest {
