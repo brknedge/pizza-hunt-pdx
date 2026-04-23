@@ -173,14 +173,19 @@ const FriendsPage = () => {
           </div>
         ) : (
           <ul className="grid sm:grid-cols-2 gap-3">
-            {friends.map((f) => (
-              <FriendRow
-                key={f.id}
-                friend={f}
-                onOpen={() => setActiveFriendId(f.id)}
-                onRemove={() => void removeFriend(f.id)}
-              />
-            ))}
+            {friends.map((f) => {
+              const seen = seenMap[f.id];
+              const hasNew = !!f.latestVisitAt && (!seen || f.latestVisitAt > seen);
+              return (
+                <FriendRow
+                  key={f.id}
+                  friend={f}
+                  hasNew={hasNew}
+                  onOpen={() => setActiveFriendId(f.id)}
+                  onRemove={() => void removeFriend(f.id)}
+                />
+              );
+            })}
           </ul>
         )}
       </main>
