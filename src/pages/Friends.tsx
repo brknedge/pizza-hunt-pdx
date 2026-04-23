@@ -35,6 +35,7 @@ const FriendsPage = () => {
   const [query, setQuery] = useState("");
   const [busy, setBusy] = useState(false);
   const [activeFriendId, setActiveFriendId] = useState<string | null>(null);
+  const [seenMap, setSeenMap] = useState<Record<string, string>>(() => readSeenMap());
 
   const friendIds = useMemo(() => friends.map((f) => f.id), [friends]);
   const { friendWishlistByLocation } = useWishlist(friendIds);
@@ -43,6 +44,17 @@ const FriendsPage = () => {
     () => friends.find((f) => f.id === activeFriendId) ?? null,
     [friends, activeFriendId],
   );
+
+  // When a friend drawer opens, mark their latest visit as seen.
+  useEffect(() => {
+    if (!activeFriend?.latestVisitAt) return;
+    setSeenMap((prev) => {
+      if (prev[activeFriend.id] === activeFriend.latestVisitAt) return prev;
+      const next = { ...prev, [activeFriend.id]: activeFriend.latestVisitAt! };
+      try { localStorage.setItem(SEEN_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+      return next;
+    });
+  }, [activeFriend]);
   const activeVisits = useMemo(() => {
     if (!activeFriendId) return [];
     return (visitsByFriend[activeFriendId] ?? [])
