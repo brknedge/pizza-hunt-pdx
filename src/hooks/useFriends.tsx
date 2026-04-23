@@ -61,6 +61,8 @@ export const useFriends = () => {
     Record<string, FriendVisit[]>
   >({});
   const [loading, setLoading] = useState(true);
+  /** Most recent friend visit timestamp (ISO) across all friends. */
+  const [latestFriendVisitAt, setLatestFriendVisitAt] = useState<string | null>(null);
 
   const refresh = useCallback(async () => {
     if (!user) {
@@ -69,6 +71,7 @@ export const useFriends = () => {
       setPendingOutgoingCount(0);
       setFriendVisitsByLocation({});
       setVisitsByFriend({});
+      setLatestFriendVisitAt(null);
       setLoading(false);
       return;
     }
@@ -125,6 +128,7 @@ export const useFriends = () => {
       setPendingOutgoingCount(pendingOutCount);
       setFriendVisitsByLocation({});
       setVisitsByFriend({});
+      setLatestFriendVisitAt(null);
       setLoading(false);
       return;
     }
@@ -145,6 +149,7 @@ export const useFriends = () => {
 
     const byFriend: Record<string, FriendVisit[]> = {};
     const byLocation: Record<string, FriendVisit[]> = {};
+    let latest: string | null = null;
     for (const v of rawVisits) {
       const fv: FriendVisit = {
         friendId: v.user_id,
@@ -156,6 +161,7 @@ export const useFriends = () => {
       };
       (byFriend[v.user_id] ??= []).push(fv);
       (byLocation[v.location_id] ??= []).push(fv);
+      if (!latest || v.visited_at > latest) latest = v.visited_at;
     }
 
     const friendList: FriendProfile[] = acceptedFriendIds
@@ -188,6 +194,7 @@ export const useFriends = () => {
     setPendingOutgoingCount(pendingOutCount);
     setVisitsByFriend(byFriend);
     setFriendVisitsByLocation(byLocation);
+    setLatestFriendVisitAt(latest);
     setLoading(false);
   }, [user]);
 
@@ -316,6 +323,7 @@ export const useFriends = () => {
     friendVisitsByLocation,
     visitsByFriend,
     loading,
+    latestFriendVisitAt,
     addFriendByUsername,
     acceptRequest,
     rejectRequest,
