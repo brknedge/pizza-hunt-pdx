@@ -61,6 +61,8 @@ export const useFriends = () => {
     Record<string, FriendVisit[]>
   >({});
   const [loading, setLoading] = useState(true);
+  /** Most recent friend visit timestamp (ISO) across all friends. */
+  const [latestFriendVisitAt, setLatestFriendVisitAt] = useState<string | null>(null);
 
   const refresh = useCallback(async () => {
     if (!user) {
