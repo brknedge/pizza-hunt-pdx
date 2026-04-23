@@ -71,6 +71,7 @@ export const useFriends = () => {
       setPendingOutgoingCount(0);
       setFriendVisitsByLocation({});
       setVisitsByFriend({});
+      setLatestFriendVisitAt(null);
       setLoading(false);
       return;
     }
