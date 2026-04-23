@@ -14,6 +14,16 @@ import { toast } from "@/hooks/use-toast";
 
 const LOCATIONS = locationsData as Location[];
 const LOC_BY_ID = new Map(LOCATIONS.map((l) => [l.id, l] as const));
+const SEEN_KEY = "pdxpw:friendSeenAt";
+
+const readSeenMap = (): Record<string, string> => {
+  try {
+    const raw = localStorage.getItem(SEEN_KEY);
+    return raw ? (JSON.parse(raw) as Record<string, string>) : {};
+  } catch {
+    return {};
+  }
+};
 
 const FriendsPage = () => {
   const navigate = useNavigate();
