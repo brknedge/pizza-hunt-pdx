@@ -194,6 +194,7 @@ export const useFriends = () => {
     setPendingOutgoingCount(pendingOutCount);
     setVisitsByFriend(byFriend);
     setFriendVisitsByLocation(byLocation);
+    setLatestFriendVisitAt(latest);
     setLoading(false);
   }, [user]);
 
