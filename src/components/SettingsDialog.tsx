@@ -137,6 +137,9 @@ export const SettingsDialog = ({ open, onOpenChange, nickname, onRename, onClear
           <p className="text-xs text-center text-muted-foreground">
             PDX Pizza Week 2026 Tracker · v1.0
           </p>
+          <p className="text-[10px] text-center text-muted-foreground">
+            Developed by Juven
+          </p>
         </div>
       </DialogContent>
     </Dialog>
