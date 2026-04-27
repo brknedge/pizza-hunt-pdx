@@ -88,6 +88,7 @@ interface AuthInfo {
 
 export const SettingsDialog = ({ open, onOpenChange, nickname, onRename, onClear }: Props) => {
   const navigate = useNavigate();
+  const { visits } = useVisits();
   const [name, setName] = useState(nickname);
   const [confirm, setConfirm] = useState(false);
   const [auth, setAuth] = useState<AuthInfo | null>(null);
