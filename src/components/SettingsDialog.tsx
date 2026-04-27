@@ -1,11 +1,77 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { LogIn, LogOut } from "lucide-react";
+import { Download, LogIn, LogOut } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import { useVisits } from "@/hooks/useVisits";
+import locationsData from "@/data/locations.json";
+import type { Location } from "@/types/pizza";
+
+const LOCATIONS = locationsData as Location[];
+
+const csvEscape = (val: unknown): string => {
+  const s = val == null ? "" : String(val);
+  if (/[",\n\r]/.test(s)) return `"${s.replace(/"/g, '""')}"`;
+  return s;
+};
+
+const exportVisitsToCsv = (
+  visits: Record<string, import("@/types/pizza").Visit> | null,
+  nickname: string,
+) => {
+  const entries = Object.entries(visits ?? {});
+  if (entries.length === 0) {
+    toast({ title: "Nothing to export", description: "Rate a pizza first!" });
+    return;
+  }
+  const headers = [
+    "location_id",
+    "location_name",
+    "neighborhood",
+    "pizza_name",
+    "visited_at",
+    "overall",
+    "taste",
+    "creativity",
+    "service",
+    "atmosphere",
+    "favorite",
+    "notes",
+  ];
+  const rows = entries.map(([locId, v]) => {
+    const loc = LOCATIONS.find((l) => l.id === locId);
+    return [
+      locId,
+      loc?.name ?? "",
+      loc?.neighborhood ?? "",
+      loc?.pizzaName ?? "",
+      v.visitedAt ?? "",
+      v.ratings?.overall ?? 0,
+      v.ratings?.taste ?? 0,
+      v.ratings?.creativity ?? 0,
+      v.ratings?.service ?? 0,
+      v.ratings?.atmosphere ?? 0,
+      v.favorite ? "yes" : "no",
+      v.notes ?? "",
+    ].map(csvEscape).join(",");
+  });
+  const csv = [headers.join(","), ...rows].join("\n");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  const date = new Date().toISOString().slice(0, 10);
+  const safeNick = (nickname || "my").replace(/[^a-z0-9]+/gi, "-").toLowerCase();
+  a.href = url;
+  a.download = `pdx-pizza-week-${safeNick}-${date}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  toast({ title: "Exported!", description: `${entries.length} rating${entries.length === 1 ? "" : "s"} saved.` });
+};
 
 interface Props {
   open: boolean;
