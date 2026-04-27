@@ -201,6 +201,16 @@ export const SettingsDialog = ({ open, onOpenChange, nickname, onRename, onClear
             </div>
           )}
 
+          <div className="border-t-2 border-dashed border-muted pt-4">
+            <Button
+              onClick={() => exportVisitsToCsv(visits, nickname)}
+              variant="outline"
+              className="w-full border-2 border-ink shadow-zine-sm rounded-lg"
+            >
+              <Download className="h-4 w-4 mr-2" /> EXPORT DATA (CSV)
+            </Button>
+          </div>
+
           <p className="text-xs text-center text-muted-foreground">
             PDX Pizza Week 2026 Tracker · v1.0
           </p>
