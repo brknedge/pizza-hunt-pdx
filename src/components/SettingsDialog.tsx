@@ -214,7 +214,7 @@ export const SettingsDialog = ({ open, onOpenChange, nickname, onRename, onClear
               className="w-full bg-marinara text-primary-foreground border-2 border-ink shadow-zine-sm font-display tracking-wider rounded-lg"
             >
               <a
-                href="https://venmo.com/Juvenium?txn=pay&amount=4&note=Slice%20for%20the%20dev%20%F0%9F%8D%95"
+                href="https://account.venmo.com/pay?recipients=Juvenium&amount=4&note=Slice%20for%20the%20dev%20%F0%9F%8D%95&txn=pay"
                 target="_blank"
                 rel="noopener noreferrer"
               >
