@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Download, LogIn, LogOut } from "lucide-react";
+import { Download, LogIn, LogOut, Pizza } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -201,13 +201,25 @@ export const SettingsDialog = ({ open, onOpenChange, nickname, onRename, onClear
             </div>
           )}
 
-          <div className="border-t-2 border-dashed border-muted pt-4">
+          <div className="border-t-2 border-dashed border-muted pt-4 space-y-2">
             <Button
               onClick={() => exportVisitsToCsv(visits, nickname)}
               variant="outline"
               className="w-full border-2 border-ink shadow-zine-sm rounded-lg"
             >
               <Download className="h-4 w-4 mr-2" /> EXPORT DATA (CSV)
+            </Button>
+            <Button
+              asChild
+              className="w-full bg-marinara text-primary-foreground border-2 border-ink shadow-zine-sm font-display tracking-wider rounded-lg"
+            >
+              <a
+                href="https://venmo.com/Juvenium?txn=pay&amount=4&note=Slice%20for%20the%20dev%20%F0%9F%8D%95"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Pizza className="h-4 w-4 mr-2" /> BUY THE DEVELOPER A SLICE
+              </a>
             </Button>
           </div>
 
